@@ -1,0 +1,1619 @@
+{
+  "manifestVersion": "r0-model-requests@1",
+  "baseline": "review.4-r0-20261028",
+  "author": "GPT6.1SolHigh",
+  "createdDate": "2026-10-28",
+  "scope": "T00 frozen protocol only; no provider dispatch or secret access performed",
+  "freezeState": "frozen-before-model-output; final package fingerprints and runtime materialization by root",
+  "approvedPlan": true,
+  "provider": null,
+  "model": null,
+  "tokenCapPerAttempt": null,
+  "tokenCapTotal": null,
+  "amountCapPerAttempt": null,
+  "amountCapTotal": null,
+  "currency": null,
+  "accessApprovalStatus": "T06待批准; blocks real dispatch only",
+  "humanOperator": null,
+  "semanticReviewer": null,
+  "humanRoleStatus": "unassigned; blocks human choices/judgment/comparison claims only; never infer human from agent automation",
+  "budget": {
+    "logicalRequests": 38,
+    "initialMainRequests": 28,
+    "directionFollowups": 4,
+    "explanationFollowups": 2,
+    "probes": 4,
+    "maxProviderAttemptsPerLogicalRequest": 2,
+    "maxProviderAttemptsTotal": 76,
+    "concurrency": 1,
+    "implicitSDKRetries": 0,
+    "upperBoundIsSpendingApproval": false,
+    "attemptRules": [
+      "Initial attempt plus at most one bounded actual repair/retry; same slot and logical requestId, unique attemptId.",
+      "Every attempt reruns gate/reservation/dispatch; no automatic repair after cancellation/permission withdrawal.",
+      "Every initial result remains in original denominator even if attempt2 repairs it.",
+      "Unknown dispatch/usage retains reservation and single-flight occupancy until reconciled; later slots blocked, never silently skipped or renumbered.",
+      "A child request is a distinct one of the frozen six slots, never an attempt/zero-cost tool step.",
+      "Missing budget: blocked or reviewed/re-frozen new version; never shrink original scope and claim original pass."
+    ]
+  },
+  "sources": [
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/config/ud02/risk.nodon.json",
+      "sha256": "sha256:a44cf89892e4210f886ffd0d83fa5343d1ea8f508c4a4f56a95fac6d4b794fbd",
+      "sourceType": "synthetic_fixture"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/config/ud02/garden.nodon.json",
+      "sha256": "sha256:d69ba54fad07b6ca6ed06277038624b13717d73ec24f42591f18e44c77690d16",
+      "sourceType": "synthetic_fixture"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/案例与附件/A04_AI价值与非模型基线记录表.md",
+      "sha256": "sha256:b33d259d2ef3720508da021436ec824865344d24f22d09176c43eeb89680c239",
+      "sourceType": "design_contract"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/产品策划/C18_验证观察表与证据口径案.md",
+      "sha256": "sha256:da8a6572559518773bb8a0b739b42ee7ab487a326201229bdc6ce7514b1ef1b0",
+      "sourceType": "design_contract"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/产品策划/C20_开发交接与验收里程碑案.md",
+      "sha256": "sha256:054a21b3532989f500cd4b1e0f9a3e6df71b4a789ddfac4f5f173fc20f8e51fc",
+      "sourceType": "design_contract"
+    },
+    {
+      "path": "07_R0最小真实闭环开发计划_评审稿/P05_冻结任务提案与证据记录模板.md",
+      "sha256": "sha256:3c479fa6da950b140e58cbb4c90cd4562ff8f2780f880aedd6b416c1e4d28979",
+      "sourceType": "design_contract"
+    }
+  ],
+  "fixtures": {
+    "FX-A": {
+      "sourceReference": "06_v3.0平台与AI详细设计_评审稿/config/ud02/risk.nodon.json",
+      "sourceSha256": "sha256:a44cf89892e4210f886ffd0d83fa5343d1ea8f508c4a4f56a95fac6d4b794fbd",
+      "patches": [
+        {
+          "path": "/project/rules/goal/targetScore",
+          "value": 10
+        },
+        {
+          "path": "/project/instructions",
+          "value": "方向键或WASD移动，拿到10分过关。普通点心1分，特别点心3分；碰到守卫失败。"
+        }
+      ],
+      "preserveAllOtherSourceFields": true,
+      "note": "P05 A: review.3 risk geometry, goal10, speed100/detect180, timer disabled/limit45. Source semanticHash is stale after patch and MUST be recomputed by T01; do not trust embedded source digest.",
+      "materializedFixtureReference": "verification/fixtures/scene-a.json"
+    },
+    "FX-B": {
+      "sourceReference": "06_v3.0平台与AI详细设计_评审稿/config/ud02/garden.nodon.json",
+      "sourceSha256": "sha256:d69ba54fad07b6ca6ed06277038624b13717d73ec24f42591f18e44c77690d16",
+      "patches": [],
+      "preserveAllOtherSourceFields": true,
+      "note": "P05 B: player+5 normal, no guard/high, goal4, disabled timer/limit30.",
+      "materializedFixtureReference": "verification/fixtures/scene-b.json"
+    },
+    "FX-A-G6": {
+      "deriveFrom": "FX-A",
+      "patches": [
+        {
+          "path": "/project/rules/goal/targetScore",
+          "value": 6
+        }
+      ],
+      "materializedFixtureReference": "verification/fixtures/scene-a-goal6.json"
+    },
+    "FX-E11": {
+      "sourceReference": "verification/fixtures/terminal-conflict.json",
+      "materializedFixtureReference": "verification/fixtures/terminal-conflict.json",
+      "inputReference": "verification/inputs/terminal-conflict.json",
+      "requiredGenerationTask": "R0-T03",
+      "deriveFrom": "FX-A",
+      "patches": [
+        {
+          "path": "/project/scene/entities",
+          "value": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 270
+            },
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 90,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 70,
+              "y": 290
+            }
+          ]
+        },
+        {
+          "path": "/project/rules/goal/targetScore",
+          "value": 1
+        },
+        {
+          "path": "/project/rules/guards/speed",
+          "value": 20
+        },
+        {
+          "path": "/project/rules/guards/detectRadius",
+          "value": 60
+        },
+        {
+          "path": "/project/rules/timer/enabled",
+          "value": true
+        },
+        {
+          "path": "/project/rules/timer/limit",
+          "value": 15
+        }
+      ],
+      "inputSegments": [
+        {
+          "ticks": 884,
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "ticks": 16,
+          "dx": 1,
+          "dy": 0
+        }
+      ],
+      "expectedGenerationCondition": "tick900 real first score1/goalReached, guard contact and timer expiry; round_ended reason=caught by precedence; actual runtime must validate, not assume computed expectations are evidence.",
+      "selection": "Minimal actual same-tick scoring/goal_checked/guard contact/round_ended chain and necessary causes; actual @3 fields and original rules.",
+      "repeatRule": "Each repeat resets frozen initial document and creates a distinct real run; no copying evidence between repetitions.",
+      "recheckInputReference": "verification/inputs/terminal-conflict.json",
+      "humanFollowupRule": "Human chooses one actual offered supported minimal change; if actual option moves n1 to(40,290), it is eligible; do not inject it into parent response or promise win. Recheck same frozen inputs and report support/refutation/unknown.",
+      "requirements": [
+        "Do not use K03 or run_evidence_example.",
+        "Record full initial document, tick inputs, runId, revision, semanticHash, buildHash/runtimeArtifactHash and actual collect-chase-evidence@3.",
+        "Block AI11/follow-ups if fixed caught case does not generate real required evidence; no opportunistic replacement or new model slot."
+      ],
+      "actualEvidenceReference": null,
+      "notYetGenerated": true,
+      "runtimeCaseID": "R0-RT-07",
+      "variant": "caught"
+    },
+    "FX-E12": {
+      "deriveFrom": "FX-B",
+      "eventSelection": {
+        "selectedEventIds": [],
+        "runId": null,
+        "truncated": false,
+        "coverage": "none"
+      },
+      "note": "Choose P05 no-actual-events variant, identically on both repetitions; do not silently substitute truncated chain."
+    },
+    "FX-PROBE": {
+      "deriveFrom": "FX-B",
+      "outboundIntent": "只说明当前是否有守卫及当前目标分数，不提出修改。",
+      "expected": "Read-only answered; no operations, current guard count0 and goal4."
+    }
+  },
+  "outboundFieldsWhitelist": [
+    "intent",
+    "projectId",
+    "requestId",
+    "baseRevision",
+    "semanticHash",
+    "runtimeVersion",
+    "catalogVersion",
+    "registryVersion",
+    "policyVersion",
+    "bounded current scene/rules and applicable theme catalog",
+    "eligible actual parent output and human chosen option only for child",
+    "selected actual @3 minimal event chain and original rule snapshot only for AI11",
+    "explicit none/coverage marker only for AI12"
+  ],
+  "forbiddenOutbound": [
+    "credentials/session tokens",
+    "personal/child/institution data",
+    "local file paths",
+    "entire vault/history",
+    "arbitrary code/URL/tool arguments",
+    "unselected complete trajectories",
+    "K03 as current fact"
+  ],
+  "slots": [
+    {
+      "requestSlotID": "PROBE-ACCESS",
+      "parentSlotID": null,
+      "caseID": "PROBE-ACCESS",
+      "repeat": 1,
+      "phase": "probe",
+      "phaseTask": "R0-T06",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-PROBE",
+      "intent": "只说明当前是否有守卫及当前目标分数，不提出修改。",
+      "expectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4."
+      ],
+      "pairedID": null,
+      "humanOptionSteps": [],
+      "status": "未执行",
+      "logicalExecutionOrder": 1,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "PROBE-ACCESS-A1",
+        "PROBE-ACCESS-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-01-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-01",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把目标分数从10改为6，其他不动。",
+      "expectedOutput": [
+        "proposed: exactly one set_goal 10→6; all else unchanged"
+      ],
+      "pairedID": "PAIR-01-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 2,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-01-R1-I-A1",
+        "R0-AI-01-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-02-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-02",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把普通点心分值从1改为2、特别点心从3改为4，其他不动。",
+      "expectedOutput": [
+        "proposed: exactly one joint set_reward_values normal1→2/high3→4"
+      ],
+      "pairedID": "PAIR-02-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 3,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-02-R1-I-A1",
+        "R0-AI-02-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-03-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-03",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把守卫速度从100改为80，发现距离180不变，其他不动。",
+      "expectedOutput": [
+        "proposed: only set_guard_speed 100→80; detect180 unchanged"
+      ],
+      "pairedID": "PAIR-03-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 4,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-03-R1-I-A1",
+        "R0-AI-03-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-04-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-04",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把守卫发现距离从180改为140，速度100不变，其他不动。",
+      "expectedOutput": [
+        "proposed: only set_detect_radius 180→140; speed100 unchanged"
+      ],
+      "pairedID": "PAIR-04-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 5,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-04-R1-I-A1",
+        "R0-AI-04-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-05-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-05",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-B",
+      "intent": "保留无守卫和目标4，启用30秒计时，其他不动。",
+      "expectedOutput": [
+        "proposed: only set_timer enabled=true/limit30; no guard; goal4 unchanged"
+      ],
+      "pairedID": "PAIR-05-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 6,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-05-R1-I-A1",
+        "R0-AI-05-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-06-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-06",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "只将h1从(660,190)移到(540,220)，其他不动。",
+      "expectedOutput": [
+        "proposed: only move_entity h1 (660,190)→(540,220); stable ID; no rebinding"
+      ],
+      "pairedID": "PAIR-06-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 7,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-06-R1-I-A1",
+        "R0-AI-06-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-07-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-07",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "只切换到目录中的第二个验证主题，不改玩法。",
+      "expectedOutput": [
+        "proposed: only set_theme to theme_r0_contrast (second frozen theme), playerSkin snack_player_01; semanticHash unchanged",
+        "Pure theme uses static checks/runtime_not_applicable, never fake runtime passed"
+      ],
+      "pairedID": "PAIR-07-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 8,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-07-R1-I-A1",
+        "R0-AI-07-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-08-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-08",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把目标10改为6、发现距离180改为140，保持不计时，其余不动。",
+      "expectedOutput": [
+        "proposed: set_goal10→6 + set_detect_radius180→140 in one atomic batch; timer disabled",
+        "Bad second operation rejects whole batch, no partial goal write"
+      ],
+      "pairedID": "PAIR-08-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 9,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-08-R1-I-A1",
+        "R0-AI-08-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-09",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A-G6",
+      "intent": "通过奖励路线制造紧张，但保留观察机会，不要限时。请先比较2–3个支持内方向，至少包含一个布局方向，先不要修改。",
+      "expectedOutput": [
+        "Read-only 2–3 genuinely distinct supported directions including layout; preserve no timer and goal6",
+        "Human chooses an actually offered layout direction; only then child request"
+      ],
+      "pairedID": "PAIR-09-R1-INITIAL",
+      "humanOptionSteps": [
+        "Read actually supplied options; choose one actual layout direction, record option ID/text and rationale; no offered layout means failed initial and blocked child."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 10,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-09-R1-I-A1",
+        "R0-AI-09-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a-goal6.json"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R1-F",
+      "parentSlotID": "R0-AI-09-R1-I",
+      "caseID": "R0-AI-09",
+      "repeat": 1,
+      "phase": "direction_followup",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Parent actual output passed required direction/explanation checks and real human selected an existing eligible option; parent choice recorded.",
+        "Bind fresh requestId/baseRevision/semanticHash/authEpoch and recheck referenced stable IDs; failure/retain blocks child without substitute request."
+      ],
+      "inputFixtureReference": "FX-A-G6",
+      "dynamicReferenceFields": [
+        "parent.requestId",
+        "parent.actualOutputHash",
+        "humanChoice.optionId",
+        "humanChoice.exactOptionText",
+        "currentProjectIdentity"
+      ],
+      "intentTemplate": "我选择实际提供的布局方向{{humanChoice.optionId}}：{{humanChoice.exactOptionText}}。请给出该方向的受限候选。保留目标6、观察机会和不计时。",
+      "expectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Keep goal6 and timer disabled; stable reward IDs; no add/delete."
+      ],
+      "pairedID": "PAIR-09-R1-FOLLOWUP",
+      "humanOptionSteps": [
+        "Inspect diff/trial/coverage; actual human accepts or rejects; confirm once only when authorized; record re-run observations."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 11,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-09-R1-F-A1",
+        "R0-AI-09-R1-F-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a-goal6.json"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-10",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-B",
+      "intent": "不加守卫、不改目标4，让体验稍有节奏。请比较布局和时间方向，先不要修改。",
+      "expectedOutput": [
+        "Read-only compare layout/time; no added guard, no goal change",
+        "Human chooses actually offered time direction, then child request enable30 seconds"
+      ],
+      "pairedID": "PAIR-10-R1-INITIAL",
+      "humanOptionSteps": [
+        "Read actual layout/time options; choose one offered time direction, record ID/text; no time direction means failed initial and blocked child."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 12,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-10-R1-I-A1",
+        "R0-AI-10-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R1-F",
+      "parentSlotID": "R0-AI-10-R1-I",
+      "caseID": "R0-AI-10",
+      "repeat": 1,
+      "phase": "direction_followup",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Parent actual output passed required direction/explanation checks and real human selected an existing eligible option; parent choice recorded.",
+        "Bind fresh requestId/baseRevision/semanticHash/authEpoch and recheck referenced stable IDs; failure/retain blocks child without substitute request."
+      ],
+      "inputFixtureReference": "FX-B",
+      "dynamicReferenceFields": [
+        "parent.requestId",
+        "parent.actualOutputHash",
+        "humanChoice.optionId",
+        "humanChoice.exactOptionText",
+        "currentProjectIdentity"
+      ],
+      "intentTemplate": "我选择实际提供的时间方向{{humanChoice.optionId}}：{{humanChoice.exactOptionText}}。请启用30秒，保留无守卫、目标4，其余不动。",
+      "expectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Only set_timer enabled=true/limit30; preserve no guard/goal4."
+      ],
+      "pairedID": "PAIR-10-R1-FOLLOWUP",
+      "humanOptionSteps": [
+        "Inspect diff/trial/coverage; actual human accepts or rejects; confirm once only when authorized; record re-run observations."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 13,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-10-R1-F-A1",
+        "R0-AI-10-R1-F-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-13-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-13",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "不要守卫，想慢慢探索。",
+      "expectedOutput": [
+        "answered/manual_quantity; no add/delete ops or apply entry; state concrete manual guard-delete path",
+        "Human may manually delete g1, timer remains disabled; no follow-up model request"
+      ],
+      "pairedID": "PAIR-13-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 14,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-13-R1-I-A1",
+        "R0-AI-13-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-14-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-14",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "拿到点心后瞬移穿墙。",
+      "expectedOutput": [
+        "unsupported; no invented tools, teleport, wall or covert chase substitution",
+        "Human exit/retain; zero writes; no promise of future support"
+      ],
+      "pairedID": "PAIR-14-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 15,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-14-R1-I-A1",
+        "R0-AI-14-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-01-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-01",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把目标分数从10改为6，其他不动。",
+      "expectedOutput": [
+        "proposed: exactly one set_goal 10→6; all else unchanged"
+      ],
+      "pairedID": "PAIR-01-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 16,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-01-R2-I-A1",
+        "R0-AI-01-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-02-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-02",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把普通点心分值从1改为2、特别点心从3改为4，其他不动。",
+      "expectedOutput": [
+        "proposed: exactly one joint set_reward_values normal1→2/high3→4"
+      ],
+      "pairedID": "PAIR-02-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 17,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-02-R2-I-A1",
+        "R0-AI-02-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-03-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-03",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把守卫速度从100改为80，发现距离180不变，其他不动。",
+      "expectedOutput": [
+        "proposed: only set_guard_speed 100→80; detect180 unchanged"
+      ],
+      "pairedID": "PAIR-03-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 18,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-03-R2-I-A1",
+        "R0-AI-03-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-04-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-04",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把守卫发现距离从180改为140，速度100不变，其他不动。",
+      "expectedOutput": [
+        "proposed: only set_detect_radius 180→140; speed100 unchanged"
+      ],
+      "pairedID": "PAIR-04-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 19,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-04-R2-I-A1",
+        "R0-AI-04-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-05-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-05",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-B",
+      "intent": "保留无守卫和目标4，启用30秒计时，其他不动。",
+      "expectedOutput": [
+        "proposed: only set_timer enabled=true/limit30; no guard; goal4 unchanged"
+      ],
+      "pairedID": "PAIR-05-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 20,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-05-R2-I-A1",
+        "R0-AI-05-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-06-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-06",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "只将h1从(660,190)移到(540,220)，其他不动。",
+      "expectedOutput": [
+        "proposed: only move_entity h1 (660,190)→(540,220); stable ID; no rebinding"
+      ],
+      "pairedID": "PAIR-06-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 21,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-06-R2-I-A1",
+        "R0-AI-06-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-07-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-07",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "只切换到目录中的第二个验证主题，不改玩法。",
+      "expectedOutput": [
+        "proposed: only set_theme to theme_r0_contrast (second frozen theme), playerSkin snack_player_01; semanticHash unchanged",
+        "Pure theme uses static checks/runtime_not_applicable, never fake runtime passed"
+      ],
+      "pairedID": "PAIR-07-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 22,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-07-R2-I-A1",
+        "R0-AI-07-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-08-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-08",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "把目标10改为6、发现距离180改为140，保持不计时，其余不动。",
+      "expectedOutput": [
+        "proposed: set_goal10→6 + set_detect_radius180→140 in one atomic batch; timer disabled",
+        "Bad second operation rejects whole batch, no partial goal write"
+      ],
+      "pairedID": "PAIR-08-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 23,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-08-R2-I-A1",
+        "R0-AI-08-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-09",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A-G6",
+      "intent": "通过奖励路线制造紧张，但保留观察机会，不要限时。请先比较2–3个支持内方向，至少包含一个布局方向，先不要修改。",
+      "expectedOutput": [
+        "Read-only 2–3 genuinely distinct supported directions including layout; preserve no timer and goal6",
+        "Human chooses an actually offered layout direction; only then child request"
+      ],
+      "pairedID": "PAIR-09-R2-INITIAL",
+      "humanOptionSteps": [
+        "Read actually supplied options; choose one actual layout direction, record option ID/text and rationale; no offered layout means failed initial and blocked child."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 24,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-09-R2-I-A1",
+        "R0-AI-09-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a-goal6.json"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R2-F",
+      "parentSlotID": "R0-AI-09-R2-I",
+      "caseID": "R0-AI-09",
+      "repeat": 2,
+      "phase": "direction_followup",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Parent actual output passed required direction/explanation checks and real human selected an existing eligible option; parent choice recorded.",
+        "Bind fresh requestId/baseRevision/semanticHash/authEpoch and recheck referenced stable IDs; failure/retain blocks child without substitute request."
+      ],
+      "inputFixtureReference": "FX-A-G6",
+      "dynamicReferenceFields": [
+        "parent.requestId",
+        "parent.actualOutputHash",
+        "humanChoice.optionId",
+        "humanChoice.exactOptionText",
+        "currentProjectIdentity"
+      ],
+      "intentTemplate": "我选择实际提供的布局方向{{humanChoice.optionId}}：{{humanChoice.exactOptionText}}。请给出该方向的受限候选。保留目标6、观察机会和不计时。",
+      "expectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Keep goal6 and timer disabled; stable reward IDs; no add/delete."
+      ],
+      "pairedID": "PAIR-09-R2-FOLLOWUP",
+      "humanOptionSteps": [
+        "Inspect diff/trial/coverage; actual human accepts or rejects; confirm once only when authorized; record re-run observations."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 25,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-09-R2-F-A1",
+        "R0-AI-09-R2-F-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a-goal6.json"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-10",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-B",
+      "intent": "不加守卫、不改目标4，让体验稍有节奏。请比较布局和时间方向，先不要修改。",
+      "expectedOutput": [
+        "Read-only compare layout/time; no added guard, no goal change",
+        "Human chooses actually offered time direction, then child request enable30 seconds"
+      ],
+      "pairedID": "PAIR-10-R2-INITIAL",
+      "humanOptionSteps": [
+        "Read actual layout/time options; choose one offered time direction, record ID/text; no time direction means failed initial and blocked child."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 26,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-10-R2-I-A1",
+        "R0-AI-10-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R2-F",
+      "parentSlotID": "R0-AI-10-R2-I",
+      "caseID": "R0-AI-10",
+      "repeat": 2,
+      "phase": "direction_followup",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Parent actual output passed required direction/explanation checks and real human selected an existing eligible option; parent choice recorded.",
+        "Bind fresh requestId/baseRevision/semanticHash/authEpoch and recheck referenced stable IDs; failure/retain blocks child without substitute request."
+      ],
+      "inputFixtureReference": "FX-B",
+      "dynamicReferenceFields": [
+        "parent.requestId",
+        "parent.actualOutputHash",
+        "humanChoice.optionId",
+        "humanChoice.exactOptionText",
+        "currentProjectIdentity"
+      ],
+      "intentTemplate": "我选择实际提供的时间方向{{humanChoice.optionId}}：{{humanChoice.exactOptionText}}。请启用30秒，保留无守卫、目标4，其余不动。",
+      "expectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Only set_timer enabled=true/limit30; preserve no guard/goal4."
+      ],
+      "pairedID": "PAIR-10-R2-FOLLOWUP",
+      "humanOptionSteps": [
+        "Inspect diff/trial/coverage; actual human accepts or rejects; confirm once only when authorized; record re-run observations."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 27,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-10-R2-F-A1",
+        "R0-AI-10-R2-F-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-13-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-13",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "不要守卫，想慢慢探索。",
+      "expectedOutput": [
+        "answered/manual_quantity; no add/delete ops or apply entry; state concrete manual guard-delete path",
+        "Human may manually delete g1, timer remains disabled; no follow-up model request"
+      ],
+      "pairedID": "PAIR-13-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 28,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-13-R2-I-A1",
+        "R0-AI-13-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-14-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-14",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T07",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-A",
+      "intent": "拿到点心后瞬移穿墙。",
+      "expectedOutput": [
+        "unsupported; no invented tools, teleport, wall or covert chase substitution",
+        "Human exit/retain; zero writes; no promise of future support"
+      ],
+      "pairedID": "PAIR-14-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 29,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-14-R2-I-A1",
+        "R0-AI-14-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-11",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T08",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Genuine R0-RT-07 caught actual @3 evidence generated in T03 from terminal-conflict fixture/input and fingerprinted before T08 request."
+      ],
+      "inputFixtureReference": "FX-E11",
+      "intent": "为什么这次实际运行会得到这个结果？请引用所选真实事件，区分事实、规则和假设，并给出可验证的最小改法。",
+      "expectedOutput": [
+        "Read-only explanation cites actual @3 event IDs, original run rules/revision/actual values; separate facts/rules/hypotheses",
+        "No fabrication; human chooses one actual minimal supported change; then child request and re-run"
+      ],
+      "pairedID": "PAIR-11-R1-INITIAL",
+      "humanOptionSteps": [
+        "Verify actual explanation against events; choose one actually offered supported minimal change, record ID/text/rationale; reject/retain or invalid choice blocks child."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 30,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-11-R1-I-A1",
+        "R0-AI-11-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/terminal-conflict.json"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R1-F",
+      "parentSlotID": "R0-AI-11-R1-I",
+      "caseID": "R0-AI-11",
+      "repeat": 1,
+      "phase": "explanation_followup",
+      "phaseTask": "R0-T08",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Parent actual output passed required direction/explanation checks and real human selected an existing eligible option; parent choice recorded.",
+        "Bind fresh requestId/baseRevision/semanticHash/authEpoch and recheck referenced stable IDs; failure/retain blocks child without substitute request."
+      ],
+      "inputFixtureReference": "FX-E11",
+      "dynamicReferenceFields": [
+        "parent.requestId",
+        "parent.actualOutputHash",
+        "humanChoice.optionId",
+        "humanChoice.exactOptionText",
+        "currentProjectIdentity"
+      ],
+      "intentTemplate": "我选择实际提供的最小改法{{humanChoice.optionId}}：{{humanChoice.exactOptionText}}。请按当前基准给出受限候选；引用原实际证据，修改后由程序与作者再验。",
+      "expectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Preserve facts and distinguish hypothesis; rerun frozen recheck input after confirm; improvement may be supported/refuted/unknown."
+      ],
+      "pairedID": "PAIR-11-R1-FOLLOWUP",
+      "humanOptionSteps": [
+        "Inspect diff/trial/coverage; actual human accepts or rejects; confirm once only when authorized; record re-run observations."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 31,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-11-R1-F-A1",
+        "R0-AI-11-R1-F-A2"
+      ],
+      "runtimeRequestId": null,
+      "recheckInputReference": "verification/inputs/terminal-conflict.json",
+      "inputFixturePath": "verification/fixtures/terminal-conflict.json"
+    },
+    {
+      "requestSlotID": "R0-AI-12-R1-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-12",
+      "repeat": 1,
+      "phase": "initial",
+      "phaseTask": "R0-T08",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-E12",
+      "intent": "当前没有实际运行事件。原因是什么？",
+      "expectedOutput": [
+        "Read-only unknown/missing evidence; may ask one necessary observation; no invented history/cause",
+        "Human retain/exit; no extra model observation request"
+      ],
+      "pairedID": "PAIR-12-R1-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 32,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-12-R1-I-A1",
+        "R0-AI-12-R1-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-11",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T08",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Genuine R0-RT-07 caught actual @3 evidence generated in T03 from terminal-conflict fixture/input and fingerprinted before T08 request."
+      ],
+      "inputFixtureReference": "FX-E11",
+      "intent": "为什么这次实际运行会得到这个结果？请引用所选真实事件，区分事实、规则和假设，并给出可验证的最小改法。",
+      "expectedOutput": [
+        "Read-only explanation cites actual @3 event IDs, original run rules/revision/actual values; separate facts/rules/hypotheses",
+        "No fabrication; human chooses one actual minimal supported change; then child request and re-run"
+      ],
+      "pairedID": "PAIR-11-R2-INITIAL",
+      "humanOptionSteps": [
+        "Verify actual explanation against events; choose one actually offered supported minimal change, record ID/text/rationale; reject/retain or invalid choice blocks child."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 33,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-11-R2-I-A1",
+        "R0-AI-11-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/terminal-conflict.json"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R2-F",
+      "parentSlotID": "R0-AI-11-R2-I",
+      "caseID": "R0-AI-11",
+      "repeat": 2,
+      "phase": "explanation_followup",
+      "phaseTask": "R0-T08",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "Parent actual output passed required direction/explanation checks and real human selected an existing eligible option; parent choice recorded.",
+        "Bind fresh requestId/baseRevision/semanticHash/authEpoch and recheck referenced stable IDs; failure/retain blocks child without substitute request."
+      ],
+      "inputFixtureReference": "FX-E11",
+      "dynamicReferenceFields": [
+        "parent.requestId",
+        "parent.actualOutputHash",
+        "humanChoice.optionId",
+        "humanChoice.exactOptionText",
+        "currentProjectIdentity"
+      ],
+      "intentTemplate": "我选择实际提供的最小改法{{humanChoice.optionId}}：{{humanChoice.exactOptionText}}。请按当前基准给出受限候选；引用原实际证据，修改后由程序与作者再验。",
+      "expectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Preserve facts and distinguish hypothesis; rerun frozen recheck input after confirm; improvement may be supported/refuted/unknown."
+      ],
+      "pairedID": "PAIR-11-R2-FOLLOWUP",
+      "humanOptionSteps": [
+        "Inspect diff/trial/coverage; actual human accepts or rejects; confirm once only when authorized; record re-run observations."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 34,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-11-R2-F-A1",
+        "R0-AI-11-R2-F-A2"
+      ],
+      "runtimeRequestId": null,
+      "recheckInputReference": "verification/inputs/terminal-conflict.json",
+      "inputFixturePath": "verification/fixtures/terminal-conflict.json"
+    },
+    {
+      "requestSlotID": "R0-AI-12-R2-I",
+      "parentSlotID": null,
+      "caseID": "R0-AI-12",
+      "repeat": 2,
+      "phase": "initial",
+      "phaseTask": "R0-T08",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "For UI collection T04 authorized new panel ready; missing humanOperator blocks only human choice/judgment and their dependent child slots, not machine/model engineering collection.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt."
+      ],
+      "inputFixtureReference": "FX-E12",
+      "intent": "当前没有实际运行事件。原因是什么？",
+      "expectedOutput": [
+        "Read-only unknown/missing evidence; may ask one necessary observation; no invented history/cause",
+        "Human retain/exit; no extra model observation request"
+      ],
+      "pairedID": "PAIR-12-R2-INITIAL",
+      "humanOptionSteps": [
+        "Review actual output against frozen constraints; record accept/reject/retain and semantic judgment."
+      ],
+      "status": "未执行",
+      "logicalExecutionOrder": 35,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "R0-AI-12-R2-I-A1",
+        "R0-AI-12-R2-I-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "PROBE-IDEMPOTENT",
+      "parentSlotID": null,
+      "caseID": "PROBE-IDEMPOTENT",
+      "repeat": 1,
+      "phase": "probe",
+      "phaseTask": "R0-T09",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "All previous dispatches terminal/accounted sufficiently to release single-flight slot."
+      ],
+      "inputFixtureReference": "FX-PROBE",
+      "intent": "只说明当前是否有守卫及当前目标分数，不提出修改。",
+      "expectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4.",
+        "One logical request: duplicate same idempotency key before/after delivery; one initial provider dispatch only; duplicate submit/confirm never consumes another logical slot.",
+        "A separately gated bounded repair may use attempt2 only if actual malformed response warrants it; duplicate itself never dispatches."
+      ],
+      "pairedID": null,
+      "humanOptionSteps": [],
+      "status": "未执行",
+      "logicalExecutionOrder": 36,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "PROBE-IDEMPOTENT-A1",
+        "PROBE-IDEMPOTENT-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "PROBE-CANCEL",
+      "parentSlotID": null,
+      "caseID": "PROBE-CANCEL",
+      "repeat": 1,
+      "phase": "probe",
+      "phaseTask": "R0-T09",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "All previous dispatches terminal/accounted sufficiently to release single-flight slot."
+      ],
+      "inputFixtureReference": "FX-PROBE",
+      "intent": "只说明当前是否有守卫及当前目标分数，不提出修改。",
+      "expectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4.",
+        "Dispatch actual request then cancel frontend wait; preserve late/cancel state, permission epoch and actual usage; no assumption of free cancellation."
+      ],
+      "pairedID": null,
+      "humanOptionSteps": [],
+      "status": "未执行",
+      "logicalExecutionOrder": 37,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "PROBE-CANCEL-A1",
+        "PROBE-CANCEL-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "requestSlotID": "PROBE-TIMEOUT",
+      "parentSlotID": null,
+      "caseID": "PROBE-TIMEOUT",
+      "repeat": 1,
+      "phase": "probe",
+      "phaseTask": "R0-T09",
+      "preconditions": [
+        "T00 manifests frozen before any model result; fixture source fingerprints match.",
+        "T01/T03 immutable base/run identity and current catalog/registry/policy/build/artifact bound.",
+        "T06 precise model, outbound scope, token/amount approval and credential flow completed before dispatch; do not read secrets here.",
+        "Current adult permission/writer/epoch, budget and single-flight gate rechecked for every attempt.",
+        "All previous dispatches terminal/accounted sufficiently to release single-flight slot."
+      ],
+      "inputFixtureReference": "FX-PROBE",
+      "intent": "只说明当前是否有守卫及当前目标分数，不提出修改。",
+      "expectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4.",
+        "Apply approved gateway deadline to actual in-flight transport; record real provider timing/status/unknown usage; preserve reservation and in-flight slot until known.",
+        "If response arrives before deadline, record probe condition not observed rather than fake timeout or add a new request."
+      ],
+      "pairedID": null,
+      "humanOptionSteps": [],
+      "status": "未执行",
+      "logicalExecutionOrder": 38,
+      "maxProviderAttempts": 2,
+      "reservedAttemptIDs": [
+        "PROBE-TIMEOUT-A1",
+        "PROBE-TIMEOUT-A2"
+      ],
+      "runtimeRequestId": null,
+      "inputFixturePath": "verification/fixtures/scene-b.json"
+    }
+  ],
+  "executionOrder": [
+    "PROBE-ACCESS",
+    "R0-AI-01-R1-I",
+    "R0-AI-02-R1-I",
+    "R0-AI-03-R1-I",
+    "R0-AI-04-R1-I",
+    "R0-AI-05-R1-I",
+    "R0-AI-06-R1-I",
+    "R0-AI-07-R1-I",
+    "R0-AI-08-R1-I",
+    "R0-AI-09-R1-I",
+    "R0-AI-09-R1-F",
+    "R0-AI-10-R1-I",
+    "R0-AI-10-R1-F",
+    "R0-AI-13-R1-I",
+    "R0-AI-14-R1-I",
+    "R0-AI-01-R2-I",
+    "R0-AI-02-R2-I",
+    "R0-AI-03-R2-I",
+    "R0-AI-04-R2-I",
+    "R0-AI-05-R2-I",
+    "R0-AI-06-R2-I",
+    "R0-AI-07-R2-I",
+    "R0-AI-08-R2-I",
+    "R0-AI-09-R2-I",
+    "R0-AI-09-R2-F",
+    "R0-AI-10-R2-I",
+    "R0-AI-10-R2-F",
+    "R0-AI-13-R2-I",
+    "R0-AI-14-R2-I",
+    "R0-AI-11-R1-I",
+    "R0-AI-11-R1-F",
+    "R0-AI-12-R1-I",
+    "R0-AI-11-R2-I",
+    "R0-AI-11-R2-F",
+    "R0-AI-12-R2-I",
+    "PROBE-IDEMPOTENT",
+    "PROBE-CANCEL",
+    "PROBE-TIMEOUT"
+  ],
+  "expectedGameplayChecks": [
+    "For proposed gameplay: construct complete candidate; validate whole final document, same-candidateHash 180-tick CC-SMOKE-01/current build/artifact, human confirmation then one revision/one undo, new official run.",
+    "Before confirmation zero project writes. No model output self-certifies passed.",
+    "Record actual loaded parameter/position and triggered event coverage; 180 ticks never proves solvability/fairness/30-second timeout.",
+    "Human may refuse/retain; record reason and incomplete chain without coercion or replacement calls."
+  ],
+  "unresolvedRuntimeReferences": [],
+  "actualResults": null,
+  "frozenThemeCatalog": {
+    "reference": "config/catalog.json",
+    "orderedThemeIDs": [
+      "theme_snack",
+      "theme_r0_contrast"
+    ],
+    "secondThemeID": "theme_r0_contrast",
+    "playerSkinMapping": {
+      "theme_snack": "snack_player_01",
+      "theme_r0_contrast": "snack_player_01"
+    },
+    "scope": "Two builtin verification palettes only; root materializes catalog and locks hash before case07; no art/product validation claim."
+  }
+}

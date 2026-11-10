@@ -1,0 +1,548 @@
+{
+  "reviewId": "R1-PREP-INDEPENDENT-20261102",
+  "version": "review.4",
+  "date": "2026-11-02",
+  "reviewer": "独立非作者复审者（本子Agent）",
+  "reviewScope": "P00–P04非编码准备；只作静态文档与非执行JSON核验",
+  "productExecutionPerformed": false,
+  "codingAuthorized": false,
+  "status": "document_review_and_delivery_spotcheck_passed",
+  "issues": [
+    {
+      "id": "PREP-IR-01",
+      "priority": "P1",
+      "title": "另存失败后的新身份导航合同互斥",
+      "status": "closed",
+      "locations": [
+        {
+          "path": "contracts/repository-schema-and-transaction.md",
+          "section": "5.4 另存副本 NAV020",
+          "text": "成功才把NavigationContext切至新身份"
+        },
+        {
+          "path": "contracts/page-command-and-return.md",
+          "section": "4 R1-NAV-020通用另存副本冻结",
+          "text": "确认/失败均进入清楚标身份的新副本S02"
+        }
+      ],
+      "impact": "同一create rollback分支同时要求停留原身份与进入新身份，无法唯一实现；未存新副本的编辑/导出身份和sourceReturn可能混淆。",
+      "requestedRevision": "确认时为pending-new分配独立新身份/内存context；失败明确进入未存新副本并可返回原作；持久成功只控制saved、可靠起始版本与持久列表，不控制是否切新内存身份。",
+      "authorResponse": "Repository §5.4与REP11现为确认即独立pending-new身份/context进入新S02；失败保该新身份，sourceReturn保原作；commit只控制saved/持久列表/起始保障，与page §4一致。",
+      "recheck": {
+        "reviewer": "独立非作者复审者（本子Agent）",
+        "date": "2026-11-02",
+        "result": "passed_document_revision_only",
+        "basis": "Repository §5.4与REP11现为确认即独立pending-new身份/context进入新S02；失败保该新身份，sourceReturn保原作；commit只控制saved/持久列表/起始保障，与page §4一致。",
+        "fileFingerprints": [
+          {
+            "path": "contracts/repository-schema-and-transaction.md",
+            "sha256": "sha256:14624687e9d5ffc9d21c70314dd410e718185e65fcacbf866421dba8d6b40cfc"
+          },
+          {
+            "path": "contracts/page-command-and-return.md",
+            "sha256": "sha256:f6501e997deba853289eba545df71fe83ed17f016cced6bf3a29034579cc0f6a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PREP-IR-02",
+      "priority": "P1",
+      "title": "工作区清除缺少跨档案删除权限准入",
+      "status": "closed",
+      "locations": [
+        {
+          "path": "adr/ADR-R1-01-repository.md",
+          "section": "DG01第3点/工作区隔离"
+        },
+        {
+          "path": "contracts/repository-schema-and-transaction.md",
+          "section": "3 命令信封与端口/8 清除工作区"
+        },
+        {
+          "path": "adr/ADR-R1-02-adult-auth.md",
+          "section": "6 Reset、清除和最小审计"
+        },
+        {
+          "path": "contracts/page-command-and-return.md",
+          "section": "2 S08权限边界"
+        }
+      ],
+      "impact": "学生S08可到达的clear被扩大为workspace所有profiles/绑定浏览器，而仅普通profile会话即可准入；一位作者可删除隔离档案中的其他作者作品。",
+      "requestedRevision": "选择并写实跨档案清除的权限：建议S08只申请/提示范围，受控adult-origin重新认证并发行短期单次action-bound clear能力，Node在清除准入与持久线性化前核验；同步DG01/03待采用记录和拒绝/过期/重放/取消案例。",
+      "authorResponse": "ADR01/02、Repository §8及REP10、page S08/§3、AUTH09–12现要求adult-origin受限确认、本次重新口令认证、<=60秒精确action-bound单次能力；Node reserve和最终准入，C1同事务journal消费+generation屏障；普通profile越权、过期/重放/错payload均拒，C1后由journal续C2。",
+      "recheck": {
+        "reviewer": "独立非作者复审者（本子Agent）",
+        "date": "2026-11-02",
+        "result": "passed_document_revision_only",
+        "basis": "ADR01/02、Repository §8及REP10、page S08/§3、AUTH09–12现要求adult-origin受限确认、本次重新口令认证、<=60秒精确action-bound单次能力；Node reserve和最终准入，C1同事务journal消费+generation屏障；普通profile越权、过期/重放/错payload均拒，C1后由journal续C2。",
+        "fileFingerprints": [
+          {
+            "path": "adr/ADR-R1-01-repository.md",
+            "sha256": "sha256:eed41500e71471f47c4813ff016b0921ca063327911adf23903df153dfbb02fe"
+          },
+          {
+            "path": "adr/ADR-R1-02-adult-auth.md",
+            "sha256": "sha256:55401c97335f87f50bfc2f89d1c9abf6e728cdbe688b131f071f4eddf296c218"
+          },
+          {
+            "path": "contracts/repository-schema-and-transaction.md",
+            "sha256": "sha256:14624687e9d5ffc9d21c70314dd410e718185e65fcacbf866421dba8d6b40cfc"
+          },
+          {
+            "path": "contracts/page-command-and-return.md",
+            "sha256": "sha256:f6501e997deba853289eba545df71fe83ed17f016cced6bf3a29034579cc0f6a"
+          },
+          {
+            "path": "contracts/auth-projection-review-cases.json",
+            "sha256": "sha256:adf9bc536cc65f0aaa8725dc027f224180d92bd14224af3acc9ddae743a914b8"
+          },
+          {
+            "path": "entry-gate-register.json",
+            "sha256": "sha256:d01843722f0f2647bbbd8b95bcc28ac709f11d9452f67e1115e180be97281ddd"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PREP-IR-03",
+      "priority": "P2",
+      "title": "资产清单漏总览且83/84统计口径未闭合",
+      "status": "closed",
+      "locations": [
+        {
+          "path": "asset-register.json",
+          "section": "items/designManifestCount/count"
+        },
+        {
+          "path": "baseline-and-gap-register.md",
+          "section": "资产准入"
+        }
+      ],
+      "impact": "登记83场景SVG与83PNG，但两份00_界面总览实际存在且未列；每张设计图/缺失0易被误读为全部图稿已覆盖，旧84表述无法从台账直接解释。",
+      "requestedRevision": "另列总览SVG和PNG为设计参考并记录hash/用途/许可，或明确排除理由；清楚区分83个manifest场景与含总览84图，不改旧历史原件。",
+      "authorResponse": "已加总览SVG/PNG和实际R0目录，共195项；designImageCounts明确83 manifest场景+1总览=84 SVG/PNG。195项存在和hash再次全符。",
+      "recheck": {
+        "reviewer": "独立非作者复审者（本子Agent）",
+        "date": "2026-11-02",
+        "result": "passed_document_revision_only",
+        "basis": "已加总览SVG/PNG和实际R0目录，共195项；designImageCounts明确83 manifest场景+1总览=84 SVG/PNG。195项存在和hash再次全符。",
+        "fileFingerprints": [
+          {
+            "path": "asset-register.json",
+            "sha256": "sha256:21e24dc351d26cbd24a8bd2723cb59c8ec8a29520c6fd7e35ca99b7746d05b94"
+          },
+          {
+            "path": "baseline-and-gap-register.md",
+            "sha256": "sha256:171ae9ac8c1d56c846a7e8af3ab18acc114c497f975b1ce6b0eef002ed04dd5d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PREP-IR-04",
+      "priority": "P1",
+      "title": "恢复intent外键与两自动点裁剪缺终结策略",
+      "status": "closed",
+      "locations": [
+        {
+          "path": "contracts/repository-schema-and-transaction.md",
+          "section": "2.1 恢复/清除",
+          "text": "restore_intents FK protectionSnapshotId"
+        },
+        {
+          "path": "contracts/repository-schema-and-transaction.md",
+          "section": "6 恢复两阶段 R1",
+          "text": "自动点裁剪至2"
+        }
+      ],
+      "impact": "已完成applied_saved的restore_intents仍引用旧automatic保护点且未规定ON DELETE/同事务清理；连续第三次恢复裁剪被外键阻断，或实现者自行级联丢失未决恢复记录。",
+      "requestedRevision": "规定已完成/已明确放弃intent终结与外键删除策略；同保护事务只可淘汰不再承担恢复保障的旧automatic，protected/result_unknown未决必须保留并给容量退路；补连续3+恢复及完成/未决混合用例。",
+      "authorResponse": "新增Repository §6.1/REP15：保护点外键可空且NO ACTION兜底；已applied_saved/settled/cancelled的终结intent才允许在裁剪事务解绑FK保无正文Endpoint；protected/result_unknown pin，双pin阻新恢复。后续checkpoint须可信settlesRestoreOperationId/appliedRevision关联才终结恢复；连续3+成功恢复可裁剪。",
+      "recheck": {
+        "reviewer": "独立非作者复审者（本子Agent）",
+        "date": "2026-11-02",
+        "result": "passed_document_revision_only",
+        "basis": "新增Repository §6.1/REP15：保护点外键可空且NO ACTION兜底；已applied_saved/settled/cancelled的终结intent才允许在裁剪事务解绑FK保无正文Endpoint；protected/result_unknown pin，双pin阻新恢复。后续checkpoint须可信settlesRestoreOperationId/appliedRevision关联才终结恢复；连续3+成功恢复可裁剪。",
+        "fileFingerprints": [
+          {
+            "path": "contracts/repository-schema-and-transaction.md",
+            "sha256": "sha256:15e538904b294c4ff0bd07051db8cdcd9d24f611d0a3938bf8540fed190a2d2d"
+          }
+        ]
+      }
+    }
+  ],
+  "verified": {
+    "pageCases": 50,
+    "navigationCases": 75,
+    "crossScreenCases": 15,
+    "sliceCases": 87,
+    "requirementTrace": 52,
+    "pageAndNavigationExactSourceCopy": true,
+    "requirementTraceExactSourceCopy": true,
+    "sliceIdsAndStatementsPreserved": true,
+    "sourceReferencesHashMatch": true,
+    "developmentStrata": [
+      40,
+      16,
+      16,
+      8
+    ],
+    "heldoutStrata": [
+      10,
+      4,
+      4,
+      2
+    ],
+    "heldoutInitialDenominators": [
+      20,
+      8,
+      8,
+      4
+    ],
+    "heldoutThresholdCounts": [
+      16,
+      18,
+      8
+    ],
+    "assetFilesInitiallyVerified": 192,
+    "assetHashMismatchesInitially": 0,
+    "assetFilesFinalVerified": 195,
+    "assetHashMismatchesFinal": 0,
+    "designManifestScenes": 83,
+    "separateOverview": 1,
+    "totalSvg": 84,
+    "totalPng": 84,
+    "supplementalAuthProjectionCaseCount": 24,
+    "supplementalRepositoryCaseCount": 15,
+    "supplementalSpecialAICaseCount": 20,
+    "nonModelComparisonPairs": 4,
+    "allFourIssuesRecheckedByOriginalReviewer": true,
+    "allProductResultsRemainNotExecuted": true
+  },
+  "adoptionNotEvidence": [
+    "DG01/02/03仍待用户采用",
+    "G-R0未过/G-E待验/G-ADR待采用；G-R1-ENTRY不成立",
+    "400逻辑/800attempt只是上界，不是费用授权",
+    "所有产品/模型/真人/存储/认证/浏览器/测试运行结果未执行"
+  ],
+  "notes": [
+    "起始版本计入8命名与新导入起始+最多2额外快照是具体配额解释，不与C09/C10直接冲突，应在待采用记录显式列出。",
+    "sealed仅流程隔离，规划者/审阅者可读已披露；未来正式实施者若读取并用于调试，原20例不能再称未用于调试。"
+  ],
+  "openIssueCount": 0,
+  "closedIssueCount": 4,
+  "finalReviewScope": "作者合同独立复审与正式目录交付抽查完成；仅文档准备通过，不放行实现或证明产品实测。",
+  "finalReviewedArtifacts": [
+    {
+      "path": "README.md",
+      "sha256": "sha256:f6c06b53729ead7c04a0880429347d7a51dfaa9594ee216bdf67b6ecb29f9c96",
+      "bytes": 1494
+    },
+    {
+      "path": "acceptance/case-manifest.json",
+      "sha256": "sha256:643039a9c34314953af9ed239d031bde894a7f02772b8032c6cce15e769c0459",
+      "bytes": 430258
+    },
+    {
+      "path": "acceptance/development-cases.json",
+      "sha256": "sha256:8baf952019281a1bf7e3187a729b2f8b69809d2e083de6957e6aed32d139232c",
+      "bytes": 63370
+    },
+    {
+      "path": "acceptance/evidence-template.md",
+      "sha256": "sha256:fd491c56cc2cdb541b7afc749f4eb5b07588d59c4cd7f250f79f20050b297351",
+      "bytes": 3689
+    },
+    {
+      "path": "acceptance/non-model-comparison.md",
+      "sha256": "sha256:175d4ae3e548e41e997b3320e29e4694bd48753ee976ba3017c223224b2fa3dc",
+      "bytes": 2448
+    },
+    {
+      "path": "acceptance/performance-and-ai-budget.md",
+      "sha256": "sha256:9cd7043a9a803568eb1e9f9571e41e642d85bccb1b4037e8de39028367c7fa7a",
+      "bytes": 8319
+    },
+    {
+      "path": "acceptance/sealed/heldout-cases.json",
+      "sha256": "sha256:ee7c69383df87aaee1e09a374a6c5376ba6c9fc6a09821a378e5acf96111d0c1",
+      "bytes": 17643
+    },
+    {
+      "path": "acceptance/special-ai-cases.json",
+      "sha256": "sha256:06f38032d651922bb15f8638369a50a686439ea518adce0e6639d8b1eb300d90",
+      "bytes": 10033
+    },
+    {
+      "path": "adr/ADR-R1-01-repository.md",
+      "sha256": "sha256:41f354579a895e3f063b971736c649873c97936fd2fb48de3d6867be73b77193",
+      "bytes": 11460
+    },
+    {
+      "path": "adr/ADR-R1-02-adult-auth.md",
+      "sha256": "sha256:2341715c2bb1c7e39d77a5e0bede8be8ec151dba075330727866c8441956043f",
+      "bytes": 19117
+    },
+    {
+      "path": "adr/ADR-R1-03-projection-and-cursor.md",
+      "sha256": "sha256:8a93d362acec3d7748071d8a1c40bd3a4d67a1909ad0ceed190b573c879384ff",
+      "bytes": 9107
+    },
+    {
+      "path": "asset-register.json",
+      "sha256": "sha256:21e24dc351d26cbd24a8bd2723cb59c8ec8a29520c6fd7e35ca99b7746d05b94",
+      "bytes": 155916
+    },
+    {
+      "path": "baseline-and-gap-register.md",
+      "sha256": "sha256:171ae9ac8c1d56c846a7e8af3ab18acc114c497f975b1ce6b0eef002ed04dd5d",
+      "bytes": 4667
+    },
+    {
+      "path": "contracts/auth-projection-review-cases.json",
+      "sha256": "sha256:d6e58edc856fd64e8453997622b818fac4ed65cd2a744eb4cf6074b3e945b0fe",
+      "bytes": 7084
+    },
+    {
+      "path": "contracts/page-command-and-return.md",
+      "sha256": "sha256:8b13738471136f2fce94dd17c6932718903b533153e317edf54b9bd28ab0ee8a",
+      "bytes": 14732
+    },
+    {
+      "path": "contracts/repository-schema-and-transaction.md",
+      "sha256": "sha256:15e538904b294c4ff0bd07051db8cdcd9d24f611d0a3938bf8540fed190a2d2d",
+      "bytes": 47046
+    },
+    {
+      "path": "entry-gate-register.json",
+      "sha256": "sha256:6ff8a2566a999c9c8971f962dd640cc2dd3c8273810eaa58c2432b45926c69c2",
+      "bytes": 8190
+    },
+    {
+      "path": "entry-gates-and-decisions.md",
+      "sha256": "sha256:deb322c7615e40da0cf4f57b825183fe74ec7d5a7cccf9fb05ae1d1fb54b5828",
+      "bytes": 3139
+    },
+    {
+      "path": "plan-review-reference.md",
+      "sha256": "sha256:c4ff598d6b2fc3a4b658264b890564a3f85951869dad1c8b076a2924ad015fb4",
+      "bytes": 1610
+    }
+  ],
+  "finalReviewedArtifactsNote": "review.4作者材料最终指纹已纳入case-manifest末次仅元数据说明更新；issue.recheck.fileFingerprints保留各次历史字节，不伪覆盖。finalDeliverySpotcheck排除本次尚未复制回正式目录的独立报告/问题清单及交付manifest，父agent随后复制并独立字节核验。",
+  "postRevisionChecks": [
+    "另存pending-new新身份失败仍正确，原作sourceReturn零写",
+    "S08只申请；adult-origin本次重认证、60秒单次能力、C1同事务journal消费和generation屏障",
+    "C2=数据库删除+可信备份/文件实际清理+C2-final，db_deleted仍clearing无新writer，跨storage/auth/page/AUTH12一致",
+    "恢复连续3+成功及未决pin外键裁剪策略闭合；后续save关联settled",
+    "195资产全部存在/hash相符；83manifest场景+1总览=84套",
+    "开发/冻结输入hash仍相符，源任务JSON改指原采用存档且hash不变，现行状态另canonicalExecutionStatusSource",
+    "专项20总逻辑含后续，SP16拒发0logical/attempt释放槽给SP02；400/800非授权",
+    "T02最小真实helper本机verification独立于T15；无假设付费签名/公证完成",
+    "四组Nodon内部非模型比较不重排外部工具、不新发重复AI请求、不用sealed调试、不捏等价run"
+  ],
+  "finalDeliverySpotcheck": {
+    "checkedAt": "2026-11-02T00:46:18.420247+00:00",
+    "sourceRoot": "/private/tmp/nodon-r1-prep-stage/docs/r1",
+    "targetRoot": "/Users/dmy/Projects/Nodon-R0/docs/r1",
+    "result": "passed_read_only_document_delivery_check",
+    "comparedFileCount": 24,
+    "byteMismatches": [],
+    "comparedArtifacts": [
+      {
+        "path": "README.md",
+        "sha256": "sha256:f6c06b53729ead7c04a0880429347d7a51dfaa9594ee216bdf67b6ecb29f9c96"
+      },
+      {
+        "path": "acceptance/case-manifest.json",
+        "sha256": "sha256:643039a9c34314953af9ed239d031bde894a7f02772b8032c6cce15e769c0459"
+      },
+      {
+        "path": "acceptance/development-cases.json",
+        "sha256": "sha256:8baf952019281a1bf7e3187a729b2f8b69809d2e083de6957e6aed32d139232c"
+      },
+      {
+        "path": "acceptance/evidence-template.md",
+        "sha256": "sha256:fd491c56cc2cdb541b7afc749f4eb5b07588d59c4cd7f250f79f20050b297351"
+      },
+      {
+        "path": "acceptance/non-model-comparison.md",
+        "sha256": "sha256:175d4ae3e548e41e997b3320e29e4694bd48753ee976ba3017c223224b2fa3dc"
+      },
+      {
+        "path": "acceptance/performance-and-ai-budget.md",
+        "sha256": "sha256:9cd7043a9a803568eb1e9f9571e41e642d85bccb1b4037e8de39028367c7fa7a"
+      },
+      {
+        "path": "acceptance/sealed/heldout-cases.json",
+        "sha256": "sha256:ee7c69383df87aaee1e09a374a6c5376ba6c9fc6a09821a378e5acf96111d0c1"
+      },
+      {
+        "path": "acceptance/special-ai-cases.json",
+        "sha256": "sha256:06f38032d651922bb15f8638369a50a686439ea518adce0e6639d8b1eb300d90"
+      },
+      {
+        "path": "adr/ADR-R1-01-repository.md",
+        "sha256": "sha256:41f354579a895e3f063b971736c649873c97936fd2fb48de3d6867be73b77193"
+      },
+      {
+        "path": "adr/ADR-R1-02-adult-auth.md",
+        "sha256": "sha256:2341715c2bb1c7e39d77a5e0bede8be8ec151dba075330727866c8441956043f"
+      },
+      {
+        "path": "adr/ADR-R1-03-projection-and-cursor.md",
+        "sha256": "sha256:8a93d362acec3d7748071d8a1c40bd3a4d67a1909ad0ceed190b573c879384ff"
+      },
+      {
+        "path": "asset-register.json",
+        "sha256": "sha256:21e24dc351d26cbd24a8bd2723cb59c8ec8a29520c6fd7e35ca99b7746d05b94"
+      },
+      {
+        "path": "baseline-and-gap-register.md",
+        "sha256": "sha256:171ae9ac8c1d56c846a7e8af3ab18acc114c497f975b1ce6b0eef002ed04dd5d"
+      },
+      {
+        "path": "contracts/auth-projection-review-cases.json",
+        "sha256": "sha256:d6e58edc856fd64e8453997622b818fac4ed65cd2a744eb4cf6074b3e945b0fe"
+      },
+      {
+        "path": "contracts/page-command-and-return.md",
+        "sha256": "sha256:8b13738471136f2fce94dd17c6932718903b533153e317edf54b9bd28ab0ee8a"
+      },
+      {
+        "path": "contracts/repository-schema-and-transaction.md",
+        "sha256": "sha256:15e538904b294c4ff0bd07051db8cdcd9d24f611d0a3938bf8540fed190a2d2d"
+      },
+      {
+        "path": "entry-gate-register.json",
+        "sha256": "sha256:6ff8a2566a999c9c8971f962dd640cc2dd3c8273810eaa58c2432b45926c69c2"
+      },
+      {
+        "path": "entry-gates-and-decisions.md",
+        "sha256": "sha256:deb322c7615e40da0cf4f57b825183fe74ec7d5a7cccf9fb05ae1d1fb54b5828"
+      },
+      {
+        "path": "plan-review-reference.md",
+        "sha256": "sha256:c4ff598d6b2fc3a4b658264b890564a3f85951869dad1c8b076a2924ad015fb4"
+      },
+      {
+        "path": "review/document-validation.json",
+        "sha256": "sha256:bd9f4720d78a88e33510246790eaca5ec235c249ea511f73ecfa51af9116541d"
+      },
+      {
+        "path": "review/environment-reference.json",
+        "sha256": "sha256:7720bcc531e5ebd9e6ef8744d1103d10283808e3280f0c59cb81b8fa1e160479"
+      },
+      {
+        "path": "review/preparation-task-results.json",
+        "sha256": "sha256:0f065097086855ca132be580f62a20b00612bc0a7209cff8d9cc5e11dc352a90"
+      },
+      {
+        "path": "review/source-integrity-after.json",
+        "sha256": "sha256:00fca23fe3c712b9cf4c90a7d1b1b1e870123534ce4fb9dc6667b7e459ace591"
+      },
+      {
+        "path": "review/source-integrity-before.json",
+        "sha256": "sha256:67956800acd4f2f91442cace47b58160b5a67c9b4f0858f41c26b26d649b1b44"
+      }
+    ],
+    "excludedUntilRootFinalCopy": [
+      "review/delivery-manifest.json",
+      "review/independent-review.md",
+      "review/issues.json"
+    ],
+    "plannedDeliverables": {
+      "count": 11,
+      "allExistAtActualTarget": true,
+      "paths": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/baseline-and-gap-register.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/asset-register.json",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-01-repository.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/repository-schema-and-transaction.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-02-adult-auth.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-03-projection-and-cursor.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/page-command-and-return.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/case-manifest.json",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/evidence-template.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/performance-and-ai-budget.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/plan-review-reference.md"
+      ]
+    },
+    "executionStatus": {
+      "preparationTasksPassedDocumentOnly": 5,
+      "preparationSlicesPassedDocumentOnly": 16,
+      "formalTasksNotExecuted": 18,
+      "codingAuthorized": false,
+      "productExecutionPerformed": false,
+      "gates": {
+        "G-R1-ENTRY": "未通过",
+        "G-PLAN": "通过",
+        "G-R0": "未通过",
+        "G-E": "待验",
+        "G-ADR": "待用户采用"
+      }
+    },
+    "frozenPlanArchive": {
+      "path": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/10_R1非编码准备与准入记录/已采用计划输入",
+      "fileCount": 18,
+      "previousDeliveryIndexedFilesHashChecked": 15,
+      "mismatches": [],
+      "originalTaskStatus": "23项全部未执行的采用输入原样保留",
+      "taskIdsDependenciesAndAllSliceIdsStatementsUnchanged": true
+    },
+    "sourceIntegrity": {
+      "count": 976,
+      "independentlyRehashedReadOnly": 976,
+      "unchanged": 976,
+      "R0SourceArtifactDependencyCount": 677,
+      "sensitiveCredentialDataFilesRead": 0,
+      "mismatches": [],
+      "sourceSets": {
+        "review4_design": 246,
+        "T00_engineering": 53,
+        "R0_build_source": 125,
+        "R0_runtime_core": 12,
+        "R0_runtime_dependencies": 540
+      }
+    },
+    "manifest": {
+      "counts": {
+        "pageCases": 50,
+        "navigationCases": 75,
+        "crossScreenCases": 15,
+        "sliceCases": 87,
+        "requirementTrace": 52
+      },
+      "sourceReferenceHashesAllMatch": true,
+      "canonicalExecutionStatusSeparateFromFrozenExpectations": true,
+      "preparationResultsReference": "review/preparation-task-results.json",
+      "frozenAIInitialDenominators": {
+        "supported": 20,
+        "ambiguous": 8,
+        "unsupported": 8,
+        "boundary": 4
+      },
+      "thresholdCounts": {
+        "supportedFirstCorrect": 16,
+        "supportedAfterAtMostOneRepair": 18,
+        "ambiguousCorrectClarification": 8
+      },
+      "developmentCases": 80,
+      "heldoutCases": 20,
+      "supplementalCasesDoNotAlterOriginalDenominators": true
+    },
+    "rootDocumentValidation": {
+      "count": 52,
+      "allPassed": true,
+      "scope": "documentation_validation_not_product_test"
+    },
+    "limitations": [
+      "没有运行runtime/browser/test/model，没有读取凭证",
+      "G-ADR及DG01/02/03供用户采用，不因文档复审通过被批准",
+      "G-R0/G-E未满足，R1实施AND未通过；当前正式编码仍禁止",
+      "独立审阅输出与最终delivery-manifest由父agent随后复制并另行核字节，不纳入本次目标一致性声明"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-02",
+  "sourceType": "read_only_tool_location_check_not_compilation",
+  "commands": {
+    "xcode-select -p": {
+      "exitCode": 0,
+      "stdout": "/Library/Developer/CommandLineTools"
+    },
+    "xcrun --find swiftc": {
+      "exitCode": 0,
+      "stdout": "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    }
+  },
+  "compilerExecuted": false,
+  "helperCompiled": false,
+  "helperSigned": false,
+  "keychainAccessed": false,
+  "certificatesRead": false,
+  "limitation": "只确认工具定位；Swift/SDK精确版本、签名身份、helper构建和系统认证实际可用性均待T02/T15登记并验证，不因此放行DG03。"
+}

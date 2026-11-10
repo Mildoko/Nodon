@@ -1,0 +1,28 @@
+{
+  "segments": [
+    {
+      "ticks": 64,
+      "x": 0,
+      "y": -1
+    },
+    {
+      "ticks": 165,
+      "x": -1,
+      "y": 0
+    },
+    {
+      "ticks": 128,
+      "x": 0,
+      "y": 1
+    },
+    {
+      "ticks": 140,
+      "x": 1,
+      "y": 0
+    }
+  ],
+  "maxTicks": 497,
+  "stopOnLegalTerminal": true,
+  "inputSource": "catalog_machine",
+  "inputId": "a-normal-route-mirror"
+}

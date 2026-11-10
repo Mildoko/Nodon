@@ -1,0 +1,39 @@
+{
+  "kind": "T00_freeze_document_and_environment_only",
+  "date": "2026-10-28",
+  "productRuntimeExecuted": false,
+  "t00IndependentReviewer": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high",
+    "name": "r0_t00_audit",
+    "P2Found": 4,
+    "P2Closed": 4,
+    "openP1": 0,
+    "openP2": 0,
+    "conclusion": "T00 final fingerprint then enter T01"
+  },
+  "checks": {
+    "caseIdsUnique": true,
+    "allCasesUnexecuted": true,
+    "controlledFixturesMaterialized": 19,
+    "inputFilesMaterialized": 13,
+    "realSemanticShaVectors": 19,
+    "requestSlots": 38,
+    "requestSlotOrderUnique": true,
+    "pairedBlocks": 28,
+    "sourceBaselinesUnmodified": true,
+    "exactEnvironmentAndLockfile": true
+  },
+  "conditions": {
+    "AI": "T06未批provider/model/token/金额，当前零发送",
+    "human": "未指派；相应人类环节阻塞但不阻内核",
+    "browser": "新R0环境未探测；旧原型拒绝有效",
+    "sqlite": "仅环境memory probe，未验持久账本",
+    "codegraph": "无源码阶段配置已初始化，首次源码后索引仍必需"
+  },
+  "numericReportTolerance": {
+    "absolute": 1e-09,
+    "relative": 1e-12,
+    "neverAffectsRuntimeThreshold": true
+  }
+}

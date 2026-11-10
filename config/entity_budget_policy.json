@@ -1,0 +1,48 @@
+{
+  "version": "entity-budget@1",
+  "designOnly": true,
+  "formatVersion": "3.0-review.3",
+  "runtimeVersion": "collect-chase@1",
+  "maxTotal": 18,
+  "kinds": {
+    "player": {
+      "min": 1,
+      "max": 1,
+      "add": false,
+      "copy": false,
+      "delete": false
+    },
+    "guard": {
+      "min": 0,
+      "max": 2
+    },
+    "normal": {
+      "min": 0,
+      "max": 12
+    },
+    "high": {
+      "min": 0,
+      "max": 3
+    }
+  },
+  "radii": {
+    "player": 12,
+    "guard": 14,
+    "normal": 10,
+    "high": 10
+  },
+  "world": {
+    "minX": 20,
+    "maxX": 940,
+    "minY": 20,
+    "maxY": 520,
+    "step": 10,
+    "surfaceGap": 4
+  },
+  "playability": "at least one reward and 1 <= targetScore <= totalScore; zero rewards or insufficient total is a savable draft, not a playable level",
+  "noGuard": "no chase/caught; retained global guard parameters inactive; timer unchanged",
+  "ai": "manual add/copy/delete only; AI reads counts, explains and locates object panel; no new write operations",
+  "placement": "preview first, explicit legal coordinate commit; no silent nearest-point relocation",
+  "identity": "new ID per add/copy, monotonic project allocator; undo restores same ID; allocator never rewinds",
+  "limitsEvidence": "review defaults, not performance or teaching evidence"
+}

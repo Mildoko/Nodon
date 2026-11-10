@@ -1,0 +1,61 @@
+{
+  "formatVersion": "3.0-review.3",
+  "runtimeVersion": "collect-chase@1",
+  "catalogVersion": "workshop-core@1",
+  "project": {
+    "projectId": "r0-fixture-double-reward",
+    "revision": 0,
+    "title": "R0见证:double-reward",
+    "instructions": "R0专用机器见证，用于精确规则核验。",
+    "authorNote": "",
+    "designIntent": null,
+    "sourceProject": null,
+    "scene": {
+      "worldId": "rect_960_540",
+      "width": 960,
+      "height": 540,
+      "entities": [
+        {
+          "id": "p",
+          "kind": "player",
+          "x": 20,
+          "y": 270
+        },
+        {
+          "id": "n10",
+          "kind": "normal",
+          "x": 70,
+          "y": 250
+        },
+        {
+          "id": "n2",
+          "kind": "normal",
+          "x": 70,
+          "y": 290
+        }
+      ]
+    },
+    "rules": {
+      "goal": {
+        "targetScore": 2
+      },
+      "rewards": {
+        "normalValue": 1,
+        "highValue": 3
+      },
+      "guards": {
+        "speed": 20,
+        "detectRadius": 60
+      },
+      "timer": {
+        "enabled": false,
+        "limit": 15
+      }
+    },
+    "presentation": {
+      "themeId": "theme_snack",
+      "playerSkinId": "snack_player_01"
+    },
+    "semanticHash": "sha256:0adb4e8ff22dd6a4937c5685f6ea3c6788339d3a5427ebf9e6f191d8e7a050d2"
+  }
+}

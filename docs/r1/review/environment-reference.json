@@ -1,0 +1,11 @@
+{
+  "kind": "read_only_reference_environment_not_performance_result",
+  "os": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "frozenNode": "24.21.0",
+  "frozenNpm": "11.19.0",
+  "referenceBuild": "7f9533356b2c",
+  "nodeExecutedThisRound": false,
+  "actualBrowserAndDevicePerformance": null,
+  "performanceEquipmentRule": "T00登记同一实际机器型号/内存/OS/浏览器精确版本/电源模式/后台负载；缺字段不能测。其他设备另列，不冒充已测。"
+}

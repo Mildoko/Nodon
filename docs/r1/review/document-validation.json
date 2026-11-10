@@ -1,0 +1,326 @@
+{
+  "version": "r1-prep-document-check.final",
+  "kind": "documentation_validation_not_product_test",
+  "checks": [
+    {
+      "id": "DOC-01",
+      "check": "pages count",
+      "passed": true,
+      "detail": 10
+    },
+    {
+      "id": "DOC-02",
+      "check": "pages unique IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-03",
+      "check": "pageCases count",
+      "passed": true,
+      "detail": 50
+    },
+    {
+      "id": "DOC-04",
+      "check": "pageCases unique IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-05",
+      "check": "navigationCases count",
+      "passed": true,
+      "detail": 75
+    },
+    {
+      "id": "DOC-06",
+      "check": "navigationCases unique IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-07",
+      "check": "crossScreenCases count",
+      "passed": true,
+      "detail": 15
+    },
+    {
+      "id": "DOC-08",
+      "check": "crossScreenCases unique IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-09",
+      "check": "sliceCases count",
+      "passed": true,
+      "detail": 87
+    },
+    {
+      "id": "DOC-10",
+      "check": "sliceCases unique IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-11",
+      "check": "requirementTrace count",
+      "passed": true,
+      "detail": 52
+    },
+    {
+      "id": "DOC-12",
+      "check": "requirementTrace unique IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-13",
+      "check": "50UX完全保留",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-14",
+      "check": "75NAV完全保留",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-15",
+      "check": "52F完全保留",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-16",
+      "check": "源输入hash:页面与跳转矩阵.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-17",
+      "check": "源输入hash:工程任务与依赖.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-18",
+      "check": "源输入hash:需求到页面任务与证据追踪.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-19",
+      "check": "development例数",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-20",
+      "check": "development分层",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-21",
+      "check": "development全部未执行",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-22",
+      "check": "development请求不超300UTF16",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-23",
+      "check": "development非propose无ops",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-24",
+      "check": "heldout例数",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-25",
+      "check": "heldout分层",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-26",
+      "check": "heldout全部未执行",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-27",
+      "check": "heldout请求不超300UTF16",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-28",
+      "check": "heldout非propose无ops",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-29",
+      "check": "AI输入hash:acceptance/development-cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-30",
+      "check": "AI输入hash:acceptance/sealed/heldout-cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-31",
+      "check": "资产数量195",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-32",
+      "check": "资产全部存在",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-33",
+      "check": "资产hash全部一致",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-34",
+      "check": "83场景+1总览=84套",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-35",
+      "check": "AI冻结分母",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-36",
+      "check": "AI冻结门槛",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-37",
+      "check": "专项20输入有独立预期",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-38",
+      "check": "24认证投影例",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-39",
+      "check": "所有AUTH未执行",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-40",
+      "check": "REP15含连续恢复",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-41",
+      "check": "只有md/json文档",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-42",
+      "check": "内部markdown链接存在",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "id": "DOC-43",
+      "check": "编码false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-44",
+      "check": "总门未过",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-45",
+      "check": "976源输入后验不变",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-46",
+      "check": "677R0源码产物依赖不变",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-47",
+      "check": "P00至P04五项仅文档通过",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-48",
+      "check": "T00至T17十八项未执行",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-49",
+      "check": "计划内11份P交付实际存在",
+      "passed": true,
+      "detail": {
+        "plannedCount": 11,
+        "presentCount": 11
+      }
+    },
+    {
+      "id": "DOC-50",
+      "check": "依赖ID均存在",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-51",
+      "check": "任务与AND门合并DAG无环",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "DOC-52",
+      "check": "独立4问题同人关闭",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "count": 52,
+  "passed": 52,
+  "failed": [],
+  "productOrTestOrModelExecuted": false,
+  "executedAt": "2026-11-02T00:45:08.077828+00:00"
+}

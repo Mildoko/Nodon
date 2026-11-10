@@ -1,0 +1,12 @@
+{
+  "segments": [
+    {
+      "ticks": 16,
+      "x": 1,
+      "y": 0
+    }
+  ],
+  "maxTicks": 16,
+  "inputSource": "catalog_machine",
+  "inputId": "double-reward"
+}

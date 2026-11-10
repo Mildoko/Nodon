@@ -1,0 +1,1754 @@
+{
+  "protocolVersion": "r0-validation-division-v2",
+  "createdDate": "2026-11-02",
+  "status": "active_reviewed",
+  "authorization": {
+    "source": "explicit_user_request_this_turn",
+    "snapshotPath": "18_R0冻结验证协议修订与自动化/00_切换前事实与指纹.json",
+    "snapshotCreatedAt": "2026-11-02T04:20:46.611716+00:00",
+    "actualUserMessageTimestamp": null,
+    "scope": "revise_and_review_protocol_then_automatically_execute_mechanical_R0_only; genuine_intent_experience_and_actual_options_remain_human"
+  },
+  "codeRoot": "/Users/dmy/Projects/Nodon-R0",
+  "protocolPath": "docs/r0-validation-protocol-v2.md",
+  "overlayPrecedence": {
+    "supersedesOnly": "future_operator_division_and_evidence_reporting",
+    "unchanged": [
+      "original_slots",
+      "original_execution_order",
+      "original_pair_AB_BA",
+      "original_prompts",
+      "original_expected_outputs",
+      "original_fixtures",
+      "original_parent_child_preconditions",
+      "original_budget",
+      "historical_results"
+    ],
+    "conflictAction": "stop_affected_step_and_record_no_silent_manifest_edit"
+  },
+  "immutableReferences": [
+    {
+      "path": "docs/r0-comparison-protocol.md",
+      "sha256": "f676c5ce03ff762f272d1fe2bd854c1d4e9de19d6f205fb253982974bb49aaad"
+    },
+    {
+      "path": "verification/model-request-manifest.json",
+      "sha256": "f19ee52518b91cab22456ae12aa7d53562dc12f4f93dcf71c52221b8827d0701"
+    },
+    {
+      "path": "verification/comparison-manifest.json",
+      "sha256": "63755405d702ad513fd5824e395188d7c5369c5f3acdb19eec533991eb5f95f9"
+    },
+    {
+      "path": "docs/r0-t00-freeze-check.json",
+      "sha256": "4d30a223832767d7baf8542ffc7197cc813aa3428ba8174a062b6c5c9055f093"
+    }
+  ],
+  "t00FreezeEntries": 53,
+  "denominators": {
+    "initialMain": 28,
+    "child": 6,
+    "probes": 4,
+    "logicalTotal": 38,
+    "maxProviderAttempts": 76,
+    "repairAttemptsSeparate": true,
+    "neverShrinkForBlockedOrHumanPending": true
+  },
+  "budget": {
+    "provider": "DeepSeek",
+    "approvedModelVersion": "1017",
+    "totalCapCNY": 20,
+    "attemptCapCNY": 0.06,
+    "inputTokenCap": 12000,
+    "outputTokenCap": 4096,
+    "concurrency": 1,
+    "implicitSDKRetries": 0,
+    "maxAttemptsPerLogical": 2,
+    "newPaidSlots": 0,
+    "firstBatchAutomaticA2": false,
+    "unknownDispatchOrUsageBlocksLaterSlots": true,
+    "usageEstimateIsSupplierBill": false
+  },
+  "sourceKinds": [
+    "legacy_human",
+    "new_machine_engineering",
+    "human_choice_or_experience",
+    "expert_semantic_review",
+    "pending_human"
+  ],
+  "machineIdentity": {
+    "evidenceSource": "machine_engineering_only",
+    "participantId": null,
+    "humanDecision": null,
+    "humanSemanticJudgment": null,
+    "createHumanWitness": false,
+    "callDecisionToAccept": false,
+    "candidateConfirmMeaning": "engineering_apply_after_frozen_oracle_not_author_accept",
+    "setAdultMechanism": "existing_AiAuthority.setAdult(true)_experimental_engineering_permission_not_real_adult_authentication_or_human_decision"
+  },
+  "cutover": {
+    "priorBuild": "f8d6b514a215",
+    "accountedAttemptIDs": [
+      "PROBE-ACCESS-A1",
+      "R0-AI-01-R1-I-A1",
+      "R0-AI-02-R1-I-A1",
+      "R0-AI-03-R1-I-A1"
+    ],
+    "accountedAttemptCount": 4,
+    "usageCalculatedNanoCNY": 12098640,
+    "reservationNanoCNY": 227072000,
+    "supplierBillVerified": false,
+    "nextUnconsumedSlot": "R0-AI-04-R1-I",
+    "newProviderCallsByProtocolAuthor": 0,
+    "legacyB04": "limited_pass_separate_legacy_human_evidence_generation2_and_52seconds_scope_unknown_and_delayed_export_preserved",
+    "oldBuildHumanQualificationMigratesAutomatically": false
+  },
+  "executionOrder": [
+    "PROBE-ACCESS",
+    "R0-AI-01-R1-I",
+    "R0-AI-02-R1-I",
+    "R0-AI-03-R1-I",
+    "R0-AI-04-R1-I",
+    "R0-AI-05-R1-I",
+    "R0-AI-06-R1-I",
+    "R0-AI-07-R1-I",
+    "R0-AI-08-R1-I",
+    "R0-AI-09-R1-I",
+    "R0-AI-09-R1-F",
+    "R0-AI-10-R1-I",
+    "R0-AI-10-R1-F",
+    "R0-AI-13-R1-I",
+    "R0-AI-14-R1-I",
+    "R0-AI-01-R2-I",
+    "R0-AI-02-R2-I",
+    "R0-AI-03-R2-I",
+    "R0-AI-04-R2-I",
+    "R0-AI-05-R2-I",
+    "R0-AI-06-R2-I",
+    "R0-AI-07-R2-I",
+    "R0-AI-08-R2-I",
+    "R0-AI-09-R2-I",
+    "R0-AI-09-R2-F",
+    "R0-AI-10-R2-I",
+    "R0-AI-10-R2-F",
+    "R0-AI-13-R2-I",
+    "R0-AI-14-R2-I",
+    "R0-AI-11-R1-I",
+    "R0-AI-11-R1-F",
+    "R0-AI-12-R1-I",
+    "R0-AI-11-R2-I",
+    "R0-AI-11-R2-F",
+    "R0-AI-12-R2-I",
+    "PROBE-IDEMPOTENT",
+    "PROBE-CANCEL",
+    "PROBE-TIMEOUT"
+  ],
+  "firstAutomaticBatch": {
+    "slots": [
+      "R0-AI-04-R1-I",
+      "R0-AI-05-R1-I",
+      "R0-AI-06-R1-I",
+      "R0-AI-07-R1-I",
+      "R0-AI-08-R1-I"
+    ],
+    "then": "R0-AI-09-R1-I_to_obtain_actual_options",
+    "stopAt": "R0-AI-09-R1-F_until_actual_human_eligible_layout_choice",
+    "skipChildOrReorderAllowed": false,
+    "pairedSideOrder": "original_comparison_manifest",
+    "noHumanButtonConfirmationForDeterministicSteps": true,
+    "runtimeInputPlan": {
+      "R0-AI-04-R1-I": {
+        "A": [
+          {
+            "dx": 1,
+            "dy": 0,
+            "ticks": 200
+          },
+          {
+            "dx": -1,
+            "dy": 0,
+            "ticks": 120
+          }
+        ],
+        "B": "mirror_dx",
+        "assertion": "actual_loaded_radius_and_covered_chase_boundary_only"
+      },
+      "R0-AI-05-R1-I": {
+        "A": [
+          {
+            "dx": 0,
+            "dy": 0,
+            "ticks": 1800
+          }
+        ],
+        "B": "mirror_dx",
+        "assertion": "actual_timeout"
+      },
+      "R0-AI-06-R1-I": {
+        "A": [
+          {
+            "dx": 0,
+            "dy": -1,
+            "ticks": 19
+          },
+          {
+            "dx": 1,
+            "dy": 0,
+            "ticks": 173
+          }
+        ],
+        "B": [
+          {
+            "dx": 0,
+            "dy": -1,
+            "ticks": 19
+          },
+          {
+            "dx": -1,
+            "dy": 0,
+            "ticks": 173
+          }
+        ],
+        "assertion": "actual_h1_collection_at_new_coordinate"
+      },
+      "R0-AI-07-R1-I": {
+        "A": "runtime_not_applicable",
+        "B": "runtime_not_applicable"
+      },
+      "R0-AI-08-R1-I": {
+        "A": [
+          {
+            "dx": 1,
+            "dy": 0,
+            "ticks": 200
+          },
+          {
+            "dx": -1,
+            "dy": 0,
+            "ticks": 120
+          }
+        ],
+        "B": "mirror_dx",
+        "assertion": "actual_loaded_rules_and_covered_events_only"
+      }
+    },
+    "offlineExpectedOperationsPreflight": "before_provider_call_confirm_inputs_then_lock_hash_not_paid_model_evidence"
+  },
+  "preOutputFreeze": {
+    "required": true,
+    "fields": [
+      "slot_oracle",
+      "allowed_operations",
+      "full_document_constraints",
+      "trial_input",
+      "formal_run_input",
+      "expected_coverage",
+      "fingerprints"
+    ],
+    "deriveFrom": "original_manifest_and_contracts",
+    "adaptOracleAfterSeeingOutput": false
+  },
+  "sameHostContinuity": {
+    "requiredFor": [
+      "09_parent_child",
+      "10_parent_child",
+      "11_RT07_explanation_child_recheck"
+    ],
+    "silentJsonRehydrateAsHumanChain": false,
+    "expiredAuthorityMustBeRechecked": true,
+    "cannotRestoreLegally": "blocked_no_extra_paid_slot"
+  },
+  "timing": {
+    "sideLimitSeconds": 900,
+    "machineWallClockNotHumanNetTime": true,
+    "unknownHumanStartOrNetTime": null,
+    "legacyHumanVersusNewMachineEfficiencyAllowed": false
+  },
+  "acceptance": {
+    "engineeringProgressAllowed": true,
+    "overallR0AutomaticGo": false,
+    "GE": "未执行/待合格非开发者证据",
+    "R1Coding": false,
+    "makeCode": "user_skip_preserved_not_pass_not_reintroduced_as_prerequisite",
+    "authorExperienceCanBeFilledByMachine": false,
+    "twoRealChainsAndOtherGatesRemainSeparate": true,
+    "statuses": [
+      "未执行",
+      "通过",
+      "失败",
+      "阻塞",
+      "不适用"
+    ]
+  },
+  "slots": [
+    {
+      "requestSlotID": "PROBE-ACCESS",
+      "logicalExecutionOrder": 1,
+      "caseID": "PROBE-ACCESS",
+      "repeat": 1,
+      "phase": "probe",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4."
+      ],
+      "consumptionAtCutover": "legacy_accounted_access",
+      "statusAtCutover": "历史记录保留",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_probe_original_order",
+      "machineActions": [
+        "execute_original_probe_only_when_preconditions_met",
+        "preserve_unknown_reservation_and_single_flight",
+        "no_implicit_retry"
+      ],
+      "humanRequiredFor": [],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": false,
+      "dispatchAllowed": false
+    },
+    {
+      "requestSlotID": "R0-AI-01-R1-I",
+      "logicalExecutionOrder": 2,
+      "caseID": "R0-AI-01",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: exactly one set_goal 10→6; all else unchanged"
+      ],
+      "consumptionAtCutover": "legacy_human_limited_chain",
+      "statusAtCutover": "历史记录保留",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": false,
+      "dispatchAllowed": false
+    },
+    {
+      "requestSlotID": "R0-AI-02-R1-I",
+      "logicalExecutionOrder": 3,
+      "caseID": "R0-AI-02",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: exactly one joint set_reward_values normal1→2/high3→4"
+      ],
+      "consumptionAtCutover": "legacy_blocked_permission_revoked",
+      "statusAtCutover": "历史记录保留",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": false,
+      "dispatchAllowed": false
+    },
+    {
+      "requestSlotID": "R0-AI-03-R1-I",
+      "logicalExecutionOrder": 4,
+      "caseID": "R0-AI-03",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_guard_speed 100→80; detect180 unchanged"
+      ],
+      "consumptionAtCutover": "legacy_human_limited_chain",
+      "statusAtCutover": "历史记录保留",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": false,
+      "dispatchAllowed": false
+    },
+    {
+      "requestSlotID": "R0-AI-04-R1-I",
+      "logicalExecutionOrder": 5,
+      "caseID": "R0-AI-04",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_detect_radius 180→140; speed100 unchanged"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-05-R1-I",
+      "logicalExecutionOrder": 6,
+      "caseID": "R0-AI-05",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_timer enabled=true/limit30; no guard; goal4 unchanged"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-06-R1-I",
+      "logicalExecutionOrder": 7,
+      "caseID": "R0-AI-06",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only move_entity h1 (660,190)→(540,220); stable ID; no rebinding"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-07-R1-I",
+      "logicalExecutionOrder": 8,
+      "caseID": "R0-AI-07",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_theme to theme_r0_contrast (second frozen theme), playerSkin snack_player_01; semanticHash unchanged",
+        "Pure theme uses static checks/runtime_not_applicable, never fake runtime passed"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "static_catalog_hash_checks_runtime_not_applicable",
+        "engineering_apply_after_frozen_oracle",
+        "static_visual_evidence"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-08-R1-I",
+      "logicalExecutionOrder": 9,
+      "caseID": "R0-AI-08",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: set_goal10→6 + set_detect_radius180→140 in one atomic batch; timer disabled",
+        "Bad second operation rejects whole batch, no partial goal write"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "operationOrderPolicy": {
+        "independentOperationsMaySwap": true,
+        "eachExactlyOnce": true,
+        "extraOrDuplicateAllowed": false,
+        "candidateHashUses": "actual_operation_order"
+      },
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R1-I",
+      "logicalExecutionOrder": 10,
+      "caseID": "R0-AI-09",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only 2–3 genuinely distinct supported directions including layout; preserve no timer and goal6",
+        "Human chooses an actually offered layout direction; only then child request"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_choice_gated",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R1-F",
+      "logicalExecutionOrder": 11,
+      "caseID": "R0-AI-09",
+      "repeat": 1,
+      "phase": "direction_followup",
+      "parentSlotID": "R0-AI-09-R1-I",
+      "frozenExpectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Keep goal6 and timer disabled; stable reward IDs; no add/delete."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_parent_choice_then_machine_child_engineering",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence",
+        "verify_child_fidelity_to_pre_frozen_selected_option",
+        "trial_actual_candidate",
+        "engineering_apply_after_frozen_oracle_when_choice_covers_all_tradeoffs",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R1-I",
+      "logicalExecutionOrder": 12,
+      "caseID": "R0-AI-10",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only compare layout/time; no added guard, no goal change",
+        "Human chooses actually offered time direction, then child request enable30 seconds"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_choice_gated",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R1-F",
+      "logicalExecutionOrder": 13,
+      "caseID": "R0-AI-10",
+      "repeat": 1,
+      "phase": "direction_followup",
+      "parentSlotID": "R0-AI-10-R1-I",
+      "frozenExpectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Only set_timer enabled=true/limit30; preserve no guard/goal4."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_parent_choice_then_machine_child_engineering",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence",
+        "verify_child_fidelity_to_pre_frozen_selected_option",
+        "trial_actual_candidate",
+        "engineering_apply_after_frozen_oracle_when_choice_covers_all_tradeoffs",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-13-R1-I",
+      "logicalExecutionOrder": 14,
+      "caseID": "R0-AI-13",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "answered/manual_quantity; no add/delete ops or apply entry; state concrete manual guard-delete path",
+        "Human may manually delete g1, timer remains disabled; no follow-up model request"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_manual_quantity_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "check_answered_manual_quantity_no_model_apply_entry",
+        "expert_review_concrete_supported_manual_path",
+        "machine_direct_control_delete_stable_g1",
+        "assert_timer_disabled_limit45_other_values_unchanged",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "exploration_experience_or_author_value_if_claimed"
+      ],
+      "expertSemanticReviewRequired": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-14-R1-I",
+      "logicalExecutionOrder": 15,
+      "caseID": "R0-AI-14",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "unsupported; no invented tools, teleport, wall or covert chase substitution",
+        "Human exit/retain; zero writes; no promise of future support"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_readonly_with_expert_semantic_review",
+      "machineActions": [
+        "submit_frozen_slot",
+        "assert_actual_kind_and_zero_project_writes",
+        "assert_no_extra_observation_request",
+        "expert_review_no_fabricated_cause_history_capability_or_promises"
+      ],
+      "humanRequiredFor": [
+        "author_retain_exit_or_subjective_understanding_if_claimed"
+      ],
+      "expertSemanticReviewRequired": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-01-R2-I",
+      "logicalExecutionOrder": 16,
+      "caseID": "R0-AI-01",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: exactly one set_goal 10→6; all else unchanged"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-02-R2-I",
+      "logicalExecutionOrder": 17,
+      "caseID": "R0-AI-02",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: exactly one joint set_reward_values normal1→2/high3→4"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-03-R2-I",
+      "logicalExecutionOrder": 18,
+      "caseID": "R0-AI-03",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_guard_speed 100→80; detect180 unchanged"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-04-R2-I",
+      "logicalExecutionOrder": 19,
+      "caseID": "R0-AI-04",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_detect_radius 180→140; speed100 unchanged"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-05-R2-I",
+      "logicalExecutionOrder": 20,
+      "caseID": "R0-AI-05",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_timer enabled=true/limit30; no guard; goal4 unchanged"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-06-R2-I",
+      "logicalExecutionOrder": 21,
+      "caseID": "R0-AI-06",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only move_entity h1 (660,190)→(540,220); stable ID; no rebinding"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-07-R2-I",
+      "logicalExecutionOrder": 22,
+      "caseID": "R0-AI-07",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: only set_theme to theme_r0_contrast (second frozen theme), playerSkin snack_player_01; semanticHash unchanged",
+        "Pure theme uses static checks/runtime_not_applicable, never fake runtime passed"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "static_catalog_hash_checks_runtime_not_applicable",
+        "engineering_apply_after_frozen_oracle",
+        "static_visual_evidence"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-08-R2-I",
+      "logicalExecutionOrder": 23,
+      "caseID": "R0-AI-08",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "proposed: set_goal10→6 + set_detect_radius180→140 in one atomic batch; timer disabled",
+        "Bad second operation rejects whole batch, no partial goal write"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "deterministic_machine_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "validate_actual_output_and_full_candidate_against_pre_frozen_oracle",
+        "trial_same_candidate_build_artifact",
+        "engineering_apply_after_frozen_oracle",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "author_intent_or_experience_if_claimed"
+      ],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "operationOrderPolicy": {
+        "independentOperationsMaySwap": true,
+        "eachExactlyOnce": true,
+        "extraOrDuplicateAllowed": false,
+        "candidateHashUses": "actual_operation_order"
+      },
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R2-I",
+      "logicalExecutionOrder": 24,
+      "caseID": "R0-AI-09",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only 2–3 genuinely distinct supported directions including layout; preserve no timer and goal6",
+        "Human chooses an actually offered layout direction; only then child request"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_choice_gated",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-09-R2-F",
+      "logicalExecutionOrder": 25,
+      "caseID": "R0-AI-09",
+      "repeat": 2,
+      "phase": "direction_followup",
+      "parentSlotID": "R0-AI-09-R2-I",
+      "frozenExpectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Keep goal6 and timer disabled; stable reward IDs; no add/delete."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_parent_choice_then_machine_child_engineering",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence",
+        "verify_child_fidelity_to_pre_frozen_selected_option",
+        "trial_actual_candidate",
+        "engineering_apply_after_frozen_oracle_when_choice_covers_all_tradeoffs",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R2-I",
+      "logicalExecutionOrder": 26,
+      "caseID": "R0-AI-10",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only compare layout/time; no added guard, no goal change",
+        "Human chooses actually offered time direction, then child request enable30 seconds"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_choice_gated",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-10-R2-F",
+      "logicalExecutionOrder": 27,
+      "caseID": "R0-AI-10",
+      "repeat": 2,
+      "phase": "direction_followup",
+      "parentSlotID": "R0-AI-10-R2-I",
+      "frozenExpectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Only set_timer enabled=true/limit30; preserve no guard/goal4."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_parent_choice_then_machine_child_engineering",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence",
+        "verify_child_fidelity_to_pre_frozen_selected_option",
+        "trial_actual_candidate",
+        "engineering_apply_after_frozen_oracle_when_choice_covers_all_tradeoffs",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-13-R2-I",
+      "logicalExecutionOrder": 28,
+      "caseID": "R0-AI-13",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "answered/manual_quantity; no add/delete ops or apply entry; state concrete manual guard-delete path",
+        "Human may manually delete g1, timer remains disabled; no follow-up model request"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_manual_quantity_engineering",
+      "machineActions": [
+        "submit_frozen_slot",
+        "check_answered_manual_quantity_no_model_apply_entry",
+        "expert_review_concrete_supported_manual_path",
+        "machine_direct_control_delete_stable_g1",
+        "assert_timer_disabled_limit45_other_values_unchanged",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "exploration_experience_or_author_value_if_claimed"
+      ],
+      "expertSemanticReviewRequired": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-14-R2-I",
+      "logicalExecutionOrder": 29,
+      "caseID": "R0-AI-14",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "unsupported; no invented tools, teleport, wall or covert chase substitution",
+        "Human exit/retain; zero writes; no promise of future support"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_readonly_with_expert_semantic_review",
+      "machineActions": [
+        "submit_frozen_slot",
+        "assert_actual_kind_and_zero_project_writes",
+        "assert_no_extra_observation_request",
+        "expert_review_no_fabricated_cause_history_capability_or_promises"
+      ],
+      "humanRequiredFor": [
+        "author_retain_exit_or_subjective_understanding_if_claimed"
+      ],
+      "expertSemanticReviewRequired": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R1-I",
+      "logicalExecutionOrder": 30,
+      "caseID": "R0-AI-11",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only explanation cites actual @3 event IDs, original run rules/revision/actual values; separate facts/rules/hypotheses",
+        "No fabrication; human chooses one actual minimal supported change; then child request and re-run"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_choice_gated",
+      "machineActions": [
+        "generate_same_host_real_RT07_caught_at3_before_submit",
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R1-F",
+      "logicalExecutionOrder": 31,
+      "caseID": "R0-AI-11",
+      "repeat": 1,
+      "phase": "explanation_followup",
+      "parentSlotID": "R0-AI-11-R1-I",
+      "frozenExpectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Preserve facts and distinguish hypothesis; rerun frozen recheck input after confirm; improvement may be supported/refuted/unknown."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_parent_choice_then_machine_child_engineering",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence",
+        "verify_child_fidelity_to_pre_frozen_selected_option",
+        "trial_actual_candidate",
+        "engineering_apply_after_frozen_oracle_when_choice_covers_all_tradeoffs",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-12-R1-I",
+      "logicalExecutionOrder": 32,
+      "caseID": "R0-AI-12",
+      "repeat": 1,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only unknown/missing evidence; may ask one necessary observation; no invented history/cause",
+        "Human retain/exit; no extra model observation request"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_readonly_with_expert_semantic_review",
+      "machineActions": [
+        "submit_frozen_slot",
+        "assert_actual_kind_and_zero_project_writes",
+        "assert_no_extra_observation_request",
+        "expert_review_no_fabricated_cause_history_capability_or_promises"
+      ],
+      "humanRequiredFor": [
+        "author_retain_exit_or_subjective_understanding_if_claimed"
+      ],
+      "expertSemanticReviewRequired": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R2-I",
+      "logicalExecutionOrder": 33,
+      "caseID": "R0-AI-11",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only explanation cites actual @3 event IDs, original run rules/revision/actual values; separate facts/rules/hypotheses",
+        "No fabrication; human chooses one actual minimal supported change; then child request and re-run"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_choice_gated",
+      "machineActions": [
+        "generate_same_host_real_RT07_caught_at3_before_submit",
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-11-R2-F",
+      "logicalExecutionOrder": 34,
+      "caseID": "R0-AI-11",
+      "repeat": 2,
+      "phase": "explanation_followup",
+      "parentSlotID": "R0-AI-11-R2-I",
+      "frozenExpectedOutput": [
+        "Supported bounded candidate implements only chosen eligible option; complete checks/trial/confirmation/new run; model must not manufacture human choice.",
+        "Preserve facts and distinguish hypothesis; rerun frozen recheck input after confirm; improvement may be supported/refuted/unknown."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "human_parent_choice_then_machine_child_engineering",
+      "machineActions": [
+        "submit_only_when_original_order_and_all_preconditions_met",
+        "check_actual_supported_output_and_constraints",
+        "preserve_same_host_parent_child_evidence",
+        "verify_child_fidelity_to_pre_frozen_selected_option",
+        "trial_actual_candidate",
+        "engineering_apply_after_frozen_oracle_when_choice_covers_all_tradeoffs",
+        "new_machine_run_and_export"
+      ],
+      "humanRequiredFor": [
+        "choose_actual_eligible_parent_option_with_rationale",
+        "new_ambiguity_or_tradeoff_not_covered_by_parent_choice_if_present"
+      ],
+      "expertSemanticReviewRequired": true,
+      "stopBeforeChildWithoutActualHumanChoice": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates",
+      "childAuthorAcceptance": "pending_unless_actual_author_judgment_never_inferred_from_parent_choice",
+      "humanButtonConfirmationRequiredByDefault": false,
+      "newChildAmbiguityAction": "present_actual_differences_for_genuine_human_judgment_then_agent_operates",
+      "humanRefusalOrIntentChange": "stop_chain_preserve_result_no_extra_request_to_replace_failure"
+    },
+    {
+      "requestSlotID": "R0-AI-12-R2-I",
+      "logicalExecutionOrder": 35,
+      "caseID": "R0-AI-12",
+      "repeat": 2,
+      "phase": "initial",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only unknown/missing evidence; may ask one necessary observation; no invented history/cause",
+        "Human retain/exit; no extra model observation request"
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_readonly_with_expert_semantic_review",
+      "machineActions": [
+        "submit_frozen_slot",
+        "assert_actual_kind_and_zero_project_writes",
+        "assert_no_extra_observation_request",
+        "expert_review_no_fabricated_cause_history_capability_or_promises"
+      ],
+      "humanRequiredFor": [
+        "author_retain_exit_or_subjective_understanding_if_claimed"
+      ],
+      "expertSemanticReviewRequired": true,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "PROBE-IDEMPOTENT",
+      "logicalExecutionOrder": 36,
+      "caseID": "PROBE-IDEMPOTENT",
+      "repeat": 1,
+      "phase": "probe",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4.",
+        "One logical request: duplicate same idempotency key before/after delivery; one initial provider dispatch only; duplicate submit/confirm never consumes another logical slot.",
+        "A separately gated bounded repair may use attempt2 only if actual malformed response warrants it; duplicate itself never dispatches."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_probe_original_order",
+      "machineActions": [
+        "execute_original_probe_only_when_preconditions_met",
+        "preserve_unknown_reservation_and_single_flight",
+        "no_implicit_retry"
+      ],
+      "humanRequiredFor": [],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "PROBE-CANCEL",
+      "logicalExecutionOrder": 37,
+      "caseID": "PROBE-CANCEL",
+      "repeat": 1,
+      "phase": "probe",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4.",
+        "Dispatch actual request then cancel frontend wait; preserve late/cancel state, permission epoch and actual usage; no assumption of free cancellation."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_probe_original_order",
+      "machineActions": [
+        "execute_original_probe_only_when_preconditions_met",
+        "preserve_unknown_reservation_and_single_flight",
+        "no_implicit_retry"
+      ],
+      "humanRequiredFor": [],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    },
+    {
+      "requestSlotID": "PROBE-TIMEOUT",
+      "logicalExecutionOrder": 38,
+      "caseID": "PROBE-TIMEOUT",
+      "repeat": 1,
+      "phase": "probe",
+      "parentSlotID": null,
+      "frozenExpectedOutput": [
+        "Read-only answered; no operations, current guard count0 and goal4.",
+        "Apply approved gateway deadline to actual in-flight transport; record real provider timing/status/unknown usage; preserve reservation and in-flight slot until known.",
+        "If response arrives before deadline, record probe condition not observed rather than fake timeout or add a new request."
+      ],
+      "consumptionAtCutover": "unconsumed",
+      "statusAtCutover": "未执行",
+      "participantIdForNewMachineEvidence": null,
+      "humanDecisionForMachineActions": null,
+      "humanWitnessForMachineActions": null,
+      "executionMode": "machine_probe_original_order",
+      "machineActions": [
+        "execute_original_probe_only_when_preconditions_met",
+        "preserve_unknown_reservation_and_single_flight",
+        "no_implicit_retry"
+      ],
+      "humanRequiredFor": [],
+      "expertSemanticReviewRequired": false,
+      "newMachineExecutionAuthorizedByThisRow": "only_after_independent_review_and_original_preconditions",
+      "dispatchAllowed": "conditional_after_review_original_order_and_gates"
+    }
+  ],
+  "pairBlocks": [
+    {
+      "pairBlockID": "PAIR-01-R1",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-02-R1",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-03-R1",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-04-R1",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-05-R1",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-06-R1",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-07-R1",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-08-R1",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-09-R1",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-10-R1",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-13-R1",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-14-R1",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-01-R2",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-02-R2",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-03-R2",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-04-R2",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-05-R2",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-06-R2",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-07-R2",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-08-R2",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-09-R2",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-10-R2",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-13-R2",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-14-R2",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-11-R1",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-12-R1",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-11-R2",
+      "order": "BA",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    },
+    {
+      "pairBlockID": "PAIR-12-R2",
+      "order": "AB",
+      "sourceManifestUnchanged": true,
+      "futureUnperformedBMode": "machine_direct_control",
+      "humanComparisonClaimAllowed": false,
+      "legacyHumanEvidenceSeparate": true
+    }
+  ],
+  "effectiveScope": "future_actions_after_current_explicit_authorization_and_independent_review_pass_only",
+  "effectiveAt": "2026-11-02T04:30:49Z",
+  "adoption": {
+    "authority": "root_adopted_after_user_authorized_independent_review",
+    "review": "R01_no_open_P1_or_P2",
+    "appliesTo": "future_actions_only",
+    "legacyFourSlotsRedispatchAllowed": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": "nodon-r0-deepseek-access@1",
+  "provider": "deepseek",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "model": "deepseek-flash",
+  "productModel": "DeepSeek-V4.1-Flash-1017",
+  "modelApproved": true,
+  "budgetApproved": true,
+  "availabilityApproved": true,
+  "outboundScopeApproved": true,
+  "credentialsConfigured": true,
+  "inputTokenCap": 12000,
+  "outputTokenCap": 4096,
+  "totalTokenCap": 1223296,
+  "attemptAmountCapNanoCNY": 60000000,
+  "totalAmountCapNanoCNY": 20000000000,
+  "maxLogicalRequests": 38,
+  "maxAttempts": 76,
+  "concurrency": 1,
+  "implicitRetries": 0
+}

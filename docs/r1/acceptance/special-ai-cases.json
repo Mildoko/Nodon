@@ -1,0 +1,214 @@
+{
+  "version": "r1-ai-special.freeze1",
+  "sourceType": "non_executable_planned_product_scenarios",
+  "modelCallsPerformed": false,
+  "scope": "20专项情境覆盖在最多20总逻辑请求槽内统筹（含所有后续，不是20初始再另加）。SP16发送前拒绝应为0logical/0attempt，可将该未消耗槽预分给SP02后续；每次执行前记录slotId→caseId/phase，若实际需要更多则先停并另核范围/预算。",
+  "cases": [
+    {
+      "id": "R1-AI-SP01",
+      "name": "明确双参数创作",
+      "fixture": "explore",
+      "requestText": "目标改8分，守卫速度改80；奖励和布局保持。",
+      "expected": "propose两个合法op；同hash真实trial，作者确认后revision+1和新正式run，原候选不冒充已玩",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP02",
+      "name": "澄清和比较",
+      "fixture": "explore",
+      "requestText": "想轻松一点，但不改奖励数量，请给两个方向。",
+      "expected": "directions/clarify无ops；作者选降低速度方向后新后续请求（不额外超出已计后续槽），不能自动选择",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP03",
+      "name": "真实事件解释",
+      "fixture": "actual_current_at3",
+      "requestText": "解释我主动选的这次caught：为什么步末距离大于26仍失败？",
+      "expected": "只引用本次真实run逐对ContactWitness步内最近/步末采样；缺证即未知；不得拿当前参数补旧run",
+      "actualEventBinding": null,
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP04",
+      "name": "解释后的再验证",
+      "fixture": "actual_current_at3",
+      "requestText": "根据刚才的证据，只把守卫速度改为80，我来试。",
+      "expected": "新请求/候选/hash/trial/确认/新run可追；没改善照记；若原速度已80，先说明无净变化而不捏改",
+      "actualEventBinding": null,
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP05",
+      "name": "旧证据缺见证",
+      "fixture": "legacy_at2",
+      "requestText": "能确定这次失败发生的接触点吗？",
+      "expected": "不能从@2端点捏造步内接触点，标未知、建议新真实观察；无伪Witness",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP06",
+      "name": "无守卫参数请求",
+      "fixture": "no_guard",
+      "requestText": "把守卫减速到80。",
+      "expected": "E_NO_GUARD或只读说明，不产生可应用候选",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP07",
+      "name": "缺ID",
+      "fixture": "missing_h1",
+      "requestText": "把h1移到(600,200)，不动其他物件。",
+      "expected": "缺ID整批拒绝，不改成h2",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP08",
+      "name": "零奖励计时",
+      "fixture": "empty_rewards",
+      "requestText": "开启30秒计时，不加奖励。",
+      "expected": "玩法候选不可玩阻断；合法草稿保留，无假passed",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP09",
+      "name": "数量手动退路",
+      "fixture": "explore",
+      "requestText": "增加一个特别奖励。",
+      "expected": "locate/manual_quantity，无ops无应用；到手动物件面板",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP10",
+      "name": "主题例外",
+      "fixture": "unplayable_draft",
+      "requestText": "只换成theme_r0_contrast验证配色，不改玩法。",
+      "expected": "纯set_theme静态通过且runtime_not_applicable，无伪run，草稿仍不可玩",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP11",
+      "name": "混合含玩法",
+      "fixture": "explore",
+      "requestText": "换验证配色并把目标改8分。",
+      "expected": "全批同hash真实Runtime试跑；不得按主题免除",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP12",
+      "name": "取消迟到",
+      "fixture": "explore",
+      "requestText": "目标改8分。",
+      "expected": "pending后实际取消→迟到响应永久终止，零写入；费用仍按实际/未知预留",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP13",
+      "name": "关闭AI迟到",
+      "fixture": "explore",
+      "requestText": "目标改8分。",
+      "expected": "pending后成人关AI→重开→迟到，旧请求无ops不可应用",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP14",
+      "name": "候选后改版",
+      "fixture": "explore",
+      "requestText": "目标改8分。",
+      "expected": "proposed后标题编辑也增revision使旧候选过期，不能同semanticHash绕过",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP15",
+      "name": "失写权",
+      "fixture": "explore",
+      "requestText": "守卫速度改80。",
+      "expected": "validation中接管写锁，迟到trial不得授应用权",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP16",
+      "name": "额度不足",
+      "fixture": "explore",
+      "requestText": "目标改8分。",
+      "expected": "发送前预留失败则零实际请求/zerocharge声明不得超出账本证据；此场景不为凑20而真发",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP17",
+      "name": "网络中断",
+      "fixture": "explore",
+      "requestText": "目标改8分。",
+      "expected": "真实/故障注入分别标源，发送后断网保未知预留；重试最多2attempt/同logical，不自动再次提交",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP18",
+      "name": "事件截断",
+      "fixture": "actual_current_at3_truncated",
+      "requestText": "这些事件能解释为什么守卫开始追我吗？",
+      "expected": "缺cause标未知，不靠前端链顺序补因果；只发主动选中最小事实",
+      "actualEventBinding": null,
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP19",
+      "name": "上下文切换",
+      "fixture": "explore",
+      "requestText": "目标改8分。",
+      "expected": "answered/proposed后换作旧结果不可应用，不把返回旧面板当恢复授权",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    },
+    {
+      "id": "R1-AI-SP20",
+      "name": "幂等重复确认",
+      "fixture": "explore",
+      "requestText": "守卫速度改80。",
+      "expected": "同commandId返回原回执不多写、不多扣、不暂停新run；另一commandId拒重复应用",
+      "actualEventBinding": "not_applicable",
+      "status": "not_executed",
+      "followupPolicy": "专项20总逻辑内分配；每条最多2传输attempt；未指定修复不增发"
+    }
+  ],
+  "slotPolicy": {
+    "ceiling": 20,
+    "allocation": "SP01–SP20各预留一槽；SP16不发而释放的槽仅供SP02的一次方向后续；若有别的后续需求，停止并重排尚未使用的专项槽，不能超过20。",
+    "rejectedBeforeSend": "0logical/0attempt",
+    "globalCalculation": "200初始+40主集澄清+140主集语义修复+20专项=400logical；每logical最多2传输attempt。"
+  }
+}

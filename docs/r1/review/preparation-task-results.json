@@ -1,0 +1,139 @@
+{
+  "version": "r1-preparation-results@1",
+  "date": "2026-11-02",
+  "documentTasksPassed": 5,
+  "documentSlicesPassed": 16,
+  "formalTasksNotExecuted": 18,
+  "codingAuthorized": false,
+  "productTestsRun": false,
+  "browserOperated": false,
+  "modelCalls": 0,
+  "credentialsRead": false,
+  "results": [
+    {
+      "taskId": "R1-P00",
+      "status": "passed_document_preparation_only",
+      "deliverables": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/baseline-and-gap-register.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/asset-register.json"
+      ],
+      "sliceIds": [
+        "R1-SLICE-P00-01",
+        "R1-SLICE-P00-02",
+        "R1-SLICE-P00-03"
+      ],
+      "evidence": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/baseline-and-gap-register.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/asset-register.json",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/review/independent-review.md"
+      ],
+      "review": "3 P1 + 1 P2同人复核关闭；正式交付同步抽查另记",
+      "actualStart": null,
+      "actualCompletionRecordedAt": "2026-11-02T00:44:47.100116+00:00",
+      "actualDuration": null,
+      "timingLimitation": "逐任务真实开始未同步采样，净耗时未知；不按文件mtime/聊天间隔回填。结束为本次交付状态记录时刻。"
+    },
+    {
+      "taskId": "R1-P01",
+      "status": "passed_document_preparation_only",
+      "deliverables": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-01-repository.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/repository-schema-and-transaction.md"
+      ],
+      "sliceIds": [
+        "R1-SLICE-P01-01",
+        "R1-SLICE-P01-02",
+        "R1-SLICE-P01-03"
+      ],
+      "evidence": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-01-repository.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/repository-schema-and-transaction.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/review/independent-review.md"
+      ],
+      "review": "3 P1 + 1 P2同人复核关闭；正式交付同步抽查另记",
+      "actualStart": null,
+      "actualCompletionRecordedAt": "2026-11-02T00:44:47.100116+00:00",
+      "actualDuration": null,
+      "timingLimitation": "逐任务真实开始未同步采样，净耗时未知；不按文件mtime/聊天间隔回填。结束为本次交付状态记录时刻。"
+    },
+    {
+      "taskId": "R1-P02",
+      "status": "passed_document_preparation_only",
+      "deliverables": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-02-adult-auth.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-03-projection-and-cursor.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/page-command-and-return.md"
+      ],
+      "sliceIds": [
+        "R1-SLICE-P02-01",
+        "R1-SLICE-P02-02",
+        "R1-SLICE-P02-03"
+      ],
+      "evidence": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-02-adult-auth.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-03-projection-and-cursor.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/page-command-and-return.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/review/independent-review.md"
+      ],
+      "review": "3 P1 + 1 P2同人复核关闭；正式交付同步抽查另记",
+      "actualStart": null,
+      "actualCompletionRecordedAt": "2026-11-02T00:44:47.100116+00:00",
+      "actualDuration": null,
+      "timingLimitation": "逐任务真实开始未同步采样，净耗时未知；不按文件mtime/聊天间隔回填。结束为本次交付状态记录时刻。"
+    },
+    {
+      "taskId": "R1-P03",
+      "status": "passed_document_preparation_only",
+      "deliverables": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/case-manifest.json",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/evidence-template.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/performance-and-ai-budget.md"
+      ],
+      "sliceIds": [
+        "R1-SLICE-P03-01",
+        "R1-SLICE-P03-02",
+        "R1-SLICE-P03-03",
+        "R1-SLICE-P03-04"
+      ],
+      "evidence": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/case-manifest.json",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/evidence-template.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/performance-and-ai-budget.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/review/independent-review.md"
+      ],
+      "review": "3 P1 + 1 P2同人复核关闭；正式交付同步抽查另记",
+      "actualStart": null,
+      "actualCompletionRecordedAt": "2026-11-02T00:44:47.100116+00:00",
+      "actualDuration": null,
+      "timingLimitation": "逐任务真实开始未同步采样，净耗时未知；不按文件mtime/聊天间隔回填。结束为本次交付状态记录时刻。"
+    },
+    {
+      "taskId": "R1-P04",
+      "status": "passed_document_preparation_only",
+      "deliverables": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/plan-review-reference.md"
+      ],
+      "sliceIds": [
+        "R1-SLICE-P04-01",
+        "R1-SLICE-P04-02",
+        "R1-SLICE-P04-03"
+      ],
+      "evidence": [
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/plan-review-reference.md",
+        "/Users/dmy/Projects/Nodon-R0/docs/r1/review/independent-review.md"
+      ],
+      "review": "3 P1 + 1 P2同人复核关闭；正式交付同步抽查另记",
+      "actualStart": null,
+      "actualCompletionRecordedAt": "2026-11-02T00:44:47.100116+00:00",
+      "actualDuration": null,
+      "timingLimitation": "逐任务真实开始未同步采样，净耗时未知；不按文件mtime/聊天间隔回填。结束为本次交付状态记录时刻。"
+    }
+  ],
+  "timing": {
+    "firstObservedRoundTimestamp": "2026-11-02T00:34:22Z",
+    "completionRecordedAt": "2026-11-02T00:44:47.100116+00:00",
+    "perTaskActualStartCaptured": false,
+    "netDuration": null,
+    "note": "只给实际观测窗口；不当作各任务精确开始/净操作耗时。"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "segments": [
+    {
+      "ticks": 884,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ticks": 16,
+      "x": -1,
+      "y": 0
+    }
+  ],
+  "maxTicks": 900,
+  "inputSource": "catalog_machine",
+  "inputId": "terminal-conflict-mirror"
+}

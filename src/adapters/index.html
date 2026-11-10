@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nodon R0 · 规则实验台</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#workspace" aria-label="Nodon R0 工作台"><span class="brand-mark">n</span><span>Nodon <small>R0 / 规则实验台</small></span></a>
+    <div class="header-actions"><span id="connection-state" class="badge">正在连接 Node</span><button id="text-size" type="button" aria-pressed="false">文字 200%</button><button id="reconnect" type="button" hidden>手动重连</button></div>
+  </header>
+  <p id="session-detail" class="session-detail" role="status">等待 Node 会话状态。</p>
+  <div id="network-banner" class="banner danger" role="alert" hidden></div>
+  <div id="restart-banner" class="banner" role="status" hidden></div>
+  <div id="build-banner" class="banner danger" role="alert" hidden></div>
+  <main id="workspace">
+    <section class="intro"><div><p class="eyebrow">先改一条规则，再看看发生什么</p><h1>收集、躲避，做自己的小实验。</h1><p>作品只在当前 Node 服务内存中。刷新保留服务器作品并暂停试玩；重启服务恢复初态，没有保存功能。</p></div><span class="pill">验证工作台 · 非完整产品</span></section>
+    <section class="work-layout">
+      <aside class="panel editor-panel" aria-labelledby="editor-title">
+        <div class="section-head"><h2 id="editor-title">当前作品</h2><span id="revision" class="badge">—</span></div>
+        <p id="project-title" class="project-title">等待服务器快照</p>
+        <details open><summary>规则、预算与版本</summary><div id="rules-summary" class="facts"></div><pre id="document-meta" class="mono"></pre></details>
+        <details><summary>受控验证场景</summary><p class="hint">切换将明确重置当前内存作品，不是保存或导入。旧运行仅在服务器当前内存归档。</p><label>场景<select id="catalog-select"><option value="scene-a">场景 A · 收集与守卫</option><option value="scene-b">场景 B · 花园</option><option value="zero-guard-route">零守卫路线 · 受控验证</option></select></label><label class="check"><input id="catalog-confirm" type="checkbox">我确认重置当前内存作品</label><button id="catalog-reset" type="button" disabled>明确切换受控场景</button></details>
+        <div class="divider"></div>
+        <h3>一次改动</h3><p class="hint">先交给 Node 预览，再明确确认。输入会保留，断网后可安全重试或取消。</p>
+        <form id="edit-form">
+          <label>操作<select id="edit-action">
+            <option value="set_goal">目标分数</option><option value="set_reward_values">两类奖励分值</option><option value="set_guard_speed">守卫速度</option><option value="set_detect_radius">发现半径</option><option value="set_timer">计时规则</option><option value="set_theme">主题配色</option><option value="move_entity">精确移动物件</option><option value="add_entity">新增非玩家物件</option><option value="copy_entity">复制非玩家物件</option><option value="remove_entity">删除非玩家物件</option><option value="set_title">作品标题</option><option value="set_instructions">玩法说明</option><option value="undo">撤销最近一次改动</option>
+          </select></label>
+          <div id="edit-fields"></div>
+          <button id="preview-edit" type="submit" class="primary full" disabled>Node 预览改动</button>
+        </form>
+        <section id="preview-panel" class="preview-box" hidden aria-label="Node 命令预览"><h3>Node 预览 · 尚未提交</h3><div class="button-row"><button id="confirm-edit" type="button" class="primary">确认这一次命令</button><button id="cancel-edit" type="button">取消预览</button></div><pre id="preview-detail"></pre></section>
+      </aside>
+      <section class="center-column">
+        <div class="panel canvas-panel">
+          <div class="section-head"><h2>画布</h2><label class="compact">快照来源<select id="view-source"><option value="document">当前作品</option><option value="run">正式试玩</option><option value="candidate">候选试跑</option></select></label></div>
+          <p id="canvas-caption" class="hint">所有画面由 Node 快照绘制。</p>
+          <div class="canvas-wrap"><canvas id="play-canvas" width="960" height="540" tabindex="0" aria-label="试玩画布；点击聚焦后使用方向键或 WASD 移动"></canvas></div>
+          <div class="legend"><span><i class="dot player"></i>玩家</span><span><i class="dot guard"></i>守卫</span><span><i class="dot normal"></i>普通奖励</span><span><i class="dot high"></i>高分奖励</span><span>虚线圈：发现范围</span></div>
+          <div class="run-bar"><div><strong id="run-state">尚未开始</strong><p id="run-score" class="hint">由 Node 计算分数与胜负</p></div><div class="button-row"><button id="run-start" type="button" class="primary" disabled>开始 / 重来</button><button id="run-pause" type="button" disabled>暂停</button><button id="run-resume" type="button" disabled>明确继续</button></div></div>
+          <p class="hint">点击画布，等待本次run已显示且Node焦点确认true后，再用 Arrow / WASD。离开画布、切换标签页或断网会清键并暂停；返回或重连不会自动继续。</p>
+          <p id="source-label" class="provenance">实验输入：machine_browser_input / automation_test</p>
+          <p id="input-readiness" class="hint">等待 Node 焦点与运行状态。</p>
+          <details><summary>R0 输入与快照观察</summary><p class="hint">本地观察记录不推进游戏。请求完成、Node 收到、实际生效 tick 与页面投影分开显示；绘制提交时间不等于屏幕实际显示时间。</p><pre id="r0-observation"></pre></details>
+        </div>
+        <section class="panel events-panel" aria-labelledby="events-title">
+          <div class="section-head"><h2 id="events-title">正式试玩 · 真实事件</h2><span id="event-count" class="badge">0</span></div>
+          <p class="hint">选择一条事件会先暂停正式试玩。只读查看原始数值；缺失前因不会补造。</p>
+          <div class="events-grid"><div id="event-list" class="event-list" aria-label="事件列表"></div><div><p id="event-empty" class="empty">先开始试玩，Node 记录的事件会出现在这里。</p><pre id="event-detail" class="event-detail" hidden></pre></div></div>
+          <details><summary>运行诊断与采样信息</summary><pre id="run-meta"></pre></details>
+        </section>
+      </section>
+      <aside class="right-column">
+        <section id="real-ai-panel" class="panel" hidden aria-labelledby="real-ai-title"><p class="eyebrow">R0 · 真实供应商冻结验证</p><h2 id="real-ai-title">真实 AI 请求与人工判断</h2><p class="disclosure">只发送当前冻结合成作品及主动选中的最小事件。费用沿用20元总帽；不代表R1界面或正式成人认证已实现。</p><p class="hint"><a href="#adult-permission">查看 / 启用同页成人实验权限</a> · <a href="#candidate-detail-panel">查看候选差异与明确确认</a></p><details><summary>冻结请求状态与预算</summary><pre id="real-ai-state"></pre></details><div class="button-row"><button id="real-ai-send" type="button" disabled>开始当前冻结请求</button><button id="real-ai-cancel" type="button" disabled>取消真实请求</button></div><p id="real-ai-response" class="hint"></p><div id="real-ai-child-fields" hidden><label>父结果的实际选项<select id="real-ai-parent-option"></select></label><label>方向类别<select id="real-ai-direction-class"><option value="layout">布局</option><option value="time">计时</option><option value="minimal_change">最小改法</option></select></label></div><label>外部真人见证引用（如已登记）<input id="real-ai-witness" type="text" maxlength="200" placeholder="由本轮外部记录提供；不发给模型"></label><div class="button-row"><button id="real-ai-frozen-run" type="button" hidden>生成冻结RT07真实900tick证据</button><button id="real-ai-recheck" type="button" hidden>按冻结输入再验已确认版本</button><button id="real-ai-advance-child" type="button" hidden>进入同一作品的方向/改法后续</button><button id="real-ai-retry" type="button" hidden>原请求零发送失败后显式重提</button><select id="real-ai-dispose-reason" aria-label="子步骤阻塞原因"><option value="parent_no_eligible_options">父结果没有合法选项</option><option value="human_reject">真人拒绝</option><option value="human_retain">真人保留、不继续</option><option value="program_precondition_unavailable">程序前置不可用</option></select><button id="real-ai-dispose" type="button" hidden>记录子步骤阻塞（不发送）</button></div><label>人工语义判断<select id="real-ai-semantic"><option value="unknown">尚不能判断</option><option value="correct">符合本题约束</option><option value="incorrect">不符合本题约束</option></select></label><label>作者决定<select id="real-ai-author-choice"><option value="retain">暂时保留，不应用</option><option value="accept">接受候选，准备确认</option><option value="reject">拒绝本次结果</option></select></label><label>判断依据<textarea id="real-ai-rationale" maxlength="300" rows="2"></textarea></label><button id="real-ai-record" type="button" disabled>记录本人的判断</button><p class="hint">记录接受不自动应用；仍需下方候选完成真实试跑并明确确认。内部开发者自测不等于独立非开发者证据。</p></section>
+        <section class="panel candidate-panel" aria-labelledby="candidate-title"><p id="candidate-kind-label" class="eyebrow">T05 · 受控候选流程</p><h2 id="candidate-title">把改动当作一个提案</h2><p id="candidate-disclosure" class="disclosure">source: controlled_fixture<br>以下是手工构造的 1–3 项白名单操作，<strong>不是模型输出</strong>。程序使用真实 Runtime 验证；结果不等于真人通关证明。</p>
+          <details id="adult-permission" class="adult-panel" open><summary>同页成人实验权限</summary><p class="hint">仅供本机实验，不是正式监护身份认证。</p><p id="authority-state">等待权限快照</p><div class="button-row"><button id="adult-on" type="button" disabled>启用实验权限</button><button id="adult-off" type="button" disabled>撤销权限</button><button id="scope-off" type="button" disabled>关闭候选能力</button><button id="scope-on" type="button" disabled>启用候选能力</button></div></details>
+          <form id="candidate-form"><fieldset><legend>选择 1–3 项受控操作</legend><label class="check"><input id="candidate-goal-on" type="checkbox" checked>目标分数</label><input id="candidate-goal" type="number" min="1" max="99" step="1" value="6" aria-label="候选目标分数"><label class="check"><input id="candidate-speed-on" type="checkbox">守卫速度</label><input id="candidate-speed" type="number" min="20" max="180" step="10" value="50" aria-label="候选守卫速度" disabled><label class="check"><input id="candidate-theme-on" type="checkbox">验证配色</label><select id="candidate-theme" aria-label="候选主题" disabled><option value="theme_r0_contrast">R0 高对比 · 验证配色</option><option value="theme_snack">零食主题</option></select><p class="hint">未勾选字段保留原值，不参与本次候选校验；重新勾选后恢复范围约束。</p></fieldset><button id="candidate-prepare" type="submit" class="full" disabled>构造受控候选并检查</button></form>
+          <section id="candidate-detail-panel" class="candidate-detail" hidden><p id="candidate-status" class="status-line"></p><progress id="trial-progress" max="1" value="0" aria-label="真实验证进度"></progress><p id="candidate-application" class="disclosure" role="status"></p><div id="candidate-comparison" class="candidate-comparison" aria-label="当前作品与候选提案对照"></div><div class="button-row"><button id="candidate-trial" type="button">运行真实验证</button><button id="candidate-view" type="button">查看候选试跑</button><button id="candidate-confirm" type="button" class="primary">明确确认候选</button><button id="candidate-reject" type="button">取消候选</button></div><p id="candidate-recovery" class="hint"></p><details><summary>候选身份、程序检查与历史验证详情</summary><pre id="candidate-detail"></pre></details></section>
+          <p id="candidate-model-notice" class="hint">DeepSeek 模型与费用沿用已确认配置，本面板不调用模型，不读取或显示密钥；余额不在本地推测。</p>
+        </section>
+        <section class="panel evidence-panel"><h2>导出本轮运行记录</h2><p class="hint">Node 导出实际运行记录及候选证明，不是作品保存。来源以本次实际run记录为准；主机声明和HTTP User-Agent都不能单独证明真人操作或独立试用。</p><div class="button-row"><button id="export-formal" type="button" disabled>导出正式试玩证据</button><button id="export-candidate" type="button" disabled>导出候选验证证据</button></div><p id="evidence-state" class="hint" role="status">尚未导出。正式试玩导出会先暂停；候选需完成或取消验证。</p><p id="evidence-identity" class="hint" hidden></p><pre id="evidence-result" hidden></pre></section>
+        <section class="panel log-panel"><h2>操作反馈</h2><p id="feedback" role="status" aria-live="polite">连接后可从一次规则预览开始。</p><button id="retry-action" type="button" hidden>安全重试上一次请求</button><button id="cancel-retry" type="button" hidden>取消待重试请求</button><button id="verification-disconnect" type="button" hidden>验证模式：模拟连接中断</button><details><summary>当前构建</summary><pre id="build-info"></pre></details></section>
+      </aside>
+    </section>
+  </main>
+  <footer>NODE SNAPSHOT → CANVAS · 当前页面不运行游戏规则、不保存作品副本。</footer>
+</body>
+</html>

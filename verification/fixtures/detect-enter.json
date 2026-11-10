@@ -1,0 +1,61 @@
+{
+  "formatVersion": "3.0-review.3",
+  "runtimeVersion": "collect-chase@1",
+  "catalogVersion": "workshop-core@1",
+  "project": {
+    "projectId": "r0-fixture-detect-enter",
+    "revision": 0,
+    "title": "R0见证:detect-enter",
+    "instructions": "R0专用机器见证，用于精确规则核验。",
+    "authorNote": "",
+    "designIntent": null,
+    "sourceProject": null,
+    "scene": {
+      "worldId": "rect_960_540",
+      "width": 960,
+      "height": 540,
+      "entities": [
+        {
+          "id": "p",
+          "kind": "player",
+          "x": 100,
+          "y": 270
+        },
+        {
+          "id": "g1",
+          "kind": "guard",
+          "x": 170,
+          "y": 270
+        },
+        {
+          "id": "n1",
+          "kind": "normal",
+          "x": 900,
+          "y": 500
+        }
+      ]
+    },
+    "rules": {
+      "goal": {
+        "targetScore": 1
+      },
+      "rewards": {
+        "normalValue": 1,
+        "highValue": 3
+      },
+      "guards": {
+        "speed": 20,
+        "detectRadius": 60
+      },
+      "timer": {
+        "enabled": false,
+        "limit": 15
+      }
+    },
+    "presentation": {
+      "themeId": "theme_snack",
+      "playerSkinId": "snack_player_01"
+    },
+    "semanticHash": "sha256:0f846e176b260f4755e463f419817d07bfff92a8b73cf1f891ab674da836d481"
+  }
+}

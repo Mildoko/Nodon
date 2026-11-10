@@ -1,0 +1,185 @@
+{
+  "version": "r1-entry-prep@1",
+  "date": "2026-11-02",
+  "codingAuthorized": false,
+  "productRuntimeExecuted": false,
+  "gates": [
+    {
+      "gateId": "G-PLAN",
+      "status": "passed_scope_limited",
+      "basis": "用户本轮明确采用R1工程计划",
+      "scope": "只授权P00–P04准备与复审；formalCodingAuthorized=false",
+      "source": "本次用户指令",
+      "owner": "用户/主agent",
+      "nextAction": "不需再次确认计划；正式编码需另指令"
+    },
+    {
+      "gateId": "G-R0",
+      "status": "not_passed",
+      "basis": "真实双链、七操作/混合、异常/费用及T11限定裁决尚不齐",
+      "scope": "外部skip不解除这些自家证据",
+      "source": "07/R0任务与依赖.json;08/05",
+      "owner": "R0执行者+独立审阅者",
+      "nextAction": "按剩余R0依赖补验并形成T11明确限定结论"
+    },
+    {
+      "gateId": "G-E",
+      "status": "not_assessed",
+      "basis": "没有获准独立非开发者完整Nodon作者旅程证据",
+      "scope": "开发者/Agent自测不能替代；成人代理仅支持相应代理可用性",
+      "source": "06/C20;R00-S03;09/P00",
+      "owner": "真实参与者+组织者+独立审阅者",
+      "nextAction": "至少1名获准非开发者：意图→关键决定→试玩→事件观察或未知，记录支持并复审可扩范围"
+    },
+    {
+      "gateId": "G-ADR",
+      "status": "pending_adoption",
+      "basis": "DG01/02/03合同本轮已具体化供审阅，非用户采用",
+      "scope": "P准备文档通过不等于ADR已采用；实测仍未执行",
+      "source": "adr/ADR-R1-01..03;contracts/*",
+      "owner": "用户采用；执行者记录",
+      "nextAction": "先明确C17位置/清理、页面状态和成人认证决策；再补实测设备登记"
+    },
+    {
+      "gateId": "G-R1-ENTRY",
+      "status": "not_passed",
+      "basis": "AND(G-PLAN,G-R0,G-E,G-ADR)",
+      "scope": "即使AND满足，用户当前仍禁止正式编码",
+      "source": "09工程任务与依赖.json",
+      "owner": "独立审阅者/用户",
+      "nextAction": "保持T00–T17未执行"
+    }
+  ],
+  "r0Criteria": [
+    {
+      "id": "R0-E01",
+      "criterion": "真实意图→受限计划→同hash真实候选试跑→作者确认→正式run",
+      "status": "missing",
+      "evidence": "只有controlled_fixture候选与只读ACCESS；R0-T07未执行",
+      "nextOwner": "R0-T07"
+    },
+    {
+      "id": "R0-E02",
+      "criterion": "真实选定事件→引用/未知解释→作者选择→候选→新run再验证",
+      "status": "missing",
+      "evidence": "R0-T08未执行，不借K03设计样例或旧@2补@3事实",
+      "nextOwner": "R0-T08"
+    },
+    {
+      "id": "R0-E03",
+      "criterion": "七操作及混合各至少一次真实语义正确且适用程序检查通过",
+      "status": "missing",
+      "evidence": "程序候选防线不等于模型正确；纯主题无伪run；缺守卫/奖励/ID不替换",
+      "nextOwner": "R0-T07/T08/T11"
+    },
+    {
+      "id": "R0-E04",
+      "criterion": "取消/过期/关AI/换作/revision/失锁/迟到与幂等全部关键异常",
+      "status": "partial_historical_program_only",
+      "evidence": "Oct28候选与权限程序/浏览器历史可复用对应防线；真实服务故障/链待验",
+      "nextOwner": "R0-T09"
+    },
+    {
+      "id": "R0-E05",
+      "criterion": "费用槽/attempt/取消未知/usage与账单可追",
+      "status": "partial_unreconciled",
+      "evidence": "原20元/38逻辑/76尝试/并发1保持；一次只读ACCESS估算0.00604元、预留0.056768元不当实际账单",
+      "nextOwner": "R0-T06/T09/T11"
+    },
+    {
+      "id": "R0-E06",
+      "criterion": "11月2日首键/投影时序/长run风险明确定点复核或限定处置",
+      "status": "unresolved_risk",
+      "evidence": "两次partial run无胜利；第一向上输入缺失，第二droppedWallTicks26；根因未定，旧tick导出不补后续事件",
+      "nextOwner": "R0-T09/T11"
+    },
+    {
+      "id": "R0-E07",
+      "criterion": "外部成熟工具比较范围最新裁决",
+      "status": "skipped_by_user_not_passed",
+      "evidence": "用户明确已知外部效果/操作而跳过；停止MakeCode，不重排，不宣称优于工具；保留卡点/缺计时原记录",
+      "nextOwner": "R0-T11仅书面收录skip范围"
+    },
+    {
+      "id": "R0-E08",
+      "criterion": "Nodon内手动/非模型帮助与AI价值证据区分",
+      "status": "missing_relevant_pair_evidence",
+      "evidence": "不因外部skip删掉自家价值/人工判读；不存在的体验记录填null",
+      "nextOwner": "R0-T07/T08/T11与G-E"
+    },
+    {
+      "id": "R0-E09",
+      "criterion": "无未关闭关键错写/错证据/越权/超支问题，独立T11限定进入裁决",
+      "status": "not_executed",
+      "evidence": "不能把221/221历史或计划问题关闭当R0整体通过；T11最新skip范围裁决未出",
+      "nextOwner": "R0-T11独立审阅"
+    }
+  ],
+  "scopeDecision": {
+    "externalToolComparison": "skip已由用户决定，不再次强制",
+    "originalT00Contract": "保持原件与原分母；T11引用Nov2用户范围覆盖外部步骤，列被放弃的比较主张，不能标原全集通过",
+    "independentNodonParticipant": "未豁免",
+    "baselineInputInspection": "976/976字节一致仅文档/现状校验"
+  },
+  "decisions": [
+    {
+      "id": "DG01",
+      "recommendation": "Node独立本机SQLite，跨绑定浏览器工作区；六点C17告知/清理/迁移变更；工作区清理须成人重认证+≤60秒动作绑定单次能力，普通档案无权删除其他档案",
+      "status": "recommended_pending_user_adoption",
+      "before": "正式T00/T03"
+    },
+    {
+      "id": "DG02",
+      "recommendation": "Node唯一文档、统一route/sourceReturn、同作收起保有效候选/取消才终止、精确dirty/返回/焦点及有界投影",
+      "status": "specified_pending_adoption",
+      "before": "正式T00/T01"
+    },
+    {
+      "id": "DG03",
+      "recommendation": "真实成人Node口令认证与Keychain凭证；管理会话和有时限AI发送grant分开",
+      "status": "specified_pending_adoption",
+      "before": "正式T00/T02"
+    },
+    {
+      "id": "DG04",
+      "recommendation": "R1开发/冻结/后续请求新额度与R0总帽关系另核，不沿用R0槽执行全集",
+      "status": "not_authorized_no_calls",
+      "before": "任一新增R1真实模型请求"
+    },
+    {
+      "id": "DG05",
+      "recommendation": "T11按已定外部skip限定裁决；保留真实双链/关键风险/G-E",
+      "status": "evidence_pending",
+      "before": "G-R1-ENTRY"
+    },
+    {
+      "id": "DG06",
+      "recommendation": "交接条件/许可由实际组织者核对，不从导入身份推许可",
+      "status": "before_real_handoff",
+      "before": "真人参与/交接"
+    },
+    {
+      "id": "DG07",
+      "recommendation": "素材来源/许可/占位替换/教师排练台账，验证配色明标",
+      "status": "release_evidence_pending",
+      "before": "T15对外交付"
+    }
+  ],
+  "decisionDetailsForAdoption": {
+    "DG01": [
+      "Node本机仓库改变C17浏览器存放/可见/清理/告知六点",
+      "清全workspace须成人本次重认证+单次动作权限，普通profile无跨档案删除权",
+      "起始快照计入8命名；新导入起始+文件最多2额外；50层会话undo和2自动点含pin满退路"
+    ],
+    "DG02": [
+      "同作收起保仍有效任务；Cancel终止；answered关闭ready",
+      "另存确认即新pending-new内存身份，落库失败仍停新副本S02，原作零写",
+      "页面投影/事件游标/输入回执与性能freeze1合同"
+    ],
+    "DG03": [
+      "真实成人口令必要短暂password value及回环POST，不回显/记录；供应商key始终不经过浏览器",
+      "macOS原生Swift Keychain/LocalAuthentication helper是新工程依赖，由T02最小落地、T15正式包集成；其他OS凭证配置待同等级适配，不承诺跨OS首发AI",
+      "管理logout与最长45分钟课堂grant分开；Node重启全部发送grant失效"
+    ]
+  }
+}

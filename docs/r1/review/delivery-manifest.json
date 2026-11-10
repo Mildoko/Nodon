@@ -1,0 +1,195 @@
+{
+  "version": "r1-prep-delivery@1",
+  "date": "2026-11-02",
+  "createdAt": "2026-11-02T00:46:42.769681+00:00",
+  "deliveryRoot": "/Users/dmy/Projects/Nodon-R0/docs/r1",
+  "status": "P00_P04_document_preparation_and_independent_review_passed_pending_ADR_adoption_and_runtime_entry",
+  "documentTasksPassed": 5,
+  "documentSlicesPassed": 16,
+  "formalTasksExecuted": 0,
+  "plannedDeliverablesPresent": 11,
+  "productUX": 50,
+  "productNAV": 75,
+  "crossScreenScenarios": 15,
+  "plannedLocalSlicesIncludingP": 87,
+  "originalRequirements": 52,
+  "assetReferences": 195,
+  "designScenes": 83,
+  "designOverview": 1,
+  "AICaseInputs": 100,
+  "development": 80,
+  "heldout": 20,
+  "AIRealCallsThisRound": 0,
+  "independentReviewModel": "gpt-6.1-sol",
+  "independentReviewReasoning": "high",
+  "issuesClosed": 4,
+  "closedPriorityCounts": {
+    "P1": 3,
+    "P2": 1
+  },
+  "openReviewIssues": 0,
+  "documentChecksPassed": 52,
+  "sourceInputsUnchanged": 976,
+  "R0SourceArtifactsDependenciesUnchanged": 677,
+  "codingAuthorized": false,
+  "productTestsRun": false,
+  "productRuntimeOperated": false,
+  "credentialsRead": false,
+  "databaseCreated": false,
+  "v3BaselineChanged": false,
+  "providerModelAndR0Budget": "DeepSeek-V4.1-Flash-1017 / R0 20CNY unchanged; R1 additional budget not authorized",
+  "entryGateStatus": {
+    "G-PLAN": "adopted_P_only",
+    "G-R0": "not_passed",
+    "G-E": "not_assessed",
+    "G-ADR": "pending_user_adoption",
+    "G-R1-ENTRY": "not_passed"
+  },
+  "adoptionDecisions": [
+    "DG01 C17 location/clear and schema quota interpretation",
+    "DG02 page and projection contracts",
+    "DG03 adult authentication/macOS helper and separate classroom grant"
+  ],
+  "reviewHistory": "review/issues.json preserves historical recheck hashes plus finalReviewedArtifacts",
+  "independentSpotcheck": "review.4 checked actual root core outputs; final review outputs and this manifest copied after review and byte-verified by root",
+  "additionalReadOnlyMetadata": "native-toolchain-presence.json added by root after independent core spotcheck; only compiler path discovery, no compiler/build/Keychain execution",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1494,
+      "sha256": "sha256:f6c06b53729ead7c04a0880429347d7a51dfaa9594ee216bdf67b6ecb29f9c96"
+    },
+    {
+      "path": "acceptance/case-manifest.json",
+      "bytes": 430258,
+      "sha256": "sha256:643039a9c34314953af9ed239d031bde894a7f02772b8032c6cce15e769c0459"
+    },
+    {
+      "path": "acceptance/development-cases.json",
+      "bytes": 63370,
+      "sha256": "sha256:8baf952019281a1bf7e3187a729b2f8b69809d2e083de6957e6aed32d139232c"
+    },
+    {
+      "path": "acceptance/evidence-template.md",
+      "bytes": 3689,
+      "sha256": "sha256:fd491c56cc2cdb541b7afc749f4eb5b07588d59c4cd7f250f79f20050b297351"
+    },
+    {
+      "path": "acceptance/non-model-comparison.md",
+      "bytes": 2448,
+      "sha256": "sha256:175d4ae3e548e41e997b3320e29e4694bd48753ee976ba3017c223224b2fa3dc"
+    },
+    {
+      "path": "acceptance/performance-and-ai-budget.md",
+      "bytes": 8319,
+      "sha256": "sha256:9cd7043a9a803568eb1e9f9571e41e642d85bccb1b4037e8de39028367c7fa7a"
+    },
+    {
+      "path": "acceptance/sealed/heldout-cases.json",
+      "bytes": 17643,
+      "sha256": "sha256:ee7c69383df87aaee1e09a374a6c5376ba6c9fc6a09821a378e5acf96111d0c1"
+    },
+    {
+      "path": "acceptance/special-ai-cases.json",
+      "bytes": 10033,
+      "sha256": "sha256:06f38032d651922bb15f8638369a50a686439ea518adce0e6639d8b1eb300d90"
+    },
+    {
+      "path": "adr/ADR-R1-01-repository.md",
+      "bytes": 11460,
+      "sha256": "sha256:41f354579a895e3f063b971736c649873c97936fd2fb48de3d6867be73b77193"
+    },
+    {
+      "path": "adr/ADR-R1-02-adult-auth.md",
+      "bytes": 19117,
+      "sha256": "sha256:2341715c2bb1c7e39d77a5e0bede8be8ec151dba075330727866c8441956043f"
+    },
+    {
+      "path": "adr/ADR-R1-03-projection-and-cursor.md",
+      "bytes": 9107,
+      "sha256": "sha256:8a93d362acec3d7748071d8a1c40bd3a4d67a1909ad0ceed190b573c879384ff"
+    },
+    {
+      "path": "asset-register.json",
+      "bytes": 155916,
+      "sha256": "sha256:21e24dc351d26cbd24a8bd2723cb59c8ec8a29520c6fd7e35ca99b7746d05b94"
+    },
+    {
+      "path": "baseline-and-gap-register.md",
+      "bytes": 4667,
+      "sha256": "sha256:171ae9ac8c1d56c846a7e8af3ab18acc114c497f975b1ce6b0eef002ed04dd5d"
+    },
+    {
+      "path": "contracts/auth-projection-review-cases.json",
+      "bytes": 7084,
+      "sha256": "sha256:d6e58edc856fd64e8453997622b818fac4ed65cd2a744eb4cf6074b3e945b0fe"
+    },
+    {
+      "path": "contracts/page-command-and-return.md",
+      "bytes": 14732,
+      "sha256": "sha256:8b13738471136f2fce94dd17c6932718903b533153e317edf54b9bd28ab0ee8a"
+    },
+    {
+      "path": "contracts/repository-schema-and-transaction.md",
+      "bytes": 47046,
+      "sha256": "sha256:15e538904b294c4ff0bd07051db8cdcd9d24f611d0a3938bf8540fed190a2d2d"
+    },
+    {
+      "path": "entry-gate-register.json",
+      "bytes": 8190,
+      "sha256": "sha256:6ff8a2566a999c9c8971f962dd640cc2dd3c8273810eaa58c2432b45926c69c2"
+    },
+    {
+      "path": "entry-gates-and-decisions.md",
+      "bytes": 3139,
+      "sha256": "sha256:deb322c7615e40da0cf4f57b825183fe74ec7d5a7cccf9fb05ae1d1fb54b5828"
+    },
+    {
+      "path": "plan-review-reference.md",
+      "bytes": 1610,
+      "sha256": "sha256:c4ff598d6b2fc3a4b658264b890564a3f85951869dad1c8b076a2924ad015fb4"
+    },
+    {
+      "path": "review/document-validation.json",
+      "bytes": 6562,
+      "sha256": "sha256:bd9f4720d78a88e33510246790eaca5ec235c249ea511f73ecfa51af9116541d"
+    },
+    {
+      "path": "review/environment-reference.json",
+      "bytes": 496,
+      "sha256": "sha256:7720bcc531e5ebd9e6ef8744d1103d10283808e3280f0c59cb81b8fa1e160479"
+    },
+    {
+      "path": "review/independent-review.md",
+      "bytes": 5584,
+      "sha256": "sha256:00e0c196782c3527c1ea8b151ffac773202900762821308a42044aa0633bc18f"
+    },
+    {
+      "path": "review/issues.json",
+      "bytes": 24091,
+      "sha256": "sha256:e3483fdc7bd0c34ce87c5f663cc3a1a8a1a465f3fc9cb45a379bf607ddd4054a"
+    },
+    {
+      "path": "review/native-toolchain-presence.json",
+      "bytes": 662,
+      "sha256": "sha256:5e5014a89ab5cacbdd61456197a56105693effbf4f06fb7b29cd3be7459390a1"
+    },
+    {
+      "path": "review/preparation-task-results.json",
+      "bytes": 5976,
+      "sha256": "sha256:0f065097086855ca132be580f62a20b00612bc0a7209cff8d9cc5e11dc352a90"
+    },
+    {
+      "path": "review/source-integrity-after.json",
+      "bytes": 368368,
+      "sha256": "sha256:00fca23fe3c712b9cf4c90a7d1b1b1e870123534ce4fb9dc6667b7e459ace591"
+    },
+    {
+      "path": "review/source-integrity-before.json",
+      "bytes": 368287,
+      "sha256": "sha256:67956800acd4f2f91442cace47b58160b5a67c9b4f0858f41c26b26d649b1b44"
+    }
+  ],
+  "fileCountExcludingSelf": 27,
+  "selfHashPolicy": "manifest excludes itself to avoid a cyclic digest"
+}

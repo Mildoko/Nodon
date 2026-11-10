@@ -1,0 +1,142 @@
+{
+  "designOnly": true,
+  "status": "review.2 design contract; not an executor or test result",
+  "registryVersion": "collect-chase-rules@1",
+  "runtimeVersion": "collect-chase@1",
+  "immutable": true,
+  "resolution": "Application selects this trusted immutable registry by runtimeVersion; .nodon rules stores parameters only. Changed behavior requires a new runtimeVersion and preserved old mapping.",
+  "rules": [
+    {
+      "ruleId": "rule.goal.score@1",
+      "behaviorVersion": 1,
+      "cards": [
+        "RC01"
+      ],
+      "parameterPaths": [
+        "rules.goal.targetScore"
+      ],
+      "parameterTypes": {
+        "rules.goal.targetScore": "integer[1,99]"
+      },
+      "events": [
+        "goal_checked"
+      ],
+      "terminalReasons": [
+        "win"
+      ],
+      "behavior": "score >= targetScore; terminal merge caught > timeout > win"
+    },
+    {
+      "ruleId": "rule.reward.collect@1",
+      "behaviorVersion": 1,
+      "cards": [
+        "RC02"
+      ],
+      "parameterPaths": [
+        "rules.rewards.normalValue",
+        "rules.rewards.highValue"
+      ],
+      "parameterTypes": {
+        "rules.rewards.normalValue": "integer[1,3]",
+        "rules.rewards.highValue": "integer[2,9]; > normalValue"
+      },
+      "events": [
+        "reward_collected",
+        "score_changed"
+      ],
+      "terminalReasons": [],
+      "behavior": "unique first collection; reward stable-ID order; sum score before terminal merge"
+    },
+    {
+      "ruleId": "rule.guard.chase@1",
+      "behaviorVersion": 1,
+      "cards": [
+        "RC03",
+        "RC04"
+      ],
+      "parameterPaths": [
+        "rules.guards.detectRadius",
+        "rules.guards.speed"
+      ],
+      "parameterTypes": {
+        "rules.guards.detectRadius": "integer[60,300], step10",
+        "rules.guards.speed": "integer[20,180], step10"
+      },
+      "events": [
+        "chase_started",
+        "chase_stopped"
+      ],
+      "terminalReasons": [],
+      "behavior": "before_move centerDistance <= detectRadius starts/continues chase; > stops; no return home"
+    },
+    {
+      "ruleId": "rule.timer.limit@1",
+      "behaviorVersion": 1,
+      "cards": [
+        "RC05"
+      ],
+      "parameterPaths": [
+        "rules.timer.enabled",
+        "rules.timer.limit"
+      ],
+      "parameterTypes": {
+        "rules.timer.enabled": "boolean",
+        "rules.timer.limit": "integer[15,120], step5"
+      },
+      "events": [],
+      "terminalReasons": [
+        "timeout"
+      ],
+      "behavior": "when enabled, timeout at limit*60 ticks; disabled retains limit but never times out"
+    },
+    {
+      "ruleId": "rule.contact.fail@1",
+      "behaviorVersion": 1,
+      "cards": [
+        "RC06"
+      ],
+      "parameterPaths": [],
+      "parameterTypes": {},
+      "events": [],
+      "terminalReasons": [
+        "caught"
+      ],
+      "behavior": "swept contact; player radius12 + guard radius14; priority over timeout/win"
+    },
+    {
+      "ruleId": "rule.player.move@1",
+      "behaviorVersion": 1,
+      "cards": [
+        "RC07"
+      ],
+      "parameterPaths": [],
+      "parameterTypes": {},
+      "events": [],
+      "terminalReasons": [],
+      "behavior": "fixed player speed160 u/s, radius12, normalized input, bounded rectangle; no separate movement event"
+    }
+  ],
+  "eventBindings": {
+    "run_started": null,
+    "run_fault": null,
+    "reward_collected": "rule.reward.collect@1",
+    "score_changed": "rule.reward.collect@1",
+    "goal_checked": "rule.goal.score@1",
+    "chase_started": "rule.guard.chase@1",
+    "chase_stopped": "rule.guard.chase@1",
+    "round_ended": {
+      "selector": "actualValues.reason",
+      "caught": "rule.contact.fail@1",
+      "timeout": "rule.timer.limit@1",
+      "win": "rule.goal.score@1"
+    }
+  },
+  "eventBehaviorVersion": "Derived from immutable ruleId; event schema does not add behaviorVersion.",
+  "missingRegistry": "Preserve input file, block execution and rule explanations; do not guess.",
+  "acceptance": [
+    "three starters resolve uniquely",
+    "title/theme and import identity do not change mapping",
+    "old runtime cannot be rebound to modified registry",
+    "R2 migration records this mapping and source hash"
+  ]
+}

@@ -1,0 +1,2064 @@
+{
+  "manifestVersion": "nodon-r0-case-manifest@1",
+  "freezeDate": "2026-10-28",
+  "planBaseline": "review.4-r0-20261028",
+  "status": "frozen_specification_unexecuted_pending_root_integration",
+  "codeRoot": "/Users/dmy/Projects/Nodon-R0",
+  "authoringStagingRoot": "/tmp/nodon-r0-stage",
+  "stagingMeaning": "Temporary document staging only; not a second implementation or evidence root.",
+  "allowedWriteScope": [
+    "verification/case-manifest.json",
+    "docs/r0-verification-protocol.md"
+  ],
+  "executionResultPolicy": {
+    "defaultStatus": "not_executed",
+    "allowedCaseStatuses": [
+      "not_executed",
+      "passed",
+      "failed",
+      "blocked",
+      "not_applicable"
+    ],
+    "nativeTrialStatuses": [
+      "not_run",
+      "running",
+      "passed",
+      "failed",
+      "blocked",
+      "runtime_not_applicable"
+    ],
+    "actualResults": "All actualResult null until product actually executes; independently calculated golden hashes and numerical expected values are authoring inputs only.",
+    "historicalPrototype": "Old38 prototype/checker outputs and synthetic K03/@2 are source/defect inputs only; cannot grant a real R0 run or technical pass."
+  },
+  "contracts": {
+    "formatVersion": "3.0-review.3",
+    "runtimeVersion": "collect-chase@1",
+    "ruleRegistryVersion": "collect-chase-rules@1",
+    "catalogVersion": "workshop-core@1",
+    "entityBudgetPolicyVersion": "entity-budget@1",
+    "trialPolicyVersion": "collect-chase-candidate-trial@2",
+    "evidenceVersion": "collect-chase-evidence@3",
+    "runtimeContract": "nodon-r0-runtime-contract@1"
+  },
+  "conventions": {
+    "fixtureTransformation": "All JSON Pointer paths address complete Document. Exactly apply replacements; every unmentioned field preserved; non-base fixture IDs listed inline are authoritative. Sources are read-only. Fixture paths describe planned materialization, not files claimed written by this author.",
+    "reset": "Every branch/subcase starts from a fresh source fixture and isolated Node verification session unless a sequence explicitly states otherwise. Input segments consume consecutive ticks starting tick1; tick0 is creation and costs no time.",
+    "input": "x/y are raw -1|0|1 vectors; Runtime normalizes nonzero direction then speed160/60. InputSource only human_keyboard|machine_browser_input|catalog_machine. ExecutionClass per atomic result automation_test|human_operation. Mixed parent cases split records, never assign a fake source.",
+    "identifiers": "Normal requestId/commandId are actual UUIDs from host. Fixture project IDs may be controlled ASCII. symbolic candidate ops in prose use the exact op/expectedValue/value DTO in runtime contract; do not serialize prose abbreviations.",
+    "exactness": "Boolean contact/chase/terminal/order/count assertions are exact. Rational/square-root authoring expectations below are exact mathematical values; independent numeric report must state any error tolerance before actual evaluation. Such tolerance never changes Runtime <=threshold.",
+    "evidenceRoot": "evidence/r0/<build-id>/; all real runs 04_runs/<runId>/; case/request indexes reference runs without creating parallel case execution roots.",
+    "human": "Human action/choice and semantic judgment cannot be filled by agent roleplay. Automation typing is machine_browser_input/automation_test. Actual operator/reviewer must be registered by root.",
+    "blocked": "Missing environment/executor/approval/human branch leaves that branch blocked; CLI work can proceed where authorized, never promote whole case from a partial branch."
+  },
+  "sources": {
+    "P00": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/07_R0最小真实闭环开发计划_评审稿/P00_R0范围技术决策与执行总表.md",
+    "P01": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/07_R0最小真实闭环开发计划_评审稿/P01_真实运行与证据验证计划.md",
+    "P04": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/07_R0最小真实闭环开发计划_评审稿/P04_技术决策工程补充与来源核查.md",
+    "P05": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/07_R0最小真实闭环开发计划_评审稿/P05_冻结任务提案与证据记录模板.md",
+    "C03": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/产品策划/C03_玩法域风险取舍与数值规则案.md",
+    "C07": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/产品策划/C07_试玩运行状态与终局规格案.md",
+    "C10": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/产品策划/C10_作品格式文件交接与兼容案.md",
+    "budget": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/entity_budget_policy.json",
+    "trial": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/candidate_trial_policy.json",
+    "registry": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/rule_registry.json",
+    "semanticVector": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/semantic_projection_example.json",
+    "risk": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/ud02/risk.nodon.json",
+    "garden": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/ud02/garden.nodon.json",
+    "full": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/ud02/budget-full.nodon.json",
+    "oldEvidence": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/ud02/two_guard_evidence_example.json",
+    "runtimeContract": "/Users/dmy/Projects/Nodon-R0/docs/r0-runtime-contract.md",
+    "motionContract": "/Users/dmy/Projects/Nodon-R0/docs/r0-motion-evidence-adr.md"
+  },
+  "fixtureDefinitions": {
+    "scene-a": {
+      "path": "verification/fixtures/scene-a.json",
+      "source": "risk",
+      "transform": {
+        "replace": {
+          "/project/rules/goal/targetScore": 10,
+          "/project/instructions": "方向键或WASD移动，拿到10分过关。普通点心1分，特别点心3分；碰到守卫失败。"
+        },
+        "derived": "Recompute semanticHash; preserve timer.limit45 and every other source field.",
+        "extraction": "Take only {formatVersion,runtimeVersion,catalogVersion,project} from source. exportedAt/snapshots excluded per runtime contract; source file remains unchanged."
+      },
+      "materializationStatus": "parent_owned"
+    },
+    "scene-b": {
+      "path": "verification/fixtures/scene-b.json",
+      "source": "garden",
+      "transform": {
+        "replace": {},
+        "derived": "Project subtree is source-identical; no fixture silently adds guards or timing.",
+        "extraction": "Take only {formatVersion,runtimeVersion,catalogVersion,project}; exclude exportedAt/snapshots per runtime contract, preserve project subtree."
+      },
+      "materializationStatus": "parent_owned"
+    },
+    "zero-guard-route": {
+      "path": "verification/fixtures/zero-guard-route.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-zero-guard-route",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 50,
+              "y": 270
+            }
+          ],
+          "/project/rules/goal/targetScore": 1,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:zero-guard-route",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "single-reward-repeat": {
+      "path": "verification/fixtures/single-reward-repeat.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-single-reward-repeat",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 50,
+              "y": 270
+            },
+            {
+              "id": "n2",
+              "kind": "normal",
+              "x": 900,
+              "y": 500
+            }
+          ],
+          "/project/rules/goal/targetScore": 2,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:single-reward-repeat",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "double-reward": {
+      "path": "verification/fixtures/double-reward.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-double-reward",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 270
+            },
+            {
+              "id": "n10",
+              "kind": "normal",
+              "x": 70,
+              "y": 250
+            },
+            {
+              "id": "n2",
+              "kind": "normal",
+              "x": 70,
+              "y": 290
+            }
+          ],
+          "/project/rules/goal/targetScore": 2,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:double-reward",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "detect-equal": {
+      "path": "verification/fixtures/detect-equal.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-detect-equal",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 100,
+              "y": 270
+            },
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 160,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 900,
+              "y": 500
+            }
+          ],
+          "/project/rules/goal/targetScore": 1,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:detect-equal",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "detect-outside": {
+      "path": "verification/fixtures/detect-outside.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-detect-outside",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 100,
+              "y": 270
+            },
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 170,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 900,
+              "y": 500
+            }
+          ],
+          "/project/rules/goal/targetScore": 1,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:detect-outside",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "detect-enter": {
+      "path": "verification/fixtures/detect-enter.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-detect-enter",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 100,
+              "y": 270
+            },
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 170,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 900,
+              "y": 500
+            }
+          ],
+          "/project/rules/goal/targetScore": 1,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:detect-enter",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "two-guard-contact": {
+      "path": "verification/fixtures/two-guard-contact.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-two-guard-contact",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 270
+            },
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 90,
+              "y": 250
+            },
+            {
+              "id": "g2",
+              "kind": "guard",
+              "x": 90,
+              "y": 290
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 400,
+              "y": 270
+            }
+          ],
+          "/project/rules/goal/targetScore": 1,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:two-guard-contact",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "terminal-conflict": {
+      "path": "verification/fixtures/terminal-conflict.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-terminal-conflict",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 270
+            },
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 90,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 70,
+              "y": 290
+            }
+          ],
+          "/project/rules/goal/targetScore": 1,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": true,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:terminal-conflict",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "sweep-tangent": {
+      "path": "verification/fixtures/sweep-tangent.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-sweep-tangent",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 20
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 70,
+              "y": 50
+            },
+            {
+              "id": "n2",
+              "kind": "normal",
+              "x": 900,
+              "y": 500
+            }
+          ],
+          "/project/rules/goal/targetScore": 2,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:sweep-tangent",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "clamp": {
+      "path": "verification/fixtures/clamp.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-clamp",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 930,
+              "y": 510
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 100,
+              "y": 100
+            }
+          ],
+          "/project/rules/goal/targetScore": 1,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 20,
+          "/project/rules/guards/detectRadius": 60,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:clamp",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "smoke-caught": {
+      "path": "verification/fixtures/smoke-caught.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "base": "verification/fixtures/scene-a.json",
+      "transform": {
+        "replace": {
+          "/project/projectId": "r0-fixture-smoke-caught",
+          "/project/revision": 0,
+          "/project/scene/entities": [
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 20,
+              "y": 270
+            },
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 50,
+              "y": 270
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 900,
+              "y": 500
+            },
+            {
+              "id": "n2",
+              "kind": "normal",
+              "x": 900,
+              "y": 450
+            }
+          ],
+          "/project/rules/goal/targetScore": 2,
+          "/project/rules/rewards/normalValue": 1,
+          "/project/rules/rewards/highValue": 3,
+          "/project/rules/guards/speed": 100,
+          "/project/rules/guards/detectRadius": 180,
+          "/project/rules/timer/enabled": false,
+          "/project/rules/timer/limit": 15,
+          "/project/title": "R0见证:smoke-caught",
+          "/project/instructions": "R0专用机器见证，用于精确规则核验。"
+        },
+        "derived": "Recompute semanticHash from final scene+rules+runtimeVersion; inherited hash is not an expected hash. Keep all non-replaced author/presentation/root fields from base."
+      }
+    },
+    "budget-full": {
+      "path": "verification/fixtures/budget-full.json",
+      "source": "full",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "transform": {
+        "extraction": "Take only {formatVersion,runtimeVersion,catalogVersion,project} from source; exportedAt/snapshots excluded; project subtree unchanged.",
+        "replace": {}
+      }
+    }
+  },
+  "inputDefinitions": {
+    "right-3": {
+      "segments": [
+        {
+          "ticks": 3,
+          "x": 1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 3,
+      "path": "verification/inputs/right-3.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "idle-1800": {
+      "segments": [
+        {
+          "ticks": 1800,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "maxTicks": 1800,
+      "path": "verification/inputs/idle-1800.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "terminal-conflict": {
+      "segments": [
+        {
+          "ticks": 884,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "ticks": 16,
+          "x": 1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 900,
+      "path": "verification/inputs/terminal-conflict.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "double-reward": {
+      "segments": [
+        {
+          "ticks": 16,
+          "x": 1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 16,
+      "path": "verification/inputs/double-reward.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "repeat": {
+      "segments": [
+        {
+          "ticks": 3,
+          "x": 1,
+          "y": 0
+        },
+        {
+          "ticks": 100,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "ticks": 10,
+          "x": 1,
+          "y": 0
+        },
+        {
+          "ticks": 10,
+          "x": -1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 123,
+      "path": "verification/inputs/repeat.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "two-guards": {
+      "segments": [
+        {
+          "ticks": 100,
+          "x": 1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 100,
+      "stopOnLegalTerminal": true,
+      "path": "verification/inputs/two-guards.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "tangent": {
+      "segments": [
+        {
+          "ticks": 3,
+          "x": 0,
+          "y": 1
+        },
+        {
+          "ticks": 19,
+          "x": 1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 22,
+      "path": "verification/inputs/tangent.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "clamp": {
+      "segments": [
+        {
+          "ticks": 10,
+          "x": 1,
+          "y": 1
+        }
+      ],
+      "maxTicks": 10,
+      "path": "verification/inputs/clamp.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "smoke": {
+      "scriptId": "CC-SMOKE-01",
+      "segments": [
+        {
+          "ticks": 30,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "ticks": 60,
+          "x": 1,
+          "y": 0
+        },
+        {
+          "ticks": 60,
+          "x": 0,
+          "y": 1
+        },
+        {
+          "ticks": 30,
+          "x": -1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 180,
+      "stopOnLegalTerminal": true,
+      "path": "verification/inputs/smoke.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    },
+    "a-normal-route": {
+      "segments": [
+        {
+          "ticks": 64,
+          "x": 0,
+          "y": -1
+        },
+        {
+          "ticks": 165,
+          "x": 1,
+          "y": 0
+        },
+        {
+          "ticks": 128,
+          "x": 0,
+          "y": 1
+        },
+        {
+          "ticks": 140,
+          "x": -1,
+          "y": 0
+        }
+      ],
+      "maxTicks": 497,
+      "stopOnLegalTerminal": true,
+      "path": "verification/inputs/a-normal-route.json",
+      "materializationStatus": "planned_not_materialized_by_this_document",
+      "inputSource": "catalog_machine"
+    }
+  },
+  "goldenCandidateVector": {
+    "authoringOnly": true,
+    "provenance": "Independent Python stdlib SHA-256 over explicit C10/policy@2 projection, no product helper and no Runtime execution",
+    "hashInput": {
+      "projectId": "b7f41000-0000-4000-8000-000000000002",
+      "requestId": "a1000000-0000-4000-8000-000000000002",
+      "baseRevision": 0,
+      "baseSemanticHash": "sha256:5220575e1db5a82a52fda9b3ff212b44659bb5c6587e34f419c934eb6bfe43f9",
+      "runtimeVersion": "collect-chase@1",
+      "catalogVersion": "workshop-core@1",
+      "ruleRegistryVersion": "collect-chase-rules@1",
+      "trialPolicyVersion": "collect-chase-candidate-trial@2",
+      "operations": [
+        {
+          "op": "set_goal",
+          "expectedValue": 10,
+          "value": 6
+        },
+        {
+          "op": "set_detect_radius",
+          "expectedValue": 180,
+          "value": 140
+        }
+      ],
+      "candidateState": {
+        "scene": {
+          "worldId": "rect_960_540",
+          "width": 960,
+          "height": 540,
+          "entities": [
+            {
+              "id": "g1",
+              "kind": "guard",
+              "x": 700,
+              "y": 270
+            },
+            {
+              "id": "h1",
+              "kind": "high",
+              "x": 660,
+              "y": 190
+            },
+            {
+              "id": "h2",
+              "kind": "high",
+              "x": 780,
+              "y": 350
+            },
+            {
+              "id": "n1",
+              "kind": "normal",
+              "x": 150,
+              "y": 100
+            },
+            {
+              "id": "n2",
+              "kind": "normal",
+              "x": 280,
+              "y": 100
+            },
+            {
+              "id": "n3",
+              "kind": "normal",
+              "x": 410,
+              "y": 100
+            },
+            {
+              "id": "n4",
+              "kind": "normal",
+              "x": 540,
+              "y": 100
+            },
+            {
+              "id": "n5",
+              "kind": "normal",
+              "x": 150,
+              "y": 440
+            },
+            {
+              "id": "n6",
+              "kind": "normal",
+              "x": 280,
+              "y": 440
+            },
+            {
+              "id": "n7",
+              "kind": "normal",
+              "x": 410,
+              "y": 440
+            },
+            {
+              "id": "n8",
+              "kind": "normal",
+              "x": 540,
+              "y": 440
+            },
+            {
+              "id": "p",
+              "kind": "player",
+              "x": 80,
+              "y": 270
+            }
+          ]
+        },
+        "rules": {
+          "goal": {
+            "targetScore": 6
+          },
+          "rewards": {
+            "normalValue": 1,
+            "highValue": 3
+          },
+          "guards": {
+            "speed": 100,
+            "detectRadius": 140
+          },
+          "timer": {
+            "enabled": false,
+            "limit": 45
+          }
+        },
+        "presentation": {
+          "themeId": "theme_snack",
+          "playerSkinId": "snack_player_01"
+        }
+      }
+    },
+    "canonicalUtf8": "{\"baseRevision\":0,\"baseSemanticHash\":\"sha256:5220575e1db5a82a52fda9b3ff212b44659bb5c6587e34f419c934eb6bfe43f9\",\"candidateState\":{\"presentation\":{\"playerSkinId\":\"snack_player_01\",\"themeId\":\"theme_snack\"},\"rules\":{\"goal\":{\"targetScore\":6},\"guards\":{\"detectRadius\":140,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":45}},\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":700,\"y\":270},{\"id\":\"h1\",\"kind\":\"high\",\"x\":660,\"y\":190},{\"id\":\"h2\",\"kind\":\"high\",\"x\":780,\"y\":350},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":150,\"y\":100},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":280,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":410,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":540,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":150,\"y\":440},{\"id\":\"n6\",\"kind\":\"normal\",\"x\":280,\"y\":440},{\"id\":\"n7\",\"kind\":\"normal\",\"x\":410,\"y\":440},{\"id\":\"n8\",\"kind\":\"normal\",\"x\":540,\"y\":440},{\"id\":\"p\",\"kind\":\"player\",\"x\":80,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}},\"catalogVersion\":\"workshop-core@1\",\"operations\":[{\"expectedValue\":10,\"op\":\"set_goal\",\"value\":6},{\"expectedValue\":180,\"op\":\"set_detect_radius\",\"value\":140}],\"projectId\":\"b7f41000-0000-4000-8000-000000000002\",\"requestId\":\"a1000000-0000-4000-8000-000000000002\",\"ruleRegistryVersion\":\"collect-chase-rules@1\",\"runtimeVersion\":\"collect-chase@1\",\"trialPolicyVersion\":\"collect-chase-candidate-trial@2\"}",
+    "expectedCandidateHash": "sha256:560da260f37a0fa316b6884b5676146a8d4e2890e9fb0f24e755b99ffb5f8b5e",
+    "expectedBaseSemanticHash": "sha256:5220575e1db5a82a52fda9b3ff212b44659bb5c6587e34f419c934eb6bfe43f9",
+    "expectedCandidateSemanticHash": "sha256:7c52455c7b1080ef1c92951e18613eadaa26b1234238c4a22f3298b988088665"
+  },
+  "coverage": {
+    "P01BaseCaseIds": [
+      "R0-RT-01",
+      "R0-RT-02",
+      "R0-RT-03",
+      "R0-RT-04",
+      "R0-RT-05",
+      "R0-RT-06",
+      "R0-RT-07",
+      "R0-RT-08",
+      "R0-RT-09",
+      "R0-RT-10",
+      "R0-RT-11",
+      "R0-RT-12",
+      "R0-RT-13",
+      "R0-RT-14",
+      "R0-RT-15",
+      "R0-RT-16",
+      "R0-RT-17",
+      "R0-RT-18"
+    ],
+    "caseCount": 32,
+    "modelDataset": "P05 14×2 and6fixed followups/4probes owned by r0-comparison-protocol; these32engine/flow cases do not authorize extra real requests.",
+    "optionalPersistentRecovery": "Not implemented; R0-REC-01 tests truthful session-only fallback, not full C09 recovery."
+  },
+  "cases": [
+    {
+      "caseId": "R0-RT-01",
+      "title": "0守卫无计时完整胜利",
+      "globalTasks": [
+        "R0-T02",
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "zero-guard-route",
+      "steps": [
+        "Validate complete fixture then create run at tick0.",
+        "Apply right-3 from tick1; request another 1000 idle ticks after terminal."
+      ],
+      "independentExpected": [
+        "Initial n1 distance30 is legal; tick1 p=22⅔ distance27⅓, tick2 p=25⅓ distance24⅔, tick3 p=28 distance22, so n1 first collected at tick3.",
+        "Score1, win exactly once at tick3; no chase/caught; timer limit15 is retained but inactive; post-terminal attempts cannot advance."
+      ],
+      "evidenceRequired": [
+        "run package",
+        "per-tick consumed input",
+        "@3 n1 contact witness"
+      ],
+      "source": [
+        "P01§5/RT01",
+        "C03§2–3",
+        "C07§3"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-02",
+      "title": "无守卫实际时间上限",
+      "globalTasks": [
+        "R0-T02",
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "scene-b",
+      "steps": [
+        "Reset fixture for each subcase: timer.enabled=true; limit15 then limit30. Run idle-1800 from tick0; stop at legal terminal.",
+        "Reset to enabled=false/limit30 and run1800 idle ticks."
+      ],
+      "independentExpected": [
+        "Enabled15 ends tick900 and enabled30 ends tick1800, score0/reason timeout exactly once, no rewards/chase/caught.",
+        "Disabled reaches tick1800 running with score0 and no timeout, retaining limit30; 180tick smoke cannot establish these outcomes."
+      ],
+      "evidenceRequired": [
+        "three distinct run packages",
+        "complete zero-vector consumption intervals"
+      ],
+      "source": [
+        "P01§5/RT02",
+        "C07§3",
+        "trial.smoke"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-03",
+      "title": "发现恰等、进入及退出",
+      "globalTasks": [
+        "R0-T02"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": [
+        "detect-equal",
+        "detect-outside",
+        "detect-enter"
+      ],
+      "steps": [
+        "Equal: idle1; Outside: idle1, both fresh tick0.",
+        "Enter: right4 then idle1, fresh run.",
+        "Exit: detect-equal run left1 then idle1."
+      ],
+      "independentExpected": [
+        "Equal starts chase at tick1 before_move distance60 and g1 x=159⅔; outside distance70 stays x170 with no chase.",
+        "Enter right4: g1 remains x170 through tick4 (before_move tick4 distance62), p=110⅔; tick5 before_move distance59⅓ starts chase; no after_move early chase.",
+        "Exit tick1 starts chase but end distance62⅓; tick2 before_move >60 emits stop and g1 stays159⅔; no return-home motion."
+      ],
+      "evidenceRequired": [
+        "start/stop events with before_move positions",
+        "all start/end coordinates"
+      ],
+      "source": [
+        "P01§5/RT03",
+        "P04 ADR02",
+        "registry rule.guard.chase@1"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-04",
+      "title": "两守卫共享参数与同时接触",
+      "globalTasks": [
+        "R0-T02",
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "two-guard-contact",
+      "steps": [
+        "Validate symmetry fixture with speed20/detect60; run two-guards.",
+        "At first legal caught stop; count terminal events and inspect every contacting guard."
+      ],
+      "independentExpected": [
+        "Symmetry about y270 keeps both guards at equal distance from player each tick; before_move triggers and contact tick agree.",
+        "Exactly one caught terminal contains caughtByEntityIds ['g1','g2'], primaryGuardId g1; entityIds/positions and separate @3 witnesses include both; score0."
+      ],
+      "evidenceRequired": [
+        "complete run",
+        "both guard witnesses and event sequence"
+      ],
+      "source": [
+        "P01§5/RT04",
+        "P04 ADR02.5",
+        "oldEvidence (format inheritance only; never output source)"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-05",
+      "title": "首次唯一领取与ASCII同tick顺序",
+      "globalTasks": [
+        "R0-T02",
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": [
+        "single-reward-repeat",
+        "double-reward"
+      ],
+      "steps": [
+        "Run single-reward-repeat with repeat input.",
+        "Run double-reward with double-reward input on fresh fixture."
+      ],
+      "independentExpected": [
+        "Repeated entry yields exactly one n1 reward_collected and score_changed, score1 after123 ticks, no terminal.",
+        "At tick15 x60 distances√500>22; tick16 x62⅔ distances√(400+484/9)<22, both first collect. ASCII n10 precedes n2; mark each consumed before score; scores1 then2; one goal_checked after both with score2/target2/passedtrue; one win.",
+        "goal_checked cause may reference final score_changed directly, with both contribution references retained; final n2 is not all scoring cause."
+      ],
+      "evidenceRequired": [
+        "per-tick collected-ID set",
+        "ordered events and contribution/cause links"
+      ],
+      "source": [
+        "P01§5/RT05",
+        "P04 ADR02.4"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-06",
+      "title": "扫掠切线、端点分离与clamp路径",
+      "globalTasks": [
+        "R0-T02",
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": [
+        "sweep-tangent",
+        "clamp"
+      ],
+      "steps": [
+        "Run tangent from tick0.",
+        "Run clamp from tick0.",
+        "Separately call low-level geometry with P (68,27.999)→(70⅔,27.999), static Q(70,50), threshold22; then no relative motion P(0,0)→(0,0), Q(22,0)→(22,0), and Q(22.001,0)→(22.001,0)."
+      ],
+      "independentExpected": [
+        "Tangent: after down3 player y28; right18 ends x68 (tick21), distance√488>22. Tick22 segment(68,28)→(70⅔,28), closestTickFraction=0.75, minCenterDistance22, endpointCenterDistance√(484+4/9)>22, contactedtrue, exactly one n1 collection. No earlier collection.",
+        "Clamp diagonal per-axis160/(60√2); tick5 p=(930+5×160/(60√2),510+5×160/(60√2)); tick6 and later p=(940,520). Actual tick6 segment joins that tick5 point directly to(940,520), never an unclamped endpoint or wall-sliding polyline.",
+        "Low-level near miss min22.001 =>false; zero-relative equal =>true at fraction0, beyond=>false without division by zero. Low-level vectors do not impersonate a real run."
+      ],
+      "evidenceRequired": [
+        "full run tangent witness",
+        "clamp before/intended/actual end",
+        "separate low-level numeric calculation record"
+      ],
+      "source": [
+        "P01§5/RT06",
+        "P04 ADR02.2–3",
+        "P04 ADR03"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-07",
+      "title": "完整900tick三终局冲突",
+      "globalTasks": [
+        "R0-T02",
+        "R0-T03",
+        "R0-T08"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "terminal-conflict",
+      "steps": [
+        "Caught variant: validate fixture and execute terminal-conflict from tick0.",
+        "Timeout variant: reset fixture, remove g1 only, recompute hash, execute same input.",
+        "Win variant: reset timeout variant, timer.enabled=false only, execute same input."
+      ],
+      "independentExpected": [
+        "Ticks1–884 player20,270; guard90,270 remains outside60. Right ticks1–4 do not move guard; right5/global889 first chase. Tick899 player60,270 and g1=86⅓,270 =>distance26⅓>26; n1 distance√500>22.",
+        "Tick900 p=(62⅔,270), g1=(86,270); guard endpoint23⅓≤26, reward endpoint√(400+484/9)≈21.302≤22. First score1/goalReachedtrue and elapsed900 cause caught, timeout,win candidates together; reason caught once, preserving score and goalReached.",
+        "Same full input without guard => timeout at900 while score1/goalReachedtrue; timer disabled too=>win at900. No tick field mutation, no K03 event copy. AI11 must consume only actual generated caught variant @3 after this executes."
+      ],
+      "evidenceRequired": [
+        "three full initial documents and inputs",
+        "all900 committed ticks or their verifiable summaries",
+        "terminal contact/goal/contribution witnesses"
+      ],
+      "source": [
+        "P01§5/RT07",
+        "P04 ADR02.4–6",
+        "P05 AI11"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test",
+      "mirrorVariant": {
+        "caseIdSuffix": "mirror",
+        "transform": "Replace every entity x with 960-x; keep y/IDs/rules; each input segment x→-x, y unchanged; recompute semanticHash and actually execute fresh run. AI11 repetitions each create their own true run; never mirror a log.",
+        "fixturePath": "verification/fixtures/terminal-conflict-mirror.json",
+        "inputPath": "verification/inputs/terminal-conflict-mirror.json",
+        "source": "docs/r0-comparison-protocol.md"
+      }
+    },
+    {
+      "caseId": "R0-RT-08",
+      "title": "终局、故障、失效状态不复活",
+      "globalTasks": [
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "zero-guard-route",
+      "steps": [
+        "Reach ended using RT01; save state; attempt input/continue and open/close help/observe.",
+        "For fault use RT13 fault artifact; for invalidated use RT09 state; repeat panel and continue operations.",
+        "Explicit restart each state, then deliver an old-run callback/input."
+      ],
+      "independentExpected": [
+        "Ended/fault/invalidated retain status and complete state; continue rejected; no tick/position/score/event mutation.",
+        "Explicit restart creates different runId at tick0 from current document, clearing only new-run dynamic state; old callbacks rejected by runId/session generation."
+      ],
+      "evidenceRequired": [
+        "state-transition/command records",
+        "old/new run snapshots and rejected callback envelope"
+      ],
+      "source": [
+        "P01§5/RT08",
+        "C07§2"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-09",
+      "title": "语义编辑与旧run隔离",
+      "globalTasks": [
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Start run, right1, pause; clone historical snapshot/events.",
+        "Separate fresh branches commit: delete g1; highValue3→4; h1(660,190)→(540,220).",
+        "Undo each branch back to original semanticHash; attempt continue. Start new run; deliver prior-run callback."
+      ],
+      "independentExpected": [
+        "Every semantic branch invalidates old run; old history retains startup entities/values/presentation and identities.",
+        "Undo same hash never revives invalidated run; new run not contaminated by old callback; run positions never overwrite document spawn positions."
+      ],
+      "evidenceRequired": [
+        "document revision/hash and immutable run before/after",
+        "undo and rejected callbacks"
+      ],
+      "source": [
+        "P01§5/RT09",
+        "C07§1–2"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-10",
+      "title": "非语义revision与AI过期分离",
+      "globalTasks": [
+        "R0-T03",
+        "R0-T05"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Start/pause run and prepare unconfirmed goal6 candidate at current revision.",
+        "Commit title='R0标题核验'; in separate fresh branch set theme_r0_contrast/skin snack_player_01.",
+        "Attempt original candidate confirmation and resume paused run."
+      ],
+      "independentExpected": [
+        "Each edit revision+1 with unchanged semanticHash; candidate stale on either edit.",
+        "Paused run can resume with startup revision/theme; current contrast theme is not retroactively painted onto frozen old run. No single stale boolean conflates candidate/run."
+      ],
+      "evidenceRequired": [
+        "revision/semanticHash pairs",
+        "request/base bindings",
+        "startup/current presentation snapshots"
+      ],
+      "source": [
+        "P01§5/RT10",
+        "C10§1",
+        "P04 ADR05"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-11",
+      "title": "完整结构、草稿与数量门",
+      "globalTasks": [
+        "R0-T01"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": [
+        "scene-a",
+        "scene-b",
+        "budget-full"
+      ],
+      "steps": [
+        "For every variant reset scene-a, apply only specified edits to full document and submit through common validator.",
+        "Valid variants: scene-b; scene-a; budget-full18; scene-a remove all normal/high; scene-a goal15(total14).",
+        "Invalid variants: remove p; append player p2 at20,20; append duplicate id n1 at20,20; unknown kind wall; add third guard g3 at20,20 to budget-full18; append high h4 at20,20 to budget-full18; n1.x=10; n1.x=151; n1=(80,270); rewards.normalValue=3/highValue=3; targetScore=1.5; add project.scene.extra=true.",
+        "Attempt start on each accepted document; attempt same invalid inputs as a command batch."
+      ],
+      "independentExpected": [
+        "Valid zero/one/two guards and18 entities accepted. Zero rewards and goal15 are structurally legal drafts; no run_started, no auto reward/target/timer fix.",
+        "Every invalid variant rejects entire mutation with field/reason; document, revision, allocator and undo history unchanged; no truncation/rounding/dropping unknown fields. Combined errors may report several fields but no accepted partial state."
+      ],
+      "evidenceRequired": [
+        "validation inputs with exact diff and errors",
+        "before/after project/revision/allocator snapshot"
+      ],
+      "source": [
+        "P01§5/RT11",
+        "C03§2,4",
+        "budget",
+        "C10§1"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-12",
+      "title": "输入通道、调度和浏览器守护",
+      "globalTasks": [
+        "R0-T03",
+        "R0-T04"
+      ],
+      "status": "not_executed",
+      "executionCategory": "mixed_separate_records",
+      "inputSource": "per_subrecord",
+      "fixtureRef": "scene-b",
+      "steps": [
+        "CLI branch: idle1, right1, diagonal(1,1)1; inject scheduler elapsed10/60s once while running; then pause for5s and explicitly resume.",
+        "Real browser branch: adult operator physically holds Right/WASD; record browser transitions and Node receive/apply tick; open help/observe, refocus; repeat blur, explicit transport close and silent heartbeat loss in fresh runs.",
+        "For silent loss stop valid heartbeat after recorded monotonic t0; heartbeats normally250ms; inspect state at t0+1000ms. Reconnect and send old-connection input. Reduce RAF/render cadence while Node remains connected."
+      ],
+      "independentExpected": [
+        "Logical displacement zero,8/3, then per-axis8/(3√2); scheduler single callback commits at most5 ticks, discards remaining lag and records warning. Paused5s produces no catch-up.",
+        "Blur/explicit transport close pauses atomically before next logical step after Node receives signal, clears keys; silent guard pauses by first guard evaluation at1000ms since last valid heartbeat. Node latency is recorded, not hidden as immediate domain pause.",
+        "Refocus/reconnect/help close never auto-resumes; old connection/run input rejected. Low RAF changes drawing only. Real keyboard source human_keyboard requires actual human; automated typing is machine_browser_input/automation_test.",
+        "Replay uses Node-consumed per-tick vectors, never inferred browser timestamps."
+      ],
+      "evidenceRequired": [
+        "actual browser recording and channel sequence/receipt/apply tick",
+        "scheduler/guard monotonic logs",
+        "keyboard→run→CLI replay comparison"
+      ],
+      "source": [
+        "P01§5/RT12",
+        "P04 ADR01",
+        "P04 ADR02.8"
+      ],
+      "actualResult": null,
+      "requiredSubrecords": [
+        "CLI catalog_machine/machine_test",
+        "browser human_keyboard/human_operation",
+        "optional browser machine_browser_input/automation_test"
+      ],
+      "evidenceSource": "per_subrecord"
+    },
+    {
+      "caseId": "R0-RT-13",
+      "title": "事件环、故障原子性和预算",
+      "globalTasks": [
+        "R0-T02",
+        "R0-T03"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "single-reward-repeat",
+      "steps": [
+        "Fault branch: begin at tick0; right2, then inject test-only per-tick event budget1 on attempted tick3 (restore normal256 afterwards only for separate new run); right1 would collect n1 and score.",
+        "Ring branch: isolated evidence-buffer fault-injection input appends1001 otherwise valid ordered records with monotonic same-run sequence, never label these as Runtime-produced gameplay. Test normal capacity1000.",
+        "Record default budgets256 events/tick,1000 ring and7200tick/run; run scene-b idle7200 then request tick7201 under experiment cap."
+      ],
+      "independentExpected": [
+        "Attempted tick3 has >1 provisional events but none commit; lastCommittedTick2, player25⅓/score0/unclaimed n1 preserved; statusfault, diagnostics attemptedTick3/lastCommittedTick2, no round_ended/timeout or provisional fact in AI selection.",
+        "Ring retains exactly newest1000 and reports discarded count1/exact ordinal interval; missing cause is truncated/unknown, never invented. Ring probe alone cannot prove natural gameplay produces1001 events.",
+        "7200 cap produces executor blocked without committing7201; never game timeout when disabled. Fault-injection override is labelled and cannot imply default18 entities overflow."
+      ],
+      "evidenceRequired": [
+        "last-good state and provisional-event exclusion audit",
+        "diagnostics separate from events",
+        "ring injection input/truncation report",
+        "executor-cap record"
+      ],
+      "source": [
+        "P01§5/RT13",
+        "P04 ADR02.6",
+        "P04 ADR03",
+        "trial.specificOutcomeClaims"
+      ],
+      "actualResult": null,
+      "faultInjection": true,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-14",
+      "title": "六类玩法候选、混批与主题例外",
+      "globalTasks": [
+        "R0-T05"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Fresh request/base per candidate: set_goal target6; set_reward_values normal2/high4; set_guard_speed80; set_detect_radius140; set_timer enabledtrue/limit30; move_entity h1→540,220.",
+        "Construct full candidate state before checks; execute each with smoke, binding one candidateHash and one own trial/run.",
+        "Mixed candidate [set_goal6,set_detect_radius140] executes as one full candidate/run; pure set_theme theme_r0_contrast/skin snack_player_01 is separate."
+      ],
+      "independentExpected": [
+        "Every gameplay candidate loads exact changed values and unchanged remaining fields in same Runtime; <=180 actual ticks with true run_started and at least1 committed step, correct phase/rule binding, no faults => technical passed only if observed.",
+        "Mixed batch not partially tested/committed. Pure theme static success has unchanged semanticHash and runtime_not_applicable, no fictitious run; no untriggered mechanics/route claim."
+      ],
+      "evidenceRequired": [
+        "seven concrete candidate snapshots/hashes plus mixed record",
+        "each own trial/run or static record",
+        "loaded parameter expected/actual assertions"
+      ],
+      "source": [
+        "P01§5/RT14",
+        "trial.operations/themeOnly/mixedBatch",
+        "P05 AI01–08"
+      ],
+      "actualResult": null,
+      "aiRequirement": "program-constructed candidates verify mechanics only; real model outputs must be separately covered by T07",
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-15",
+      "title": "试跑取消、过期和确认线性化",
+      "globalTasks": [
+        "R0-T05",
+        "R0-T09"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "For each fresh goal6 candidate start sliced trial, hold completion at deterministic result-release barrier. Before releasing passed: cancel; commit title; switch project; closeAI then reopen. Attempt confirmation after each release.",
+        "Fresh passed candidate: replace trialPolicy@2 with an @1 report; separately change buildHash, runtimeArtifactHash, or contractVersion while candidateHash retained; attempt confirm.",
+        "Queue-order A: enqueue closeAI before confirm. Queue-order B: valid confirm before closeAI. Repeat identical confirmation twice."
+      ],
+      "independentExpected": [
+        "All canceled/stale/wrong project/old authEpoch/old policy/build/artifact/contract evidence denies write. Reopen never revives request. History may retain diagnostics.",
+        "Order A revision unchanged by confirm and no candidate apply; Order B exactly one revision/application, close preserves committed change and revokes other pending work. Repeat confirm adds neither revision nor command.",
+        "Critical section rechecks request/candidate/base/authEpoch/current rights/current execution identity; no awaited upstream work in submit boundary."
+      ],
+      "evidenceRequired": [
+        "barrier release and CommandBus ordered log",
+        "before/after revision and permission epoch",
+        "denial reason and trial native status"
+      ],
+      "source": [
+        "P01§5/RT15",
+        "P04 ADR01,04",
+        "trial.invalidation"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-16",
+      "title": "技术冒烟覆盖与状态失败映射",
+      "globalTasks": [
+        "R0-T05"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "smoke-caught",
+      "steps": [
+        "Create candidate set_goal1 and run smoke; record first terminal and actual executed tick interval.",
+        "Fresh identical candidate: unavailable executor; experiment executor cap0; wrong loaded assertion expectation target99; then genuine Runtime injected fault.",
+        "For each result try application through Node confirmation."
+      ],
+      "independentExpected": [
+        "Smoke-caught guard closes4u to distance26 in first3ticks (speed100=>5/3 each); legal caught at tick3 can technical-pass if assertions sound; score0, reward/timer untriggered explicitly uncovered.",
+        "No executor=>not_run, cap/environment/unplayable=>blocked, wrong assertion or Runtimefault=>failed; all deny apply. running/unknown cannot unlock. Smoke actual timeout claim impossible in3sec with15sec minimum.",
+        "No generic unit-test result or differently hashed candidate can replace concrete trial."
+      ],
+      "evidenceRequired": [
+        "native statuses",
+        "actual terminal/coverage",
+        "each rejected confirmation"
+      ],
+      "source": [
+        "P01§5/RT16",
+        "trial.failureMapping/applicationGate"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-17",
+      "title": "预览零写入、ID单调与撤销",
+      "globalTasks": [
+        "R0-T01",
+        "R0-T05"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Snapshot revision/allocator/undo before any preview. Preview add normal at20,20, then cancel.",
+        "Branch A fresh scene-a: commit add normal at20,20=>e1; copy e1 to60,20=>e2; delete e1; undo once restores e1; then commit add at100,20=>e3.",
+        "Branch B fresh scene-a: add at20,20=>e1; undo once removes e1; add at60,20=>e2; old e1 cannot be reissued.",
+        "Branch C fresh scene-a: trial and confirm one mixed [goal6,detect140] candidate, then undo once."
+      ],
+      "independentExpected": [
+        "Preview/cancel/invalid coordinates allocate no committed ID or revision/undo. Each changed command including undo adds1 revision. Branch A restores original e1 and new allocation is e3; branch B after undo issues e2, never e1. Current contract requires one undo unit only; no second undo is assumed.",
+        "Allocator issued-ID set never rewinds. Trial zero revision; whole mixed confirmation adds exactly1 revision and one undo item; one undo restores entire batch with a new revision. ID metadata excluded from file and hash."
+      ],
+      "evidenceRequired": [
+        "command history",
+        "allocator high-water and entity snapshots",
+        "candidate before/trial/commit/undo snapshots"
+      ],
+      "source": [
+        "P01§5/RT17",
+        "budget.identity",
+        "P00 T01"
+      ],
+      "actualResult": null,
+      "evidenceSource": "machine_test"
+    },
+    {
+      "caseId": "R0-RT-18",
+      "title": "真实AI创作与作者确认后的新run",
+      "globalTasks": [
+        "R0-T07",
+        "R0-T08"
+      ],
+      "status": "not_executed",
+      "executionCategory": "real_ai_and_human_operation",
+      "inputSource": "human_keyboard",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Use P05 R0-AI-01 request instance for goal10→6; no extra request for this case. Actual human plays baseline and Node records real input.",
+        "After actual provider plan: show full diff, validate/run smoke, adult author explicitly confirms, then starts new formal run and plays again.",
+        "Replay the baseline Node-consumed input against both revisions in distinct runs; human can additionally play a new route, identified separately."
+      ],
+      "independentExpected": [
+        "Before confirm zero document writes; one valid confirmation applies goal6 only as one revision; new formal run uses6 with new runId. Provider output, actual human choice, trial and formal run all individually identifiable.",
+        "Observed difference may support narrow goal/route claim; no improvement is allowed as actual outcome, no invented feeling. Program candidate cannot fill real AI denominator; absent actual human/model/UI => corresponding chain blocked."
+      ],
+      "evidenceRequired": [
+        "provider original response/request linkage",
+        "human source and author confirmation",
+        "candidate/trial/commit/new-run identity chain",
+        "paired input/claim ledger"
+      ],
+      "source": [
+        "P01§5/RT18",
+        "P00 T07–08",
+        "P05 AI01"
+      ],
+      "actualResult": null,
+      "evidenceSource": "per_subrecord"
+    },
+    {
+      "caseId": "R0-HASH-01",
+      "title": "C10独立规范化黄金向量",
+      "globalTasks": [
+        "R0-T01"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "semanticVector",
+      "steps": [
+        "Read canonicalJson string from locked semanticVector source; encode exact UTF-8 bytes with no BOM/newline/space; SHA-256 via independent standard tool, compare with literal expected digest.",
+        "Pass equivalent risk document through product semantic projection; vary recursive key insertion order, reverse entities, title/instructions/authorNote/designIntent/presentation and root formatVersion only; each independently. Hash-exclusion transformations are canonicalizer-level probes; unsupported root formatVersion still rejects at the document execution API.",
+        "Separately change h1.x660→650 and runtimeVersion to unknown collect-chase@999; attempt execution. Feed fractional integer field, NaN/Infinity (non-JSON API path), duplicate JSON keys, unknown field through external entry."
+      ],
+      "independentExpected": [
+        "Golden bytes yield sha256:7a0710df8324cf21b85d04ba8fa62f03f62feb3c46e95dca31557facd488aaf9. Risk fixture scene/rules matches this vector; do not compare scene-a target10 against target6 vector.",
+        "Object/eligible entity order and excluded metadata do not change gameplay digest. Position changes digest; runtimeVersion participates in digest but unknown runtime is not executable.",
+        "Strict invalid input is rejected before projection; no rounding, unknown-field stripping or treating self-reported hash as trusted. Lower-level canonicalizer maps -0→0 only on JSON-number vector, never accepts illegal zero position."
+      ],
+      "evidenceRequired": [
+        "canonical UTF-8 bytes and independent digest",
+        "variant input/digest table",
+        "validator errors"
+      ],
+      "source": [
+        "C10§1,6",
+        "semanticVector",
+        "runtimeContract§canonicalization"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-HASH-02",
+      "title": "候选摘要字段与顺序",
+      "globalTasks": [
+        "R0-T01",
+        "R0-T05"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Build hash input exactly: projectId from scene-a, requestId='a1000000-0000-4000-8000-000000000002', baseRevision0, baseSemanticHash from independently projected scene-a, runtimeVersion collect-chase@1/catalog workshop-core@1/registry collect-chase-rules@1/policy collect-chase-candidate-trial@2; operations [{op:'set_goal',expectedValue:10,value:6},{op:'set_detect_radius',expectedValue:180,value:140}]; candidateState final scene/rules/presentation.",
+        "Use goldenCandidateVector frozen in this manifest: exact hashInput, canonicalUtf8 and literal expected digest. Compute independent SHA-256 from those bytes, then compare product projection/bytes/digest; do not invoke product helper to derive expected.",
+        "Variant1 reverse operations with same final candidate; variant2 reverse entities/key order; variant3 theme only difference in full candidate presentation; variant4 change requestId or baseRevision independently; variant5 change input script/buildHash/authEpoch only outside hash object."
+      ],
+      "independentExpected": [
+        "Product bytes/digest equal goldenCandidateVector.canonicalUtf8/expectedCandidateHash exactly; comparison cannot compute both expected and actual via same helper.",
+        "Reverse operations changes candidateHash though candidateSemanticHash same. Entity/key order unchanged. Theme,requestId,baseRevision affect candidateHash; theme not semanticHash. Script/build/epoch excluded from candidateHash but separately bind application gate.",
+        "Hash object has exactly policy@2 fields; unknown additions/omissions fail contract. Golden generation is authoring arithmetic, not product test pass."
+      ],
+      "evidenceRequired": [
+        "golden canonical bytes plus expected digest file",
+        "all hash variants",
+        "candidateHash projection field inventory"
+      ],
+      "source": [
+        "C10§1",
+        "trial.candidateHash",
+        "runtimeContract§candidateHash"
+      ],
+      "actualResult": null,
+      "notes": [
+        "Golden vector requestId is controlled RFC UUID; no upstream request was sent. Golden bytes are authoring data, not implementation output."
+      ]
+    },
+    {
+      "caseId": "R0-CMD-01",
+      "title": "坏第二操作原子拒绝与合法交换",
+      "globalTasks": [
+        "R0-T01",
+        "R0-T05"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Branch A full batch [{op:set_goal,expectedValue10,value6},{op:move_entity,entityId:h1,expectedValue:{x:660,y:190},value:{x:540,y:100}}]; target occupied by n4.",
+        "Branch B add normal at540,220 via a legal manual command, capture new revision then propose move h1 to540,220 using new baseline.",
+        "Branch C fresh scene-a: swap h1 and h2 in full2-op batch using their own exact old positions and opposite new positions.",
+        "Branch D fresh scene-a: [set_goal expected10→8,set_goal expected8→6]; separate malformed branch second expected10→6."
+      ],
+      "independentExpected": [
+        "A/B reject whole final candidate for overlap; A goal stays10, no revision/ID/undo mutation. No silent relocation or partial goal6 commit.",
+        "C final swap legal with no overlap, one candidate/one full trial; intermediate overlap not a rejection. D sequential expected values evaluate against preceding candidate changes; malformed expected value rejects all.",
+        "Final net-no-change batch rejected with no revision; no per-op commits."
+      ],
+      "evidenceRequired": [
+        "full ordered input operations and final validation errors",
+        "before/after document/allocator",
+        "candidate/trial linkage for legal swap"
+      ],
+      "source": [
+        "P00 T01,T05",
+        "C03§4",
+        "runtimeContract D08"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-CMD-02",
+      "title": "命令幂等、并发基准与未知入口",
+      "globalTasks": [
+        "R0-T01",
+        "R0-T09"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Submit manual goal6 with fixed commandId/session/current writer/expectedRevision0, then identical duplicate commandId/envelope.",
+        "Reuse same commandId with goal8; submit new commandId goal8 with stale expectedRevision0; repeat valid value6 no change at current revision.",
+        "Attempt unknown command, add/copy/remove player, extra arbitrary URL/script/shell fields; all fresh envelopes against current revision."
+      ],
+      "independentExpected": [
+        "First command revision1 exactly; byte-equivalent duplicate returns original result with no new revision/undo.",
+        "Same ID different payload E_IDEMPOTENCY_CONFLICT; stale revision rejects; same-value command E_NO_CHANGE with no write. Invalid player/unknown commands/fields never execute or allocate IDs.",
+        "One authoritative queue/ProjectStore only; failure does not erase author input or old document."
+      ],
+      "evidenceRequired": [
+        "command envelopes/replies/order",
+        "revision/hash/undo/allocator records"
+      ],
+      "source": [
+        "P04 ADR01",
+        "runtimeContract D04–06"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-CAND-01",
+      "title": "适用性、未触及坏值与合法修复",
+      "globalTasks": [
+        "R0-T01",
+        "R0-T05"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-b",
+      "steps": [
+        "On scene-b propose guard speed80 and detect140 separately; reward values2/4 on scene-a with all rewards removed; move h1 on scene-b; add/copy/remove op on scene-a.",
+        "Create structurally legal scene-a goal15 draft(total14); test timer enabledtrue/limit30 and move h1→540,220 separately.",
+        "On same goal15 draft: full batch goal15→6 plus timer false45→true30; separately pure theme snack→contrast. Separate fresh zero-reward draft: remove all rewards and manually set goal1; propose set_goal expected1/value1, which must reject for no net change and cannot repair empty rewards."
+      ],
+      "independentExpected": [
+        "0guards=>E_NO_GUARD;0reward=>E_NO_REWARD; missing h1=>E_ENTITY_NOT_FOUND; entity writes all refuse entire AI batch and yield manual path, never retarget.",
+        "Timer/move on total14 goal15 cannot bypass unchanged unplayability. Full goal6+timer repair may trial as complete candidate; pure theme static exception can apply to draft but cannot make it playable.",
+        "Candidate validation is same full validator as manual structure checks; static playable is not route proof."
+      ],
+      "evidenceRequired": [
+        "operation/baseline/diff/errors",
+        "repair full state/trial",
+        "theme static record"
+      ],
+      "source": [
+        "P01 T06.1",
+        "trial.applicability",
+        "C03§4"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-EVID-01",
+      "title": "@3身份、阶段、因果与历史隔离",
+      "globalTasks": [
+        "R0-T03",
+        "R0-T04",
+        "R0-T08"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": [
+        "terminal-conflict",
+        "sweep-tangent",
+        "two-guard-contact"
+      ],
+      "steps": [
+        "After RT07/RT06/RT04 actually execute, validate each emitted event and outer run package.",
+        "Trace real terminal backwards using causeId/run sequence and tick contributions. Change current document then reread old selected event in panel.",
+        "Feed unchanged historical oldEvidence@2 and old K03 as explicitly synthetic reference to versioned reader; do not insert into current event stream."
+      ],
+      "independentExpected": [
+        "Every actual event has eventId/runId/projectId/revision/semanticHash/tick/kind/entityIds/causeId/ruleId/actualValues/positions/observationPhase; outer build/artifact identity is actual Node artifact.",
+        "run_started tick0 before_move; chase before_move; collect/score/goal/terminal after_move. Cause only earlier same-run event or explicit null; all same-tick score contributions available. @3 witness names startPositions/endPositions/closestTickFraction/minCenterDistance/contactThreshold/endpointCenterDistance/contacted/object identity; no ambiguous standalone contactDistance.",
+        "Old values stay historical;@2 can report missing sweep data unknown but never receives fabricated trajectory or label upgrade. Current no-guard run has no K03/caught injection."
+      ],
+      "evidenceRequired": [
+        "schema/semantic validation report",
+        "selected chain and event-order/identity index",
+        "old/new panel recording",
+        "history provenance labels"
+      ],
+      "source": [
+        "P01 T05",
+        "P04 ADR03",
+        "registry",
+        "oldEvidence"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-EVID-02",
+      "title": "新run重放与不可复现退路",
+      "globalTasks": [
+        "R0-T03",
+        "R0-T11"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "terminal-conflict",
+      "steps": [
+        "Under identical build/artifact/environment replay frozen initial and Node-consumed input into new run; normalize only runId/eventId and corresponding cause references by actual sequence.",
+        "Compare every committed tick state/collected IDs, normalized key events and terminal; preserve both raw packages.",
+        "Change one consumed direction at tick899 in a copied input, rerun, compare and report first divergence; never overwrite original evidence. Then try auditing a package missing its initial or artifact fingerprint."
+      ],
+      "independentExpected": [
+        "Replay has new runId; key events/state match within documented independent numeric report tolerance while branch/contact/terminal booleans exactly agree; raw IDs never rewritten in original package.",
+        "Mutated input first state divergence at899 must be visible (unless earlier terminal prevents application, which source fixture does not). Missing immutable input/artifact is audit failure, not technical pass.",
+        "New build generates new run/evidence and cannot inherit old application eligibility; screenshot alone cannot repair missing execution identity."
+      ],
+      "evidenceRequired": [
+        "two raw packages and normalized comparison",
+        "first-divergence report",
+        "missing-evidence failed audit"
+      ],
+      "source": [
+        "P01 T08",
+        "P04 ADR02.7,04"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-AUTH-01",
+      "title": "关闭及writer/scope撤销与发送顺序",
+      "globalTasks": [
+        "R0-T06",
+        "R0-T09"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Local controlled adapter, no provider: use explicit dispatch barrier and single queue. For fresh requests execute close→dispatch and dispatch→close orders.",
+        "Repeat with writer revoke and send-scope revoke instead of close. Repeat repair attempt after invalid first response and asynchronous adapter waiting after reservation.",
+        "Capture auth check/queue ordinal/reservation/dispatch handed-off point/authEpoch and actual provider dispatch count; current candidate confirm is tested in RT15."
+      ],
+      "independentExpected": [
+        "Close/revoke before dispatch =>zero new dispatch; release only proven unsent reservation; old epoch can never dispatch after reenable.",
+        "Dispatch before close =>in_flight retains pending/unknown fees; late result cannot apply or revive request. Adapter queued asynchronously must re-enter queue at actual dispatch; repair rechecks current rights/epoch/limits.",
+        "Each attempt authorized, reserved and handed off atomically in queue with no await; fake adapter evidence proves local gate only, cannot establish real provider cancel billing."
+      ],
+      "evidenceRequired": [
+        "deterministic queue/barrier trace",
+        "auth/reserve/dispatch timestamps/epochs/counts",
+        "zero-write document records"
+      ],
+      "source": [
+        "P00 T06,T09",
+        "P04 ADR01"
+      ],
+      "actualResult": null,
+      "faultInjection": true,
+      "providerSending": "forbidden_in_local_gate_probe"
+    },
+    {
+      "caseId": "R0-AUTH-02",
+      "title": "请求取消重开及状态矩阵",
+      "globalTasks": [
+        "R0-T05",
+        "R0-T06",
+        "R0-T09"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Fresh request for every starting state pending, validation_pending, validation_blocked, proposed. Close adultAI, reopen, release delayed model/trial result, attempt confirm.",
+        "Repeat each using explicit cancel, reject and any revision edit; once applied repeat close/reopen and reread document/history."
+      ],
+      "independentExpected": [
+        "All uncommitted requests terminal/canceled/stale under current contract; clear executable ops/confirm eligibility; reopen cannot revive.",
+        "Late callbacks diagnostic only; applied revision/content remain and history still identifies actual earlier run/candidate. New request requires new requestId/epoch and new budget check."
+      ],
+      "evidenceRequired": [
+        "per-state transition table with real local steps",
+        "candidate and command snapshots",
+        "late-result rejection record"
+      ],
+      "source": [
+        "P00 T09",
+        "P01 RT15",
+        "runtimeContract permissions"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-REC-01",
+      "title": "会话重连、进程退出与非存储退路",
+      "globalTasks": [
+        "R0-T03",
+        "R0-T04",
+        "R0-T11"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-b",
+      "steps": [
+        "Commit manual goal4→3 in original Node session; start and pause run. Close browser connection, then reconnect to same live Node.",
+        "Stop Node cleanly after exporting engineer evidence package; restart host with same locked fixture. Inspect current project and fee ledger separately.",
+        "Review UI wording and any design-state download entry; do not add .nodon/recovery implementation."
+      ],
+      "independentExpected": [
+        "Same live session reconnects to authoritative read-only snapshot, paused with keys0; no auto continue or browser-side restored second current document.",
+        "New Node session reloads controlled fixture goal4, old unsaved author state not claimed restored; engineer evidence stays reviewable. Fees if T06 used persistent ledger retain reservations independently of volatile project state.",
+        "Panel explicitly session-only/no persistent save; no saved/backup/recovered claim from exported design sample or evidence. Full C09 two-phase restore unimplemented =>not applicable with reason, never passed."
+      ],
+      "evidenceRequired": [
+        "session IDs/current snapshots",
+        "reconnect/restart recording",
+        "UI wording/evidence provenance",
+        "separate ledger audit if applicable"
+      ],
+      "source": [
+        "P01§7",
+        "P04 ADR05"
+      ],
+      "actualResult": null,
+      "storageProductClaim": "out_of_scope_not_tested"
+    },
+    {
+      "caseId": "R0-UI-01",
+      "title": "单页真实面板、观察定位与尺寸",
+      "globalTasks": [
+        "R0-T04"
+      ],
+      "status": "not_executed",
+      "executionCategory": "real_browser",
+      "inputSource": "per_subrecord",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "In permitted new R0 browser/Node service, inspect1366×768 and1920×1080; repeat critical controls at1280×720 and200% text zoom.",
+        "Use parameter commit, add/copy/delete/move exact-coordinate controls; run real keyboard and select actual event; switch formal/candidate/historical views.",
+        "Switch current theme to contrast and inspect actual Canvas; verify current code uses Node snapshots for positions/score/collision/permission."
+      ],
+      "independentExpected": [
+        "All controls and rejection/confirm/focus indicators operable; theme displays different marked verification palette with same skin and unchanged gameplay digest.",
+        "Event selected shows frozen corresponding run/version/coordinates and actual witness, not current entity values; source labels distinguish human operation/machine trial/synthetic.",
+        "Canvas rendering must not maintain an independent simulation/confirm permission. Browser/service refusal =>UI blocked and continue authorized CLI work; never serve old rejected38-test prototype to obtain UI success."
+      ],
+      "evidenceRequired": [
+        "actual screenshots/video linked to Node run",
+        "control command/event/source records",
+        "width/zoom matrix",
+        "build inspection"
+      ],
+      "source": [
+        "P00 T04",
+        "P04 ADR01,05–06",
+        "P01 T05B"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-AUDIT-01",
+      "title": "执行分母、原型隔离与失败包",
+      "globalTasks": [
+        "R0-T11"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": null,
+      "steps": [
+        "Read case manifest and actual per-case records; enumerate missing/failed/blocked/not applicable; separately inspect policy-native trialStatus.",
+        "Trace one creation chain and one diagnosis chain to original provider request→candidate→real trial→single commit→new run; audit P05 actual human source and approved request limits.",
+        "Search evidence inventory for old38 prototype/K03/designOnly/notExecutable and ensure none counted as new build real runs."
+      ],
+      "independentExpected": [
+        "Every case stays not_executed until actual step/result/raw evidence exists. Documentation/schema checks never grant product pass. not_run/blocked are not denominator exemptions.",
+        "Real-AI absence cannot be hidden by injected plans; absent browser/human may leave CLI valid but whole relevant claim blocked. Semantic model accuracy requires actual human adjudication.",
+        "Old38 helper pass is historical requirement/defect input only; no relabeling into new run. Complete experiment may end in failure or stop, separate from R0 technical pass."
+      ],
+      "evidenceRequired": [
+        "total evidence index",
+        "claim/denominator ledger",
+        "failure and first-divergence references",
+        "source classification audit"
+      ],
+      "source": [
+        "P00 T11",
+        "P05§4–6",
+        "P04 ADR06"
+      ],
+      "actualResult": null
+    },
+    {
+      "caseId": "R0-AUTH-03",
+      "title": "回环入口、会话与固定出站目录",
+      "globalTasks": [
+        "R0-T06",
+        "R0-T09"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Pre-T06 approval: request actual AI endpoint once only against local host, expect local refusal; no model/key lookup.",
+        "With local controlled adapter only, submit fresh requests varying one gate at a time: missing session header, stale session, wrong Origin, missing/stale writer, adult disabled, unapproved send scope, unknown provider/model/endpoint, arbitrary URL/shell/file fields.",
+        "Check listener binding and all handler rejection counts; do not actually attempt disallowed upstream addresses."
+      ],
+      "independentExpected": [
+        "Before approval E_AI_NOT_APPROVED and zero dispatch. Invalid gate input rejects before provider handoff and before committed document mutation; no alternate URL/general tool route.",
+        "Listener only127.0.0.1; session/Origin/writer checks do not themselves equal adult cloud-send authorization. Local fake adapter checks do not prove live provider availability."
+      ],
+      "evidenceRequired": [
+        "listener/runtime config",
+        "exact sanitized request DTO/rejection logs",
+        "adapter dispatch counter and unchanged store"
+      ],
+      "source": [
+        "P00 T06",
+        "P04 ADR01",
+        "runtimeContract D11"
+      ],
+      "actualResult": null,
+      "faultInjection": true,
+      "providerSending": "forbidden_in_local_gate_probe"
+    },
+    {
+      "caseId": "R0-COST-01",
+      "title": "已批准预算的持久预留与未知量",
+      "globalTasks": [
+        "R0-T06",
+        "R0-T09"
+      ],
+      "status": "not_executed",
+      "executionCategory": "automation_test",
+      "inputSource": "catalog_machine",
+      "evidenceSource": "machine_test",
+      "fixtureRef": "scene-a",
+      "steps": [
+        "Until T06 actual approved provider/model/price/token/amount caps exist, mark dependent execution blocked; never invent numeric money defaults.",
+        "After approval use controlled local failure adapter and approved ledger config: reserve one attempt, handoff, cancel frontend, persist usage_unknown; restart Node and inspect same ledger.",
+        "Try next request while one unknown attempt occupies concurrency1; test all cap boundaries by controlled fixture ledger balances exactly at each approved limit. Repair attempt re-enters auth/budget gate, SDK implicit retry disabled.",
+        "Release a proved-unsent reservation separately; reconcile unknown only against actual trustworthy usage/billing, not local absence of response."
+      ],
+      "independentExpected": [
+        "Unknown/canceled/timeout after handoff retains reservation and in-flight slot across restart; never fill usage0 or clear debt by new session.",
+        "Any approved token/amount/attempt/concurrency limit reached stops new dispatch. At most38 logical/76provider attempts overall is a ceiling, never a spend target or monetary approval. One repair consumes new attempt through current auth.",
+        "Proved unsent can release; real cancel cost remains unknown until reconciled. Local injected ledger correctness does not count as actual provider billing/cancel probe."
+      ],
+      "evidenceRequired": [
+        "approved config reference or explicit blocked reason",
+        "persistent ledger before/after restart",
+        "reservation/attempt/dispatch/idempotency reconciliation trace"
+      ],
+      "source": [
+        "P00 T06,T09",
+        "P04 ADR01,05",
+        "P05§3"
+      ],
+      "actualResult": null,
+      "faultInjection": true,
+      "providerSending": "none unless separately approved T06 real probe"
+    }
+  ],
+  "notesForRootDecision": [
+    {
+      "id": "NOTE-HUMAN-01",
+      "needs": "Register actual adult operator and human semantic reviewer/availability before human subrecords. No name or independent_non_developer role inferred by this manifest.",
+      "affected": [
+        "R0-RT-12",
+        "R0-RT-18",
+        "R0-AUDIT-01"
+      ],
+      "default": null
+    },
+    {
+      "id": "NOTE-GOLDEN-01",
+      "needs": "Materialize/fingerprint inline fixtures/inputs/golden bytes in unique code root before implementation evaluation; compare source/contract versions with authoritative root. No product-generated expected bytes may replace goldenCandidateVector.",
+      "affected": [
+        "R0-HASH-01",
+        "R0-HASH-02"
+      ],
+      "default": "Source-specific exact transformations and golden bytes supplied; root integrates these inputs, no runtime result inferred."
+    },
+    {
+      "id": "NOTE-NUMERIC-01",
+      "needs": "If independent numerical report requires finite absolute/relative tolerance, root must freeze it before results; same-environment event/tick/branch/count equality remains exact.",
+      "affected": [
+        "R0-RT-03",
+        "R0-RT-06",
+        "R0-EVID-02"
+      ],
+      "default": null
+    },
+    {
+      "id": "NOTE-T06-01",
+      "needs": "Provider/model/SDK/prices/monetary and token caps remain T06 user-confirmed fields; no fee/key/model request authorized by this manifest.",
+      "affected": [
+        "R0-AUTH-01",
+        "R0-AUTH-02",
+        "R0-AUTH-03",
+        "R0-COST-01",
+        "R0-RT-18"
+      ],
+      "default": null
+    },
+    {
+      "id": "NOTE-SCOPE-01",
+      "needs": "Do not silently add full persistent restore to satisfy a case. Full C09 recovery remains out-of-scope; only explicit new authorized risk task could add it.",
+      "affected": [
+        "R0-REC-01"
+      ],
+      "default": "session-only fallback"
+    }
+  ]
+}

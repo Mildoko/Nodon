@@ -1,0 +1,13 @@
+{
+  "segments": [
+    {
+      "ticks": 100,
+      "x": 1,
+      "y": 0
+    }
+  ],
+  "maxTicks": 100,
+  "stopOnLegalTerminal": true,
+  "inputSource": "catalog_machine",
+  "inputId": "two-guards"
+}

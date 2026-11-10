@@ -1,0 +1,27 @@
+{
+  "segments": [
+    {
+      "ticks": 3,
+      "x": 1,
+      "y": 0
+    },
+    {
+      "ticks": 100,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "ticks": 10,
+      "x": 1,
+      "y": 0
+    },
+    {
+      "ticks": 10,
+      "x": -1,
+      "y": 0
+    }
+  ],
+  "maxTicks": 123,
+  "inputSource": "catalog_machine",
+  "inputId": "repeat"
+}

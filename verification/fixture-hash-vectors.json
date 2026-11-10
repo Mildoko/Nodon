@@ -1,0 +1,138 @@
+{
+  "version": "r0-fixture-hashes@1",
+  "vectors": [
+    {
+      "fixture": "verification/fixtures/budget-full.json",
+      "semanticHash": "sha256:f42c861a55934ec5fc676faa2cfdbd482c495e1aa9f6d9b11df810f6d95cf7d3",
+      "fileHash": "sha256:9322b36722e5e5b6204d6b42f5dce0b3213f751cb6f3fbdd1852c06368f9a63e",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":6},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":45}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":700,\"y\":270},{\"id\":\"g2\",\"kind\":\"guard\",\"x\":850,\"y\":100},{\"id\":\"h1\",\"kind\":\"high\",\"x\":660,\"y\":190},{\"id\":\"h2\",\"kind\":\"high\",\"x\":780,\"y\":350},{\"id\":\"h3\",\"kind\":\"high\",\"x\":850,\"y\":440},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":150,\"y\":100},{\"id\":\"n10\",\"kind\":\"normal\",\"x\":280,\"y\":270},{\"id\":\"n11\",\"kind\":\"normal\",\"x\":410,\"y\":270},{\"id\":\"n12\",\"kind\":\"normal\",\"x\":540,\"y\":270},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":280,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":410,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":540,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":150,\"y\":440},{\"id\":\"n6\",\"kind\":\"normal\",\"x\":280,\"y\":440},{\"id\":\"n7\",\"kind\":\"normal\",\"x\":410,\"y\":440},{\"id\":\"n8\",\"kind\":\"normal\",\"x\":540,\"y\":440},{\"id\":\"n9\",\"kind\":\"normal\",\"x\":150,\"y\":270},{\"id\":\"p\",\"kind\":\"player\",\"x\":80,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/clamp.json",
+      "semanticHash": "sha256:84416bf5f4c6c1b5595e317c2ac9025322cd2950a4dbdad3ef06abb8b1598766",
+      "fileHash": "sha256:9e2ecedbb0842cf22965d92afe8feca36f2e0a2387e8cd59ddc4aa8c4ddf50fe",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"n1\",\"kind\":\"normal\",\"x\":100,\"y\":100},{\"id\":\"p\",\"kind\":\"player\",\"x\":930,\"y\":510}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/detect-enter.json",
+      "semanticHash": "sha256:0f846e176b260f4755e463f419817d07bfff92a8b73cf1f891ab674da836d481",
+      "fileHash": "sha256:358e127367ba382bdcb02ed4f7e9de09b081fc8d688f50cd994648add2e85b1e",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":170,\"y\":270},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":900,\"y\":500},{\"id\":\"p\",\"kind\":\"player\",\"x\":100,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/detect-equal.json",
+      "semanticHash": "sha256:2e7c2392e3dfb5134688326c7f718211b68fe08b7c8f664108971cac33ddc4bd",
+      "fileHash": "sha256:50921a6619d71b4bba9fbcd0b78d3df58d396caf15967e28a7d89ffa4183a952",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":160,\"y\":270},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":900,\"y\":500},{\"id\":\"p\",\"kind\":\"player\",\"x\":100,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/detect-outside.json",
+      "semanticHash": "sha256:0f846e176b260f4755e463f419817d07bfff92a8b73cf1f891ab674da836d481",
+      "fileHash": "sha256:2e00e070ee4d39499a69445146a3efbf4384c13f3aeadaa4583e4338a0f5856c",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":170,\"y\":270},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":900,\"y\":500},{\"id\":\"p\",\"kind\":\"player\",\"x\":100,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/double-reward.json",
+      "semanticHash": "sha256:0adb4e8ff22dd6a4937c5685f6ea3c6788339d3a5427ebf9e6f191d8e7a050d2",
+      "fileHash": "sha256:2cbee279e7f1b700d61d989f2550097e3814a11f908dfa98fd426dae9d32101c",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":2},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"n10\",\"kind\":\"normal\",\"x\":70,\"y\":250},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":70,\"y\":290},{\"id\":\"p\",\"kind\":\"player\",\"x\":20,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/scene-a-goal6-mirror.json",
+      "semanticHash": "sha256:350436ab27d89d98c058d3856e2f6621dfad2baba6d587fa044967d74263c5ff",
+      "fileHash": "sha256:5926e216600af37e040d4c23d6a3f5dcf1ca5ec7a2c4bf3919c0f6ff2c8a08d0",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":6},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":45}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":260,\"y\":270},{\"id\":\"h1\",\"kind\":\"high\",\"x\":300,\"y\":190},{\"id\":\"h2\",\"kind\":\"high\",\"x\":180,\"y\":350},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":810,\"y\":100},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":680,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":550,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":420,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":810,\"y\":440},{\"id\":\"n6\",\"kind\":\"normal\",\"x\":680,\"y\":440},{\"id\":\"n7\",\"kind\":\"normal\",\"x\":550,\"y\":440},{\"id\":\"n8\",\"kind\":\"normal\",\"x\":420,\"y\":440},{\"id\":\"p\",\"kind\":\"player\",\"x\":880,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/scene-a-goal6.json",
+      "semanticHash": "sha256:7a0710df8324cf21b85d04ba8fa62f03f62feb3c46e95dca31557facd488aaf9",
+      "fileHash": "sha256:067876ea7fadb8b1784b46aa5ccbcb74be722f19a872f63e4cd63a4db87b7783",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":6},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":45}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":700,\"y\":270},{\"id\":\"h1\",\"kind\":\"high\",\"x\":660,\"y\":190},{\"id\":\"h2\",\"kind\":\"high\",\"x\":780,\"y\":350},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":150,\"y\":100},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":280,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":410,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":540,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":150,\"y\":440},{\"id\":\"n6\",\"kind\":\"normal\",\"x\":280,\"y\":440},{\"id\":\"n7\",\"kind\":\"normal\",\"x\":410,\"y\":440},{\"id\":\"n8\",\"kind\":\"normal\",\"x\":540,\"y\":440},{\"id\":\"p\",\"kind\":\"player\",\"x\":80,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/scene-a-mirror.json",
+      "semanticHash": "sha256:f05adbec17f1067816636c095907978d5c0a00ccfa0b50c776c670f77742b5d1",
+      "fileHash": "sha256:92c3d4aea3917a15904f532fee727223905eabb4f73b0ce53bd34fb4fe3ac8a6",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":10},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":45}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":260,\"y\":270},{\"id\":\"h1\",\"kind\":\"high\",\"x\":300,\"y\":190},{\"id\":\"h2\",\"kind\":\"high\",\"x\":180,\"y\":350},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":810,\"y\":100},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":680,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":550,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":420,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":810,\"y\":440},{\"id\":\"n6\",\"kind\":\"normal\",\"x\":680,\"y\":440},{\"id\":\"n7\",\"kind\":\"normal\",\"x\":550,\"y\":440},{\"id\":\"n8\",\"kind\":\"normal\",\"x\":420,\"y\":440},{\"id\":\"p\",\"kind\":\"player\",\"x\":880,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/scene-a.json",
+      "semanticHash": "sha256:5220575e1db5a82a52fda9b3ff212b44659bb5c6587e34f419c934eb6bfe43f9",
+      "fileHash": "sha256:7d3d54ef1f7c56169b8c8475d5add8de6af1c27aca41649277e5e8f00d0b4f5e",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":10},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":45}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":700,\"y\":270},{\"id\":\"h1\",\"kind\":\"high\",\"x\":660,\"y\":190},{\"id\":\"h2\",\"kind\":\"high\",\"x\":780,\"y\":350},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":150,\"y\":100},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":280,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":410,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":540,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":150,\"y\":440},{\"id\":\"n6\",\"kind\":\"normal\",\"x\":280,\"y\":440},{\"id\":\"n7\",\"kind\":\"normal\",\"x\":410,\"y\":440},{\"id\":\"n8\",\"kind\":\"normal\",\"x\":540,\"y\":440},{\"id\":\"p\",\"kind\":\"player\",\"x\":80,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/scene-b-mirror.json",
+      "semanticHash": "sha256:43089965dc623d2d59510de07b06f0c61a254f33fa84b9171c9aa476ccd212f3",
+      "fileHash": "sha256:af888ac00abf9fc5aa1592e3b9ec58e8847b8f29f61691c0ab99b7aac0f8b386",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":4},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":30}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"n1\",\"kind\":\"normal\",\"x\":810,\"y\":100},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":680,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":550,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":420,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":810,\"y\":440},{\"id\":\"p\",\"kind\":\"player\",\"x\":880,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/scene-b.json",
+      "semanticHash": "sha256:db4fef1bccb8529c0a1d14189702c10910a128048beaab78dfd6931894b9357d",
+      "fileHash": "sha256:cf1d323e13deeb9d95db166ee4b89f3a45ae55e9a29ef561bb5c88c2f0bd79bf",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":4},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":30}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"n1\",\"kind\":\"normal\",\"x\":150,\"y\":100},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":280,\"y\":100},{\"id\":\"n3\",\"kind\":\"normal\",\"x\":410,\"y\":100},{\"id\":\"n4\",\"kind\":\"normal\",\"x\":540,\"y\":100},{\"id\":\"n5\",\"kind\":\"normal\",\"x\":150,\"y\":440},{\"id\":\"p\",\"kind\":\"player\",\"x\":80,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/single-reward-repeat.json",
+      "semanticHash": "sha256:f2bba35d5698b20545c9b289e4c51a4030e834a1009e0c6c449373546b238a7d",
+      "fileHash": "sha256:a59888920b7411cae5e52e50bb6d55cac718f5ae5f213af7801d572d36200e22",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":2},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"n1\",\"kind\":\"normal\",\"x\":50,\"y\":270},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":900,\"y\":500},{\"id\":\"p\",\"kind\":\"player\",\"x\":20,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/smoke-caught.json",
+      "semanticHash": "sha256:241b248f036bf107a9fc5cd2952ad8bcbac078d08a71588cc7d540cf93331247",
+      "fileHash": "sha256:413e890ed673aa2b69eea74174adc02c8d7db1c872ecc4a541562647ca46c39e",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":2},\"guards\":{\"detectRadius\":180,\"speed\":100},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":50,\"y\":270},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":900,\"y\":500},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":900,\"y\":450},{\"id\":\"p\",\"kind\":\"player\",\"x\":20,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/sweep-tangent.json",
+      "semanticHash": "sha256:2851a84a41c387355ad036b48f3baa3cf4561f33f165ff8d3804847532ec5473",
+      "fileHash": "sha256:1f350cf7b0e7b4b94d59c1e7ce05ab677d2c45dfb3afc0220d425dc970b49bd8",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":2},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"n1\",\"kind\":\"normal\",\"x\":70,\"y\":50},{\"id\":\"n2\",\"kind\":\"normal\",\"x\":900,\"y\":500},{\"id\":\"p\",\"kind\":\"player\",\"x\":20,\"y\":20}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/terminal-conflict-mirror.json",
+      "semanticHash": "sha256:01a9ef07bb5cfb4ab39a87e62a5891ce3334742e355627c2fb8f10200ccb6c38",
+      "fileHash": "sha256:99d20dc4d04b3c2b136a8288f96349e51fbe457bbb513a0174764c2fe622e136",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":true,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":870,\"y\":270},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":890,\"y\":290},{\"id\":\"p\",\"kind\":\"player\",\"x\":940,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/terminal-conflict.json",
+      "semanticHash": "sha256:45bd0769cde15bbc40d4661e2e08db40ec0642c2ca38a0d03df7781972ce0b4f",
+      "fileHash": "sha256:eb854e21c099c0d5345510e36005956c675632c5f97ab25a18dd1003c52478df",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":true,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":90,\"y\":270},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":70,\"y\":290},{\"id\":\"p\",\"kind\":\"player\",\"x\":20,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/two-guard-contact.json",
+      "semanticHash": "sha256:119a6fe96889d5f0e93b77ddaee63c5c1a8887e29c2309c04f4aec84c419f0ef",
+      "fileHash": "sha256:66027aac296a010153711a78cbd5e58aacab7916ce30d59e5b5af2f308569408",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"g1\",\"kind\":\"guard\",\"x\":90,\"y\":250},{\"id\":\"g2\",\"kind\":\"guard\",\"x\":90,\"y\":290},{\"id\":\"n1\",\"kind\":\"normal\",\"x\":400,\"y\":270},{\"id\":\"p\",\"kind\":\"player\",\"x\":20,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    },
+    {
+      "fixture": "verification/fixtures/zero-guard-route.json",
+      "semanticHash": "sha256:bc1c9921d5ea6d127de8a4080d64e41cd6583345a93c4a8386eb6f03a242e6a4",
+      "fileHash": "sha256:2f65de440d095d946cd5bca9795e1434f66a04a82c51e04926cc9a9cdc996d92",
+      "canonicalJson": "{\"rules\":{\"goal\":{\"targetScore\":1},\"guards\":{\"detectRadius\":60,\"speed\":20},\"rewards\":{\"highValue\":3,\"normalValue\":1},\"timer\":{\"enabled\":false,\"limit\":15}},\"runtimeVersion\":\"collect-chase@1\",\"scene\":{\"entities\":[{\"id\":\"n1\",\"kind\":\"normal\",\"x\":50,\"y\":270},{\"id\":\"p\",\"kind\":\"player\",\"x\":20,\"y\":270}],\"height\":540,\"width\":960,\"worldId\":\"rect_960_540\"}}",
+      "calculationSource": "independent Python SHA256 at T00, not product Runtime"
+    }
+  ]
+}

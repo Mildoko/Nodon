@@ -1,0 +1,193 @@
+{
+  "designOnly": true,
+  "status": "review.2 design contract; not an implemented runner or passed test",
+  "policyVersion": "collect-chase-candidate-trial@2",
+  "runtimeVersion": "collect-chase@1",
+  "ruleRegistryVersion": "collect-chase-rules@1",
+  "maxOperations": 3,
+  "minOperations": 1,
+  "operations": {
+    "set_goal": {
+      "requirement": "runtime_smoke_required",
+      "scriptId": "CC-SMOKE-01",
+      "loadedParameterAssertions": [
+        "rules.goal.targetScore"
+      ]
+    },
+    "set_reward_values": {
+      "requirement": "runtime_smoke_required",
+      "scriptId": "CC-SMOKE-01",
+      "loadedParameterAssertions": [
+        "rules.rewards.normalValue",
+        "rules.rewards.highValue"
+      ]
+    },
+    "set_guard_speed": {
+      "requirement": "runtime_smoke_required",
+      "scriptId": "CC-SMOKE-01",
+      "loadedParameterAssertions": [
+        "rules.guards.speed"
+      ]
+    },
+    "set_detect_radius": {
+      "requirement": "runtime_smoke_required",
+      "scriptId": "CC-SMOKE-01",
+      "loadedParameterAssertions": [
+        "rules.guards.detectRadius"
+      ]
+    },
+    "set_timer": {
+      "requirement": "runtime_smoke_required",
+      "scriptId": "CC-SMOKE-01",
+      "loadedParameterAssertions": [
+        "rules.timer.enabled",
+        "rules.timer.limit"
+      ]
+    },
+    "move_entity": {
+      "requirement": "runtime_smoke_required",
+      "scriptId": "CC-SMOKE-01",
+      "loadedParameterAssertions": [
+        "scene.entities[id].x",
+        "scene.entities[id].y"
+      ]
+    }
+  },
+  "themeOnly": {
+    "operation": "set_theme",
+    "requirement": "static_only",
+    "trialStatus": "runtime_not_applicable",
+    "assertions": [
+      "catalog asset and role references valid",
+      "candidateSemanticHash == baseSemanticHash"
+    ],
+    "limits": "No claim of rendered readability or play quality"
+  },
+  "mixedBatch": "Any gameplay operation requires one full-batch candidateHash runtime smoke; never execute/test partial batch.",
+  "readonlyKinds": [
+    "directions",
+    "locate",
+    "explain",
+    "clarify",
+    "unsupported"
+  ],
+  "smoke": {
+    "scriptId": "CC-SMOKE-01",
+    "maxTicks": 180,
+    "tickRate": 60,
+    "inputs": [
+      {
+        "ticks": 30,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "ticks": 60,
+        "x": 1,
+        "y": 0
+      },
+      {
+        "ticks": 60,
+        "x": 0,
+        "y": 1
+      },
+      {
+        "ticks": 30,
+        "x": -1,
+        "y": 0
+      }
+    ],
+    "stopOnLegalTerminal": true,
+    "requiredAssertions": [
+      "real run_started",
+      "at least one actual logical tick",
+      "immutable candidate snapshot and changed parameter/position loaded",
+      "no Runtime fault or budget overrun",
+      "recorded events and actualValues agree with candidate rules and phase"
+    ],
+    "legalTerminalMayPass": [
+      "caught",
+      "timeout",
+      "win"
+    ],
+    "noWitness": "Record uncovered behavior; never infer win, route solvability, fairness or untriggered mechanic coverage."
+  },
+  "specificOutcomeClaims": {
+    "requireSameCandidateHash": true,
+    "extraControlledInputRequired": true,
+    "maxTicksPerRun": 7200,
+    "maxEventsPerTick": 256,
+    "eventRingCapacity": 1000,
+    "budgetTermination": "blocked; not player timeout",
+    "noWitness": "Downgrade statement to prediction/untested; cannot claim actual verification."
+  },
+  "statuses": [
+    "not_run",
+    "running",
+    "passed",
+    "failed",
+    "blocked",
+    "runtime_not_applicable"
+  ],
+  "failureMapping": {
+    "noExecutor": "not_run",
+    "environmentOrBudgetOrUnplayable": "blocked",
+    "runtimeOrAssertionFault": "failed"
+  },
+  "applicationGate": "Static checks plus passed runtime smoke for gameplay; static checks plus runtime_not_applicable for pure theme only. Any other status denies application. Recheck candidateHash and current authorization/version at confirmation.",
+  "candidateHash": {
+    "algorithm": "SHA-256 lower hex prefixed sha256:",
+    "canonicalization": "UTF-8 compact JSON; recursively lexicographic object keys; operations array order retained; candidateState.scene.entities ASCII id sorted; integer/-0 rules as C10",
+    "fields": [
+      "projectId",
+      "requestId",
+      "baseRevision",
+      "baseSemanticHash",
+      "runtimeVersion",
+      "catalogVersion",
+      "ruleRegistryVersion",
+      "trialPolicyVersion",
+      "operations",
+      "candidateState"
+    ],
+    "candidateState": [
+      "scene",
+      "rules",
+      "presentation"
+    ],
+    "semanticHash": "Separate C10 gameplay projection; hash is association, not authorization or file field"
+  },
+  "evidenceRequired": [
+    "requestId",
+    "candidateHash",
+    "candidateSemanticHash",
+    "baseRevision",
+    "runtimeVersion",
+    "ruleRegistryVersion",
+    "trialPolicyVersion",
+    "environment",
+    "runId",
+    "initialStateReference",
+    "scriptId",
+    "expandedInputSequence",
+    "maxTicks",
+    "expectedAssertions",
+    "actualTerminalEventsAssertions",
+    "coverageAndMissing",
+    "trialStatus",
+    "failureReason"
+  ],
+  "source": "machine_test, never peer_human or author real play",
+  "invalidation": "Any candidate content/version/operation changes require rehash and rerun. Canceled, timed-out, stale or adult-disabled requests cannot unlock application.",
+  "genericUnitTest": "Supplementary only; never substitutes for the concrete candidateHash trial.",
+  "entityBudgetPolicyVersion": "entity-budget@1",
+  "applicability": {
+    "set_guard_speed": "blocked when guard count=0",
+    "set_detect_radius": "blocked when guard count=0",
+    "set_reward_values": "blocked when reward count=0; absent class value may remain but has no current score contribution",
+    "move_entity": "blocked if stable entityId absent; never retarget another entity",
+    "set_goal": "cannot turn zero-reward/insufficient-total draft into an eligible gameplay candidate unless full supported batch restores playability",
+    "set_timer": "legal with zero guards; never auto-enable timer when last guard removed",
+    "entityWrites": "add_entity/copy_entity/remove_entity not supported; return manual step without formal operations or fake proposed candidate"
+  }
+}

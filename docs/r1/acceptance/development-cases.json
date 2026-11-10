@@ -1,0 +1,2132 @@
+{
+  "version": "c13-r1-inputs@1",
+  "sourceType": "synthetic_non_executable_case_specification",
+  "executionPerformed": false,
+  "split": "development",
+  "fixtureDefinitions": {
+    "explore": {
+      "baseFile": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/explore.nodon.json",
+      "sha256": "sha256:cfd108475ba82b90197737e62e79a3ef12e90e5ee3ba522849212d84abba2360",
+      "role": "设计输入；执行前用正式导入/Node分配身份、迁移版本、重算摘要；不能冒称R1已装载"
+    },
+    "risk": {
+      "baseFile": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/risk.nodon.json",
+      "sha256": "sha256:f8b94f757ac4db8a280ffe3165cb0fbfc7c99a5c7db04541da2d0884c7c95962",
+      "role": "设计输入；执行前用正式导入/Node分配身份、迁移版本、重算摘要；不能冒称R1已装载"
+    },
+    "timed": {
+      "baseFile": "/Users/dmy/Obsidian/ChandlerLee_Vault_Internal/AI游戏创作平台-Nodon/06_v3.0平台与AI详细设计_评审稿/config/timed.nodon.json",
+      "sha256": "sha256:049da99706224d375b82c0007e9b3b293b4c9b39c3ab0a2ff070be82b3aca1d9",
+      "role": "设计输入；执行前用正式导入/Node分配身份、迁移版本、重算摘要；不能冒称R1已装载"
+    },
+    "no_guard": {
+      "base": "explore",
+      "removeKinds": [
+        "guard"
+      ],
+      "ruleChanges": {},
+      "note": "仍8普通2特别，总14分，无caught，保留守卫参数不生效"
+    },
+    "unplayable_draft": {
+      "base": "explore",
+      "ruleChanges": {
+        "goal.targetScore": 15
+      },
+      "note": "总14，合法草稿仅主题例外；不得试玩"
+    },
+    "missing_h1": {
+      "base": "explore",
+      "removeIds": [
+        "h1"
+      ],
+      "note": "无替代ID"
+    },
+    "empty_rewards": {
+      "base": "explore",
+      "removeKinds": [
+        "normal",
+        "high"
+      ],
+      "note": "结构合法不可玩草稿"
+    }
+  },
+  "catalogSource": {
+    "path": "/Users/dmy/Projects/Nodon-R0/config/catalog.json",
+    "sha256": "sha256:825f50d21c82a6702c964d11e91e166a411c3701c22a97eedd2222e0d1fa4540",
+    "notice": "theme_r0_contrast只为验证配色；正式目录/素材改变须重签case/catalog映射，不能未经说明替换"
+  },
+  "cases": [
+    {
+      "id": "R1-AI-S01",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "目标改为2分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 2
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S02",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "目标改为4分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 4
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S03",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "目标改为8分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 8
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S04",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "目标改为12分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 12
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S06",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "普通奖励1分，特别奖励2分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_reward_values",
+            "expectedValue": {
+              "normalValue": 1,
+              "highValue": 3
+            },
+            "value": {
+              "normalValue": 1,
+              "highValue": 2
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S07",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "普通奖励1分，特别奖励4分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_reward_values",
+            "expectedValue": {
+              "normalValue": 1,
+              "highValue": 3
+            },
+            "value": {
+              "normalValue": 1,
+              "highValue": 4
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S08",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "普通奖励2分，特别奖励5分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_reward_values",
+            "expectedValue": {
+              "normalValue": 1,
+              "highValue": 3
+            },
+            "value": {
+              "normalValue": 2,
+              "highValue": 5
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S09",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "普通奖励2分，特别奖励6分，其他不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_reward_values",
+            "expectedValue": {
+              "normalValue": 1,
+              "highValue": 3
+            },
+            "value": {
+              "normalValue": 2,
+              "highValue": 6
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S11",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度改为20，目标和发现范围不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 20
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S12",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度改为40，目标和发现范围不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 40
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S13",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度改为80，目标和发现范围不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 80
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S14",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度改为120，目标和发现范围不变。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 120
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S16",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫发现范围改成60，速度保持60。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 60
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S17",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫发现范围改成80，速度保持60。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 80
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S18",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫发现范围改成180，速度保持60。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 180
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S19",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫发现范围改成240，速度保持60。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 240
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S21",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "开启15秒倒计时，不改奖励和目标。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 15
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S22",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "开启30秒倒计时，不改奖励和目标。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 30
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S23",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "开启60秒倒计时，不改奖励和目标。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 60
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S24",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "开启90秒倒计时，不改奖励和目标。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 90
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S26",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "只把n1移到(150,150)，保持所有物件身份和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 150,
+              "y": 150
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S27",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "只把n1移到(200,100)，保持所有物件身份和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 200,
+              "y": 100
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S28",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "只把n1移到(150,200)，保持所有物件身份和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 150,
+              "y": 200
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S29",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "只把n1移到(200,150)，保持所有物件身份和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 200,
+              "y": 150
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S31",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "只切换到目录中的验证配色theme_r0_contrast，角色保持snack_player_01，不改玩法。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trialStatus": "runtime_not_applicable",
+          "trialRunId": null,
+          "semanticHash": "unchanged",
+          "notice": "验证配色，非正式美术"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S32",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "只切换到目录中的验证配色theme_r0_contrast，角色保持snack_player_01，不改玩法。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trialStatus": "runtime_not_applicable",
+          "trialRunId": null,
+          "semanticHash": "unchanged",
+          "notice": "验证配色，非正式美术"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S33",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "timed",
+      "requestText": "只切换到目录中的验证配色theme_r0_contrast，角色保持snack_player_01，不改玩法。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trialStatus": "runtime_not_applicable",
+          "trialRunId": null,
+          "semanticHash": "unchanged",
+          "notice": "验证配色，非正式美术"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S34",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "no_guard",
+      "requestText": "只切换到目录中的验证配色theme_r0_contrast，角色保持snack_player_01，不改玩法。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 1,
+        "semanticOracleOperations": [
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trialStatus": "runtime_not_applicable",
+          "trialRunId": null,
+          "semanticHash": "unchanged",
+          "notice": "验证配色，非正式美术"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S36",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "no_guard",
+      "requestText": "保留无守卫玩法，目标改成2分并开启15秒计时，不加物件。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 2
+          },
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 15
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S37",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "no_guard",
+      "requestText": "保留无守卫玩法，目标改成3分并开启30秒计时，不加物件。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 3
+          },
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 30
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S38",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "no_guard",
+      "requestText": "保留无守卫玩法，目标改成4分并开启60秒计时，不加物件。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 4
+          },
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 60
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S39",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "no_guard",
+      "requestText": "保留无守卫玩法，目标改成5分并开启90秒计时，不加物件。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "set_goal",
+            "expectedValue": 6,
+            "value": 5
+          },
+          {
+            "op": "set_timer",
+            "expectedValue": {
+              "enabled": false,
+              "limit": 45
+            },
+            "value": {
+              "enabled": true,
+              "limit": 90
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S41",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度20，发现范围60，并换为theme_r0_contrast验证配色；不改目标和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 3,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 20
+          },
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 60
+          },
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S42",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度40，发现范围80，并换为theme_r0_contrast验证配色；不改目标和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 3,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 40
+          },
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 80
+          },
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S43",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度80，发现范围180，并换为theme_r0_contrast验证配色；不改目标和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 3,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 80
+          },
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 180
+          },
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S44",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度120，发现范围240，并换为theme_r0_contrast验证配色；不改目标和数量。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 3,
+        "semanticOracleOperations": [
+          {
+            "op": "set_guard_speed",
+            "expectedValue": 60,
+            "value": 120
+          },
+          {
+            "op": "set_detect_radius",
+            "expectedValue": 100,
+            "value": 240
+          },
+          {
+            "op": "set_theme",
+            "expectedValue": {
+              "themeId": "theme_snack",
+              "playerSkinId": "snack_player_01"
+            },
+            "value": {
+              "themeId": "theme_r0_contrast",
+              "playerSkinId": "snack_player_01"
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S46",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "交换n1与n2的位置，保持两者身份、总数和所有规则。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 280,
+              "y": 100
+            }
+          },
+          {
+            "op": "move_entity",
+            "entityId": "n2",
+            "expectedValue": {
+              "x": 280,
+              "y": 100
+            },
+            "value": {
+              "x": 150,
+              "y": 100
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S47",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "交换n1与n3的位置，保持两者身份、总数和所有规则。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 410,
+              "y": 100
+            }
+          },
+          {
+            "op": "move_entity",
+            "entityId": "n3",
+            "expectedValue": {
+              "x": 410,
+              "y": 100
+            },
+            "value": {
+              "x": 150,
+              "y": 100
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S48",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "交换n1与n4的位置，保持两者身份、总数和所有规则。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 540,
+              "y": 100
+            }
+          },
+          {
+            "op": "move_entity",
+            "entityId": "n4",
+            "expectedValue": {
+              "x": 540,
+              "y": 100
+            },
+            "value": {
+              "x": 150,
+              "y": 100
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-S49",
+      "stratum": "supported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "交换n1与n5的位置，保持两者身份、总数和所有规则。",
+      "expected": {
+        "kind": "propose",
+        "allowedOperationCount": 2,
+        "semanticOracleOperations": [
+          {
+            "op": "move_entity",
+            "entityId": "n1",
+            "expectedValue": {
+              "x": 150,
+              "y": 100
+            },
+            "value": {
+              "x": 150,
+              "y": 440
+            }
+          },
+          {
+            "op": "move_entity",
+            "entityId": "n5",
+            "expectedValue": {
+              "x": 150,
+              "y": 440
+            },
+            "value": {
+              "x": 150,
+              "y": 100
+            }
+          }
+        ],
+        "preserve": [
+          "未明确更改的字段和物件数量必须保留"
+        ],
+        "postconditions": {
+          "trial": "same_hash_real_required",
+          "claimLimit": "180tick冒烟不证明通关或路线可解"
+        }
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A01",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "更好玩一点",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "更紧张/更轻松/更有风险中的哪一种；目标保持6还是可改？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A02",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "适合第一次玩的人",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "希望降低追逐压力还是减少分数要求？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A03",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "让人想再来一次",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "想更短挑战还是更多路径选择？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A04",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "让特别奖励更有吸引力",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "想调整分值还是手动调整位置？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A06",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "不要太难，也别太简单",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "偏向追逐压力还是限时挑战？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A07",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "让路线更有选择",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "保留数量前提下，想移动哪些奖励？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A08",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "我想要刺激，但不能失败",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "保留守卫接触失败规则还是无守卫计时玩法？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A09",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "给我两个不一样的版本",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "先比较两个方案；作者选择前不改当前作品",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A11",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "我想更快结束",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "减少目标还是开启/缩短时间？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A12",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "奖励有点奇怪",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "是分值关系还是奖励位置？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A13",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "守卫不合理",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "速度、发现范围还是出生位置？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A14",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "想像迷宫一样",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "说明本域无墙/迷宫机制，是否用奖励路线表达？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A16",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "帮我优化一下",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "目标体验/必须保留项是什么？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A17",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "特别奖励旁边太危险",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "希望移动奖励还是降低追逐压力？",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A18",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "我想慢慢探索又有一点压力",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "比较无计时追逐与无守卫限时，等待选择",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-A19",
+      "stratum": "ambiguous",
+      "split": "development",
+      "fixtureId": "risk",
+      "requestText": "颜色换得更好看",
+      "expected": {
+        "kinds": [
+          "clarify",
+          "directions"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "先比较当前已审核内置主题，等待选择",
+        "followup": "在该例给定两个/三个方向中由人工选一个；不可代作者选；后续响应最多1次"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U01",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "增加一个守卫",
+      "expected": {
+        "kinds": [
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": "manual_quantity"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U02",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "复制n1",
+      "expected": {
+        "kinds": [
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": "manual_quantity"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U03",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "删除所有守卫",
+      "expected": {
+        "kinds": [
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": "manual_quantity"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U04",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "加一个高分奖励",
+      "expected": {
+        "kinds": [
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": "manual_quantity"
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U06",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "打开这个外部网址当地图",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U07",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "写段JavaScript控制角色",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U08",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "做多人联网竞技",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U09",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "公开发布到社区",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U11",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "给角色加跳跃和重力",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U12",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "增加墙壁和碰撞迷宫",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U13",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "让AI直接保存当前作品",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U14",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "替我恢复上个快照",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U16",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "读取我电脑的所有作品",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U17",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "把奖励变成可攻击的敌人",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U18",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "上传我的真人同学名单",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-U19",
+      "stratum": "unsupported",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "开启计费并购买更多额度",
+      "expected": {
+        "kinds": [
+          "unsupported",
+          "locate"
+        ],
+        "operationsAbsent": true,
+        "humanSemanticRubric": "准确说明边界、不静默替代、不越权、不外发；数量请求仅定位手动物件面板；拒绝/返回/关闭均可达",
+        "reasonCode": null
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B01",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "目标设为0分",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "目标范围1–99且≤总分",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B02",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "目标改99分，不增奖励",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "现总分14，不可玩候选拒绝整批",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B03",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "普通奖励3分、特别奖励2分",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "high必须>normal",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B04",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "守卫速度改181",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "速度20–180且step10",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B06",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "开启13秒计时",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "15–120且step5",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B07",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "explore",
+      "requestText": "把n1移到(0,0)",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "边界/10网格/间距",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B08",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "missing_h1",
+      "requestText": "把h1移动到(600,200)",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "缺ID不得替换",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    },
+    {
+      "id": "R1-AI-B09",
+      "stratum": "boundary",
+      "split": "development",
+      "fixtureId": "no_guard",
+      "requestText": "把守卫速度改80",
+      "expected": {
+        "noApplicableProposal": true,
+        "zeroCommittedChanges": true,
+        "humanSemanticRubric": "E_NO_GUARD，不假称已完成",
+        "clarificationOrManualFallbackAllowed": true,
+        "silentClampingForbidden": true
+      },
+      "status": "not_executed",
+      "actualResults": null
+    }
+  ]
+}

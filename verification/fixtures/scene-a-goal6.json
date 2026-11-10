@@ -1,0 +1,115 @@
+{
+  "formatVersion": "3.0-review.3",
+  "runtimeVersion": "collect-chase@1",
+  "catalogVersion": "workshop-core@1",
+  "project": {
+    "projectId": "b7f41000-0000-4000-8000-000000000002",
+    "revision": 0,
+    "title": "冒险争分",
+    "instructions": "方向键或WASD移动，拿到10分过关。普通点心1分，特别点心3分；碰到守卫失败。",
+    "authorNote": "",
+    "designIntent": null,
+    "sourceProject": null,
+    "scene": {
+      "worldId": "rect_960_540",
+      "width": 960,
+      "height": 540,
+      "entities": [
+        {
+          "id": "p",
+          "kind": "player",
+          "x": 80,
+          "y": 270
+        },
+        {
+          "id": "g1",
+          "kind": "guard",
+          "x": 700,
+          "y": 270
+        },
+        {
+          "id": "n1",
+          "kind": "normal",
+          "x": 150,
+          "y": 100
+        },
+        {
+          "id": "n2",
+          "kind": "normal",
+          "x": 280,
+          "y": 100
+        },
+        {
+          "id": "n3",
+          "kind": "normal",
+          "x": 410,
+          "y": 100
+        },
+        {
+          "id": "n4",
+          "kind": "normal",
+          "x": 540,
+          "y": 100
+        },
+        {
+          "id": "n5",
+          "kind": "normal",
+          "x": 150,
+          "y": 440
+        },
+        {
+          "id": "n6",
+          "kind": "normal",
+          "x": 280,
+          "y": 440
+        },
+        {
+          "id": "n7",
+          "kind": "normal",
+          "x": 410,
+          "y": 440
+        },
+        {
+          "id": "n8",
+          "kind": "normal",
+          "x": 540,
+          "y": 440
+        },
+        {
+          "id": "h1",
+          "kind": "high",
+          "x": 660,
+          "y": 190
+        },
+        {
+          "id": "h2",
+          "kind": "high",
+          "x": 780,
+          "y": 350
+        }
+      ]
+    },
+    "rules": {
+      "goal": {
+        "targetScore": 6
+      },
+      "rewards": {
+        "normalValue": 1,
+        "highValue": 3
+      },
+      "guards": {
+        "speed": 100,
+        "detectRadius": 180
+      },
+      "timer": {
+        "enabled": false,
+        "limit": 45
+      }
+    },
+    "presentation": {
+      "themeId": "theme_snack",
+      "playerSkinId": "snack_player_01"
+    },
+    "semanticHash": "sha256:7a0710df8324cf21b85d04ba8fa62f03f62feb3c46e95dca31557facd488aaf9"
+  }
+}

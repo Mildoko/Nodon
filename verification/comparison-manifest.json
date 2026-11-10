@@ -1,0 +1,1823 @@
+{
+  "manifestVersion": "r0-comparison@1",
+  "baseline": "review.4-r0-20261028",
+  "author": "GPT6.1SolHigh",
+  "createdDate": "2026-10-28",
+  "freezeState": "frozen-before-model-output; final package fingerprints and runtime materialization by root",
+  "sources": [
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/config/ud02/risk.nodon.json",
+      "sha256": "sha256:a44cf89892e4210f886ffd0d83fa5343d1ea8f508c4a4f56a95fac6d4b794fbd",
+      "sourceType": "synthetic_fixture"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/config/ud02/garden.nodon.json",
+      "sha256": "sha256:d69ba54fad07b6ca6ed06277038624b13717d73ec24f42591f18e44c77690d16",
+      "sourceType": "synthetic_fixture"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/案例与附件/A04_AI价值与非模型基线记录表.md",
+      "sha256": "sha256:b33d259d2ef3720508da021436ec824865344d24f22d09176c43eeb89680c239",
+      "sourceType": "design_contract"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/产品策划/C18_验证观察表与证据口径案.md",
+      "sha256": "sha256:da8a6572559518773bb8a0b739b42ee7ab487a326201229bdc6ce7514b1ef1b0",
+      "sourceType": "design_contract"
+    },
+    {
+      "path": "06_v3.0平台与AI详细设计_评审稿/产品策划/C20_开发交接与验收里程碑案.md",
+      "sha256": "sha256:054a21b3532989f500cd4b1e0f9a3e6df71b4a789ddfac4f5f173fc20f8e51fc",
+      "sourceType": "design_contract"
+    },
+    {
+      "path": "07_R0最小真实闭环开发计划_评审稿/P05_冻结任务提案与证据记录模板.md",
+      "sha256": "sha256:3c479fa6da950b140e58cbb4c90cd4562ff8f2780f880aedd6b416c1e4d28979",
+      "sourceType": "design_contract"
+    }
+  ],
+  "transform": {
+    "id": "MIRROR-X-960-v1",
+    "definition": "For each scene entity x:=960-x, y unchanged; stable IDs/kinds/counts/rules/order retained. Every requested coordinate x becomes960-x; runtime input vector dx negated, dy unchanged.",
+    "worldWidth": 960,
+    "geometryJustification": "Rectangle reflection preserves all center distances/contact thresholds and relative layout; reflect all participants together. AI side is never transformed.",
+    "identityRules": [
+      "Materialize each mirrored projectId as sourceProjectId+'-mirror' and independent actual run IDs; retain source fixture and transform hash references. ProjectId-only changes do not change semanticHash; mirrored scene geometry still uses its own canonically recomputed semanticHash.",
+      "Never mirror/rename an already captured event to manufacture evidence; actually execute the mirrored document/input.",
+      "Second repeat resets the same variant to its locked initial state; retain prior familiarity as limitation.",
+      "Content instructions coordinate mentions must be transformed where present; rules/values and target goals stay equivalent."
+    ],
+    "materializedReferences": {
+      "FX-A": "verification/fixtures/scene-a-mirror.json",
+      "FX-B": "verification/fixtures/scene-b-mirror.json",
+      "FX-A-G6": "verification/fixtures/scene-a-goal6-mirror.json",
+      "FX-E11": "verification/fixtures/terminal-conflict-mirror.json",
+      "FX-E12": "verification/fixtures/scene-b-mirror.json"
+    },
+    "terminalConflictMirror": {
+      "player": [
+        940,
+        270
+      ],
+      "guard": [
+        870,
+        270
+      ],
+      "n1": [
+        890,
+        290
+      ],
+      "inputSegments": [
+        {
+          "ticks": 884,
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "ticks": 16,
+          "dx": -1,
+          "dy": 0
+        }
+      ],
+      "recheckInput": "verification/inputs/terminal-conflict-mirror.json",
+      "rule": "Actual execution only; never transform previously captured actual events as a substitute.",
+      "fixtureReference": "verification/fixtures/terminal-conflict-mirror.json",
+      "inputReference": "verification/inputs/terminal-conflict-mirror.json"
+    }
+  },
+  "roles": {
+    "humanOperator": null,
+    "semanticReviewer": null,
+    "matureToolOperator": null,
+    "sourceWhenUnassigned": "none",
+    "allowedActualHumanSources": [
+      "developer_self_test",
+      "adult_proxy"
+    ],
+    "agentExecutionSource": "machine_browser_input/automation_test or catalog_machine; cannot supply human judgment",
+    "assignmentPolicy": "Actual human and consent/scope reference required at collection; user is internal, never label independent_non_developer."
+  },
+  "sharedConditions": {
+    "materials": [
+      "same frozen scene/rules/registry/catalog facts and current program help",
+      "same hardware/display/input and actual build",
+      "same15-minute side window; assistance available equally and logged"
+    ],
+    "aiOnlyAddition": "real approved AI using the existing38 slots; no extra comparison calls",
+    "record": [
+      "actual operator identity/source and prior experience",
+      "start/end timestamps and active author/support/wait/preparation durations separately",
+      "operation count, requests/attempts/latency, actual costs/unknown reservations",
+      "explicit constraints retained/lost/unknown",
+      "actually offered distinct executable directions and human choice/reject/retain",
+      "event citation existence/version/values; facts vs hypotheses; next verifiable step",
+      "support/equivalent/extra burden/worse/missing evidence with concrete source links"
+    ],
+    "limits": [
+      "Single adult/internal observations only; no child learning, general usability, adoption or model reliability claims.",
+      "Repeated task/order effects remain limitations; mirror/ABBA do not establish causal educational benefit."
+    ],
+    "nonModelSemantics": "B is judged by author goals, retained constraints, actual manual decisions/final document/run and measured burden. B need not emit AI result kinds, directions/explanation DTOs, child requests, candidate trials or one-batch revision semantics; existing manual command validation still applies."
+  },
+  "pairedBlocks": [
+    {
+      "pairBlockID": "PAIR-01-R1",
+      "blockOrder": 1,
+      "caseID": "R0-AI-01",
+      "repeat": 1,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-01-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-01-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-01-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把目标分数从10改为6，其他不动。",
+        "manualSteps": [
+          "Set goal directly10→6."
+        ],
+        "outputExpectation": [
+          "Directly change goal10→6; final document has target6, all other scene/rule/presentation values unchanged.",
+          "Record actual controls, commands/revision count, new run and loaded goal; no AI result kind, candidate or model follow-up required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-02-R1",
+      "blockOrder": 2,
+      "caseID": "R0-AI-02",
+      "repeat": 1,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-02-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-02-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-02-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把普通点心分值从1改为2、特别点心从3改为4，其他不动。",
+        "manualSteps": [
+          "Set normal/high directly1/3→2/4 in one joint command."
+        ],
+        "outputExpectation": [
+          "Directly change reward values normal1→2/high3→4; all other values unchanged.",
+          "Observe actual2/4 only for reward classes really collected; log uncovered class and real operation/revision count."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-03-R1",
+      "blockOrder": 3,
+      "caseID": "R0-AI-03",
+      "repeat": 1,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-03-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-03-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-03-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把守卫速度从100改为80，发现距离180不变，其他不动。",
+        "manualSteps": [
+          "Set speed100→80; inspect detect180."
+        ],
+        "outputExpectation": [
+          "Directly change guard speed100→80; detect180 and all other settings unchanged.",
+          "Record loaded speed and actual pursuit coverage; no pursuit means movement effect not observed, never invent coverage."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-04-R1",
+      "blockOrder": 4,
+      "caseID": "R0-AI-04",
+      "repeat": 1,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-04-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-04-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-04-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把守卫发现距离从180改为140，速度100不变，其他不动。",
+        "manualSteps": [
+          "Set detect180→140; inspect speed100."
+        ],
+        "outputExpectation": [
+          "Directly change detect180→140; speed100 and other settings unchanged.",
+          "Record loaded radius and actual observation; boundary behavior requires actual appropriate input evidence."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-05-R1",
+      "blockOrder": 5,
+      "caseID": "R0-AI-05",
+      "repeat": 1,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-05-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-05-R1-I"
+      ],
+      "aiFixtureReference": "FX-B",
+      "nonModelVariantID": "NM-05-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-B",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "保留无守卫和目标4，启用30秒计时，其他不动。",
+        "manualSteps": [
+          "Enable timer at30; inspect no guard/goal4."
+        ],
+        "outputExpectation": [
+          "Directly enable timer30; preserve zero guards, goal4, other settings.",
+          "Record actual enabled timer/new run; short observation does not establish30-second timeout."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-b-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "pairBlockID": "PAIR-06-R1",
+      "blockOrder": 6,
+      "caseID": "R0-AI-06",
+      "repeat": 1,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-06-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-06-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-06-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "只将h1从(300,190)移到(420,220)，其他不动。",
+        "manualSteps": [
+          "Select stable h1; set mirrored x420,y220 from x300,y190."
+        ],
+        "outputExpectation": [
+          "Using stable h1, directly move mirrored position(300,190)→(420,220); preserve all other entities/settings.",
+          "Record move_entity command, final coordinates, actual run, operations/revisions; no candidate DTO or AI child request."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-07-R1",
+      "blockOrder": 7,
+      "caseID": "R0-AI-07",
+      "repeat": 1,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-07-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-07-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-07-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "只切换到目录中的第二个验证主题，不改玩法。",
+        "manualSteps": [
+          "Choose second frozen catalog theme; check semanticHash unchanged."
+        ],
+        "outputExpectation": [
+          "Directly select theme_r0_contrast (second catalog theme), playerSkin snack_player_01.",
+          "Observe actual palette and unchanged gameplay semanticHash; no gameplay run/AI candidate result required for pure palette edit."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-08-R1",
+      "blockOrder": 8,
+      "caseID": "R0-AI-08",
+      "repeat": 1,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-08-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-08-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-08-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把目标10改为6、发现距离180改为140，保持不计时，其余不动。",
+        "manualSteps": [
+          "Set goal6 and detect140 via two direct commands; keep timer off; count both operations."
+        ],
+        "outputExpectation": [
+          "Using two direct commands, set goal10→6 and detect180→140; final document satisfies both targets, timer remains disabled and all other settings unchanged.",
+          "Record two operations and actual revision increments/time/support. Do not fail manual side because it has two commits rather than an AI atomic batch; observe final-state run."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-09-R1",
+      "blockOrder": 9,
+      "caseID": "R0-AI-09",
+      "repeat": 1,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-09-R1-INITIAL",
+        "PAIR-09-R1-FOLLOWUP"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-09-R1-I",
+        "R0-AI-09-R1-F"
+      ],
+      "aiFixtureReference": "FX-A-G6",
+      "nonModelVariantID": "NM-09-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A-G6",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "通过奖励路线制造紧张，但保留观察机会，不要限时。请先比较2–3个支持内方向，至少包含一个布局方向，先不要修改。",
+        "manualSteps": [
+          "Use current program rule/scene help; write 2–3 supported alternatives including reward layout.",
+          "Human selects own actual layout alternative; direct move selected rewards; retain goal6, no timer."
+        ],
+        "outputExpectation": [
+          "Using direct controls/program help, human records2–3 actually distinct supported alternatives including reward layout; preserve goal6, observation opportunity and no timer.",
+          "Human chooses an actual layout alternative, records rationale, directly edits eligible stable reward positions and observes new actual run; retain/reject remains valid and reported. No model direction DTO or child request required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-goal6-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a-goal6.json"
+    },
+    {
+      "pairBlockID": "PAIR-10-R1",
+      "blockOrder": 10,
+      "caseID": "R0-AI-10",
+      "repeat": 1,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-10-R1-INITIAL",
+        "PAIR-10-R1-FOLLOWUP"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-10-R1-I",
+        "R0-AI-10-R1-F"
+      ],
+      "aiFixtureReference": "FX-B",
+      "nonModelVariantID": "NM-10-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-B",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "不加守卫、不改目标4，让体验稍有节奏。请比较布局和时间方向，先不要修改。",
+        "manualSteps": [
+          "Use current help to compare reward layout vs timer; keep guard count0/goal4.",
+          "Human chooses time path and directly enables30 seconds."
+        ],
+        "outputExpectation": [
+          "Human compares actually available reward-layout and timer alternatives using program facts/help; keep zero guards and goal4.",
+          "Human records choice of time alternative and directly enables30 seconds; final guard count0/goal4/timer enabled30. Record manual actions/new run, not AI child request or DTO."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-b-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "pairBlockID": "PAIR-13-R1",
+      "blockOrder": 11,
+      "caseID": "R0-AI-13",
+      "repeat": 1,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-13-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-13-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-13-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "不要守卫，想慢慢探索。",
+        "manualSteps": [
+          "Select g1 and manually delete; leave timer unchanged; record manual path."
+        ],
+        "outputExpectation": [
+          "Using actual manual path, select stable g1 and delete the guard; final guard count0.",
+          "Preserve disabled timer and its existing limit45, goal10 and all other settings; record direct action/new run/operations/revisions. No answered/manual_quantity result or model follow-up required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-14-R1",
+      "blockOrder": 12,
+      "caseID": "R0-AI-14",
+      "repeat": 1,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-14-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-14-R1-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-14-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "拿到点心后瞬移穿墙。",
+        "manualSteps": [
+          "Inspect available supported controls/help, acknowledge unsupported teleport; retain/exit with zero write."
+        ],
+        "outputExpectation": [
+          "Consult actual supported capability/help information; recognize teleport-through-walls is unsupported in this scope.",
+          "Human records retain/exit; zero project writes. Do not substitute chase, invent teleport tools or promise future support; no unsupported DTO/model request required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-01-R2",
+      "blockOrder": 13,
+      "caseID": "R0-AI-01",
+      "repeat": 2,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-01-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-01-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-01-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把目标分数从10改为6，其他不动。",
+        "manualSteps": [
+          "Set goal directly10→6."
+        ],
+        "outputExpectation": [
+          "Directly change goal10→6; final document has target6, all other scene/rule/presentation values unchanged.",
+          "Record actual controls, commands/revision count, new run and loaded goal; no AI result kind, candidate or model follow-up required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-02-R2",
+      "blockOrder": 14,
+      "caseID": "R0-AI-02",
+      "repeat": 2,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-02-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-02-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-02-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把普通点心分值从1改为2、特别点心从3改为4，其他不动。",
+        "manualSteps": [
+          "Set normal/high directly1/3→2/4 in one joint command."
+        ],
+        "outputExpectation": [
+          "Directly change reward values normal1→2/high3→4; all other values unchanged.",
+          "Observe actual2/4 only for reward classes really collected; log uncovered class and real operation/revision count."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-03-R2",
+      "blockOrder": 15,
+      "caseID": "R0-AI-03",
+      "repeat": 2,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-03-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-03-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-03-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把守卫速度从100改为80，发现距离180不变，其他不动。",
+        "manualSteps": [
+          "Set speed100→80; inspect detect180."
+        ],
+        "outputExpectation": [
+          "Directly change guard speed100→80; detect180 and all other settings unchanged.",
+          "Record loaded speed and actual pursuit coverage; no pursuit means movement effect not observed, never invent coverage."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-04-R2",
+      "blockOrder": 16,
+      "caseID": "R0-AI-04",
+      "repeat": 2,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-04-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-04-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-04-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把守卫发现距离从180改为140，速度100不变，其他不动。",
+        "manualSteps": [
+          "Set detect180→140; inspect speed100."
+        ],
+        "outputExpectation": [
+          "Directly change detect180→140; speed100 and other settings unchanged.",
+          "Record loaded radius and actual observation; boundary behavior requires actual appropriate input evidence."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-05-R2",
+      "blockOrder": 17,
+      "caseID": "R0-AI-05",
+      "repeat": 2,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-05-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-05-R2-I"
+      ],
+      "aiFixtureReference": "FX-B",
+      "nonModelVariantID": "NM-05-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-B",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "保留无守卫和目标4，启用30秒计时，其他不动。",
+        "manualSteps": [
+          "Enable timer at30; inspect no guard/goal4."
+        ],
+        "outputExpectation": [
+          "Directly enable timer30; preserve zero guards, goal4, other settings.",
+          "Record actual enabled timer/new run; short observation does not establish30-second timeout."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-b-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "pairBlockID": "PAIR-06-R2",
+      "blockOrder": 18,
+      "caseID": "R0-AI-06",
+      "repeat": 2,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-06-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-06-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-06-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "只将h1从(300,190)移到(420,220)，其他不动。",
+        "manualSteps": [
+          "Select stable h1; set mirrored x420,y220 from x300,y190."
+        ],
+        "outputExpectation": [
+          "Using stable h1, directly move mirrored position(300,190)→(420,220); preserve all other entities/settings.",
+          "Record move_entity command, final coordinates, actual run, operations/revisions; no candidate DTO or AI child request."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-07-R2",
+      "blockOrder": 19,
+      "caseID": "R0-AI-07",
+      "repeat": 2,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-07-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-07-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-07-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "只切换到目录中的第二个验证主题，不改玩法。",
+        "manualSteps": [
+          "Choose second frozen catalog theme; check semanticHash unchanged."
+        ],
+        "outputExpectation": [
+          "Directly select theme_r0_contrast (second catalog theme), playerSkin snack_player_01.",
+          "Observe actual palette and unchanged gameplay semanticHash; no gameplay run/AI candidate result required for pure palette edit."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-08-R2",
+      "blockOrder": 20,
+      "caseID": "R0-AI-08",
+      "repeat": 2,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-08-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-08-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-08-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "把目标10改为6、发现距离180改为140，保持不计时，其余不动。",
+        "manualSteps": [
+          "Set goal6 and detect140 via two direct commands; keep timer off; count both operations."
+        ],
+        "outputExpectation": [
+          "Using two direct commands, set goal10→6 and detect180→140; final document satisfies both targets, timer remains disabled and all other settings unchanged.",
+          "Record two operations and actual revision increments/time/support. Do not fail manual side because it has two commits rather than an AI atomic batch; observe final-state run."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-09-R2",
+      "blockOrder": 21,
+      "caseID": "R0-AI-09",
+      "repeat": 2,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-09-R2-INITIAL",
+        "PAIR-09-R2-FOLLOWUP"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-09-R2-I",
+        "R0-AI-09-R2-F"
+      ],
+      "aiFixtureReference": "FX-A-G6",
+      "nonModelVariantID": "NM-09-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A-G6",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "通过奖励路线制造紧张，但保留观察机会，不要限时。请先比较2–3个支持内方向，至少包含一个布局方向，先不要修改。",
+        "manualSteps": [
+          "Use current program rule/scene help; write 2–3 supported alternatives including reward layout.",
+          "Human selects own actual layout alternative; direct move selected rewards; retain goal6, no timer."
+        ],
+        "outputExpectation": [
+          "Using direct controls/program help, human records2–3 actually distinct supported alternatives including reward layout; preserve goal6, observation opportunity and no timer.",
+          "Human chooses an actual layout alternative, records rationale, directly edits eligible stable reward positions and observes new actual run; retain/reject remains valid and reported. No model direction DTO or child request required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-goal6-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a-goal6.json"
+    },
+    {
+      "pairBlockID": "PAIR-10-R2",
+      "blockOrder": 22,
+      "caseID": "R0-AI-10",
+      "repeat": 2,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-10-R2-INITIAL",
+        "PAIR-10-R2-FOLLOWUP"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-10-R2-I",
+        "R0-AI-10-R2-F"
+      ],
+      "aiFixtureReference": "FX-B",
+      "nonModelVariantID": "NM-10-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-B",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "不加守卫、不改目标4，让体验稍有节奏。请比较布局和时间方向，先不要修改。",
+        "manualSteps": [
+          "Use current help to compare reward layout vs timer; keep guard count0/goal4.",
+          "Human chooses time path and directly enables30 seconds."
+        ],
+        "outputExpectation": [
+          "Human compares actually available reward-layout and timer alternatives using program facts/help; keep zero guards and goal4.",
+          "Human records choice of time alternative and directly enables30 seconds; final guard count0/goal4/timer enabled30. Record manual actions/new run, not AI child request or DTO."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-b-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "pairBlockID": "PAIR-13-R2",
+      "blockOrder": 23,
+      "caseID": "R0-AI-13",
+      "repeat": 2,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-13-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-13-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-13-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "不要守卫，想慢慢探索。",
+        "manualSteps": [
+          "Select g1 and manually delete; leave timer unchanged; record manual path."
+        ],
+        "outputExpectation": [
+          "Using actual manual path, select stable g1 and delete the guard; final guard count0.",
+          "Preserve disabled timer and its existing limit45, goal10 and all other settings; record direct action/new run/operations/revisions. No answered/manual_quantity result or model follow-up required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-14-R2",
+      "blockOrder": 24,
+      "caseID": "R0-AI-14",
+      "repeat": 2,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-14-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-14-R2-I"
+      ],
+      "aiFixtureReference": "FX-A",
+      "nonModelVariantID": "NM-14-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-A",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "拿到点心后瞬移穿墙。",
+        "manualSteps": [
+          "Inspect available supported controls/help, acknowledge unsupported teleport; retain/exit with zero write."
+        ],
+        "outputExpectation": [
+          "Consult actual supported capability/help information; recognize teleport-through-walls is unsupported in this scope.",
+          "Human records retain/exit; zero project writes. Do not substitute chase, invent teleport tools or promise future support; no unsupported DTO/model request required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-a-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-a.json"
+    },
+    {
+      "pairBlockID": "PAIR-11-R1",
+      "blockOrder": 25,
+      "caseID": "R0-AI-11",
+      "repeat": 1,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-11-R1-INITIAL",
+        "PAIR-11-R1-FOLLOWUP"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-11-R1-I",
+        "R0-AI-11-R1-F"
+      ],
+      "aiFixtureReference": "FX-E11",
+      "nonModelVariantID": "NM-11-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-E11",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "为什么这次实际运行会得到这个结果？请引用所选真实事件，区分事实、规则和假设，并给出可验证的最小改法。",
+        "manualSteps": [
+          "Open mirrored actual event chain and original rule help; distinguish score/goal/caught.",
+          "Human records a smallest supported change and applies via direct controls; run same mirrored frozen recheck input."
+        ],
+        "outputExpectation": [
+          "Using genuinely generated mirrored terminal-conflict event chain and original rule help, human records observed score/goal/contact/result, fact/rule/hypothesis boundaries and missing evidence.",
+          "Human chooses one actually considered smallest supported change, applies via direct controls and re-runs frozen mirrored input. Record support/refutation/unknown, chosen change, actions/revisions and assistance; no model explanation, candidate or child request required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "runtimeFixtureReference": "verification/fixtures/terminal-conflict-mirror.json",
+        "fixtureReference": "verification/fixtures/terminal-conflict-mirror.json",
+        "inputReference": "verification/inputs/terminal-conflict-mirror.json",
+        "recheckInputReference": "verification/inputs/terminal-conflict-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/terminal-conflict.json"
+    },
+    {
+      "pairBlockID": "PAIR-12-R1",
+      "blockOrder": 26,
+      "caseID": "R0-AI-12",
+      "repeat": 1,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-12-R1-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-12-R1-I"
+      ],
+      "aiFixtureReference": "FX-E12",
+      "nonModelVariantID": "NM-12-R1",
+      "nonModelVariant": {
+        "deriveFrom": "FX-E12",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "当前没有实际运行事件。原因是什么？",
+        "manualSteps": [
+          "Inspect empty event selection; state unknown/missing evidence; choose retain/exit."
+        ],
+        "outputExpectation": [
+          "Inspect the frozen empty actual-event selection; human acknowledges unknown/missing cause evidence without inventing prior events.",
+          "Human records retain/exit or need for necessary observation; no extra observation/model call required and no modification needed."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-b-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-b.json"
+    },
+    {
+      "pairBlockID": "PAIR-11-R2",
+      "blockOrder": 27,
+      "caseID": "R0-AI-11",
+      "repeat": 2,
+      "order": "BA",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-11-R2-INITIAL",
+        "PAIR-11-R2-FOLLOWUP"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-11-R2-I",
+        "R0-AI-11-R2-F"
+      ],
+      "aiFixtureReference": "FX-E11",
+      "nonModelVariantID": "NM-11-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-E11",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "为什么这次实际运行会得到这个结果？请引用所选真实事件，区分事实、规则和假设，并给出可验证的最小改法。",
+        "manualSteps": [
+          "Open mirrored actual event chain and original rule help; distinguish score/goal/caught.",
+          "Human records a smallest supported change and applies via direct controls; run same mirrored frozen recheck input."
+        ],
+        "outputExpectation": [
+          "Using genuinely generated mirrored terminal-conflict event chain and original rule help, human records observed score/goal/contact/result, fact/rule/hypothesis boundaries and missing evidence.",
+          "Human chooses one actually considered smallest supported change, applies via direct controls and re-runs frozen mirrored input. Record support/refutation/unknown, chosen change, actions/revisions and assistance; no model explanation, candidate or child request required."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "runtimeFixtureReference": "verification/fixtures/terminal-conflict-mirror.json",
+        "fixtureReference": "verification/fixtures/terminal-conflict-mirror.json",
+        "inputReference": "verification/inputs/terminal-conflict-mirror.json",
+        "recheckInputReference": "verification/inputs/terminal-conflict-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/terminal-conflict.json"
+    },
+    {
+      "pairBlockID": "PAIR-12-R2",
+      "blockOrder": 28,
+      "caseID": "R0-AI-12",
+      "repeat": 2,
+      "order": "AB",
+      "sides": {
+        "A": "real AI using unchanged P05 initial state and frozen request slots",
+        "B": "direct controls + same existing program fact/rule help; no AI"
+      },
+      "phasePairedIDs": [
+        "PAIR-12-R2-INITIAL"
+      ],
+      "aiRequestSlotIDs": [
+        "R0-AI-12-R2-I"
+      ],
+      "aiFixtureReference": "FX-E12",
+      "nonModelVariantID": "NM-12-R2",
+      "nonModelVariant": {
+        "deriveFrom": "FX-E12",
+        "transform": "MIRROR-X-960-v1",
+        "targetIntent": "当前没有实际运行事件。原因是什么？",
+        "manualSteps": [
+          "Inspect empty event selection; state unknown/missing evidence; choose retain/exit."
+        ],
+        "outputExpectation": [
+          "Inspect the frozen empty actual-event selection; human acknowledges unknown/missing cause evidence without inventing prior events.",
+          "Human records retain/exit or need for necessary observation; no extra observation/model call required and no modification needed."
+        ],
+        "runtimeInputTransform": "dx→-dx, dy unchanged; mirror every runtime initial entity and coordinate-bearing event fact by x→960-x; generate real mirrored run, never rewrite actual events.",
+        "fixtureReference": "verification/fixtures/scene-b-mirror.json"
+      },
+      "humanSteps": [
+        "Record actual prior experience and equal available materials before either side.",
+        "Start each side from its own independently reset frozen fixture; no outcome transferred between sides.",
+        "Perform first side live, then second side; A uses only its frozen initial/eligible child model slots, B uses independent manual stages and never model requests/candidate DTO requirements. Preserve timestamps, failures, refusals and help.",
+        "Score same constraints/actionable alternatives/evidence fidelity/next decision; do not use text length or acceptance as value."
+      ],
+      "timeLimitSecondsPerSide": 900,
+      "stopRule": "Stop at15 minutes or completion/voluntary exit; include time spent reading/model wait/support; no extra model calls to finish.",
+      "humanOperator": null,
+      "semanticReviewer": null,
+      "status": "未执行",
+      "aiFixturePath": "verification/fixtures/scene-b.json"
+    }
+  ],
+  "fixedCollectionOrder": [
+    {
+      "blockOrder": 1,
+      "pairBlockID": "PAIR-01-R1",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-01-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-01-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 2,
+      "pairBlockID": "PAIR-02-R1",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-02-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-02-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 3,
+      "pairBlockID": "PAIR-03-R1",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-03-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-03-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 4,
+      "pairBlockID": "PAIR-04-R1",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-04-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-04-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 5,
+      "pairBlockID": "PAIR-05-R1",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-05-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-05-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 6,
+      "pairBlockID": "PAIR-06-R1",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-06-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-06-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 7,
+      "pairBlockID": "PAIR-07-R1",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-07-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-07-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 8,
+      "pairBlockID": "PAIR-08-R1",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-08-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-08-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 9,
+      "pairBlockID": "PAIR-09-R1",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-09-R1-I",
+        "R0-AI-09-R1-F"
+      ],
+      "phasePairedIDs": [
+        "PAIR-09-R1-INITIAL",
+        "PAIR-09-R1-FOLLOWUP"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 10,
+      "pairBlockID": "PAIR-10-R1",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-10-R1-I",
+        "R0-AI-10-R1-F"
+      ],
+      "phasePairedIDs": [
+        "PAIR-10-R1-INITIAL",
+        "PAIR-10-R1-FOLLOWUP"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 11,
+      "pairBlockID": "PAIR-13-R1",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-13-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-13-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 12,
+      "pairBlockID": "PAIR-14-R1",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-14-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-14-R1-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 13,
+      "pairBlockID": "PAIR-01-R2",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-01-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-01-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 14,
+      "pairBlockID": "PAIR-02-R2",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-02-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-02-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 15,
+      "pairBlockID": "PAIR-03-R2",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-03-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-03-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 16,
+      "pairBlockID": "PAIR-04-R2",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-04-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-04-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 17,
+      "pairBlockID": "PAIR-05-R2",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-05-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-05-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 18,
+      "pairBlockID": "PAIR-06-R2",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-06-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-06-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 19,
+      "pairBlockID": "PAIR-07-R2",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-07-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-07-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 20,
+      "pairBlockID": "PAIR-08-R2",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-08-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-08-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 21,
+      "pairBlockID": "PAIR-09-R2",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-09-R2-I",
+        "R0-AI-09-R2-F"
+      ],
+      "phasePairedIDs": [
+        "PAIR-09-R2-INITIAL",
+        "PAIR-09-R2-FOLLOWUP"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 22,
+      "pairBlockID": "PAIR-10-R2",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-10-R2-I",
+        "R0-AI-10-R2-F"
+      ],
+      "phasePairedIDs": [
+        "PAIR-10-R2-INITIAL",
+        "PAIR-10-R2-FOLLOWUP"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 23,
+      "pairBlockID": "PAIR-13-R2",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-13-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-13-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 24,
+      "pairBlockID": "PAIR-14-R2",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-14-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-14-R2-INITIAL"
+      ],
+      "task": "R0-T07"
+    },
+    {
+      "blockOrder": 25,
+      "pairBlockID": "PAIR-11-R1",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-11-R1-I",
+        "R0-AI-11-R1-F"
+      ],
+      "phasePairedIDs": [
+        "PAIR-11-R1-INITIAL",
+        "PAIR-11-R1-FOLLOWUP"
+      ],
+      "task": "R0-T08"
+    },
+    {
+      "blockOrder": 26,
+      "pairBlockID": "PAIR-12-R1",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-12-R1-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-12-R1-INITIAL"
+      ],
+      "task": "R0-T08"
+    },
+    {
+      "blockOrder": 27,
+      "pairBlockID": "PAIR-11-R2",
+      "order": "BA",
+      "aiSlots": [
+        "R0-AI-11-R2-I",
+        "R0-AI-11-R2-F"
+      ],
+      "phasePairedIDs": [
+        "PAIR-11-R2-INITIAL",
+        "PAIR-11-R2-FOLLOWUP"
+      ],
+      "task": "R0-T08"
+    },
+    {
+      "blockOrder": 28,
+      "pairBlockID": "PAIR-12-R2",
+      "order": "AB",
+      "aiSlots": [
+        "R0-AI-12-R2-I"
+      ],
+      "phasePairedIDs": [
+        "PAIR-12-R2-INITIAL"
+      ],
+      "task": "R0-T08"
+    }
+  ],
+  "dispatchOrderReference": "verification/model-request-manifest.json#/executionOrder",
+  "matureTool": {
+    "selectedTool": "MakeCode Arcade",
+    "selectionStatus": "資料核查后预选; not yet operated, no artifact, no compatibility success claimed",
+    "references": [
+      {
+        "url": "https://arcade.makecode.com/reference/info",
+        "source": "P04 prior source check; not newly browsed"
+      },
+      {
+        "url": "https://arcade.makecode.com/reference/sprites/on-overlap",
+        "source": "P04 prior source check; not newly browsed"
+      }
+    ],
+    "task": "R0-T04 actual collection; R0-T10 summary only",
+    "operator": null,
+    "environment": null,
+    "artifactReference": null,
+    "status": "未执行",
+    "comparisonBoundary": "Compare author goal, actual playable artifact, author/support/preparation burden; MakeCode pixel overlap need not match Nodon circle sweep/tick identity. No Nodon advantage preselected.",
+    "timeLimitSecondsPerGoal": 1800,
+    "goals": [
+      {
+        "id": "MC-G01",
+        "authorGoal": "建立可移动收集场景，有普通/特别两类得分和守卫接触终局；再把目标10→6、发现距离180→140，保持不计时。",
+        "linkedNodonCases": [
+          "R0-AI-01",
+          "R0-AI-02",
+          "R0-AI-04",
+          "R0-AI-08"
+        ],
+        "expectedEvidence": "Actual executable project and edit/run trace, observed score/terminal and limits; setup/support time separate."
+      },
+      {
+        "id": "MC-G02",
+        "authorGoal": "无守卫、5普通、目标4，比较布局和计时后启用30秒；实际运行验证启用而不伪称3秒冒烟已见超时。",
+        "linkedNodonCases": [
+          "R0-AI-05",
+          "R0-AI-10",
+          "R0-AI-13"
+        ],
+        "expectedEvidence": "Actual playable artifact, before/after settings and observed run/input; human decision/rationale and help."
+      },
+      {
+        "id": "MC-G03",
+        "authorGoal": "观察一次实际收集/终局结果，区分看见的事实和未知，作一个作者决定后再运行；无法原生提供事件链时记录额外观察/插桩/支持负担。",
+        "linkedNodonCases": [
+          "R0-AI-11",
+          "R0-AI-12"
+        ],
+        "expectedEvidence": "Actual original/new project/run trace and human explanation or explicit missing evidence; no fabricated Nodon-style logs."
+      }
+    ],
+    "substitutionRule": "If unavailable/inappropriate, record reason and block comparison; alternative requires root-reviewed protocol refreeze before that side is collected, no cherry-picking after AI output."
+  },
+  "taskBoundaries": {
+    "R0-T00": "freeze pairs/variants/order/human criteria before outputs",
+    "R0-T04": "prepare actual tools and collect mature-tool evidence; no future success prefill",
+    "R0-T07": "live initial01–10/13/14 and existing direction follow-ups, interleaved nonmodel blocks",
+    "R0-T08": "live11/12 and existing explanation follow-ups, interleaved nonmodel blocks",
+    "R0-T10": "audit/summarize references only; no provider dispatch, fresh model variant, replay-as-live, retimestamp or outcome-driven reorder"
+  },
+  "status": "未执行",
+  "actualResults": null,
+  "fixtureDefinitionsReference": "verification/model-request-manifest.json#/fixtures"
+}

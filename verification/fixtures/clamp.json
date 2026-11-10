@@ -1,0 +1,55 @@
+{
+  "formatVersion": "3.0-review.3",
+  "runtimeVersion": "collect-chase@1",
+  "catalogVersion": "workshop-core@1",
+  "project": {
+    "projectId": "r0-fixture-clamp",
+    "revision": 0,
+    "title": "R0见证:clamp",
+    "instructions": "R0专用机器见证，用于精确规则核验。",
+    "authorNote": "",
+    "designIntent": null,
+    "sourceProject": null,
+    "scene": {
+      "worldId": "rect_960_540",
+      "width": 960,
+      "height": 540,
+      "entities": [
+        {
+          "id": "p",
+          "kind": "player",
+          "x": 930,
+          "y": 510
+        },
+        {
+          "id": "n1",
+          "kind": "normal",
+          "x": 100,
+          "y": 100
+        }
+      ]
+    },
+    "rules": {
+      "goal": {
+        "targetScore": 1
+      },
+      "rewards": {
+        "normalValue": 1,
+        "highValue": 3
+      },
+      "guards": {
+        "speed": 20,
+        "detectRadius": 60
+      },
+      "timer": {
+        "enabled": false,
+        "limit": 15
+      }
+    },
+    "presentation": {
+      "themeId": "theme_snack",
+      "playerSkinId": "snack_player_01"
+    },
+    "semanticHash": "sha256:84416bf5f4c6c1b5595e317c2ac9025322cd2950a4dbdad3ef06abb8b1598766"
+  }
+}

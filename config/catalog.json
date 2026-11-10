@@ -1,0 +1,32 @@
+{
+  "catalogVersion": "workshop-core@1",
+  "purpose": "R0内置验证配色；不宣称正式美术",
+  "themes": [
+    {
+      "themeId": "theme_snack",
+      "allowedPlayerSkinIds": [
+        "snack_player_01"
+      ],
+      "colors": {
+        "background": "#FFF9ED",
+        "player": "#2563EB",
+        "guard": "#D94848",
+        "normal": "#ECA424",
+        "high": "#8B5CF6"
+      }
+    },
+    {
+      "themeId": "theme_r0_contrast",
+      "allowedPlayerSkinIds": [
+        "snack_player_01"
+      ],
+      "colors": {
+        "background": "#ECFEFF",
+        "player": "#0E7490",
+        "guard": "#9F1239",
+        "normal": "#15803D",
+        "high": "#6D28D9"
+      }
+    }
+  ]
+}

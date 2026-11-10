@@ -1,0 +1,14 @@
+{
+  "inputId": "R0-ENTRY-IDLE-6600",
+  "purpose": "本轮Node catalog长run专项；不是浏览器/真人输入",
+  "segments": [
+    {
+      "ticks": 6600,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "maxTicks": 6600,
+  "stopOnLegalTerminal": true,
+  "source": "catalog_machine"
+}

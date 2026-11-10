@@ -1,0 +1,12 @@
+{
+  "segments": [
+    {
+      "ticks": 10,
+      "x": 1,
+      "y": 1
+    }
+  ],
+  "maxTicks": 10,
+  "inputSource": "catalog_machine",
+  "inputId": "clamp"
+}

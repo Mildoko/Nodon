@@ -1,0 +1,79 @@
+{
+  "formatVersion": "3.0-review.3",
+  "runtimeVersion": "collect-chase@1",
+  "catalogVersion": "workshop-core@1",
+  "project": {
+    "projectId": "ud02-garden-mirror",
+    "revision": 0,
+    "title": "给弟弟的点心花园",
+    "instructions": "方向键或WASD移动，收集4分即可结束。当前有5个普通点心，各1分；无守卫、无时间限制，可慢慢探索。",
+    "authorNote": "",
+    "designIntent": null,
+    "sourceProject": null,
+    "scene": {
+      "worldId": "rect_960_540",
+      "width": 960,
+      "height": 540,
+      "entities": [
+        {
+          "id": "p",
+          "kind": "player",
+          "x": 880,
+          "y": 270
+        },
+        {
+          "id": "n1",
+          "kind": "normal",
+          "x": 810,
+          "y": 100
+        },
+        {
+          "id": "n2",
+          "kind": "normal",
+          "x": 680,
+          "y": 100
+        },
+        {
+          "id": "n3",
+          "kind": "normal",
+          "x": 550,
+          "y": 100
+        },
+        {
+          "id": "n4",
+          "kind": "normal",
+          "x": 420,
+          "y": 100
+        },
+        {
+          "id": "n5",
+          "kind": "normal",
+          "x": 810,
+          "y": 440
+        }
+      ]
+    },
+    "rules": {
+      "goal": {
+        "targetScore": 4
+      },
+      "rewards": {
+        "normalValue": 1,
+        "highValue": 3
+      },
+      "guards": {
+        "speed": 100,
+        "detectRadius": 180
+      },
+      "timer": {
+        "enabled": false,
+        "limit": 30
+      }
+    },
+    "presentation": {
+      "themeId": "theme_snack",
+      "playerSkinId": "snack_player_01"
+    },
+    "semanticHash": "sha256:43089965dc623d2d59510de07b06f0c61a254f33fa84b9171c9aa476ccd212f3"
+  }
+}

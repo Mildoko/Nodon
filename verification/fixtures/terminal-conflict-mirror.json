@@ -1,0 +1,61 @@
+{
+  "formatVersion": "3.0-review.3",
+  "runtimeVersion": "collect-chase@1",
+  "catalogVersion": "workshop-core@1",
+  "project": {
+    "projectId": "r0-fixture-terminal-conflict-mirror",
+    "revision": 0,
+    "title": "R0见证:terminal-conflict",
+    "instructions": "R0专用机器见证，用于精确规则核验。",
+    "authorNote": "",
+    "designIntent": null,
+    "sourceProject": null,
+    "scene": {
+      "worldId": "rect_960_540",
+      "width": 960,
+      "height": 540,
+      "entities": [
+        {
+          "id": "p",
+          "kind": "player",
+          "x": 940,
+          "y": 270
+        },
+        {
+          "id": "g1",
+          "kind": "guard",
+          "x": 870,
+          "y": 270
+        },
+        {
+          "id": "n1",
+          "kind": "normal",
+          "x": 890,
+          "y": 290
+        }
+      ]
+    },
+    "rules": {
+      "goal": {
+        "targetScore": 1
+      },
+      "rewards": {
+        "normalValue": 1,
+        "highValue": 3
+      },
+      "guards": {
+        "speed": 20,
+        "detectRadius": 60
+      },
+      "timer": {
+        "enabled": true,
+        "limit": 15
+      }
+    },
+    "presentation": {
+      "themeId": "theme_snack",
+      "playerSkinId": "snack_player_01"
+    },
+    "semanticHash": "sha256:01a9ef07bb5cfb4ab39a87e62a5891ce3334742e355627c2fb8f10200ccb6c38"
+  }
+}

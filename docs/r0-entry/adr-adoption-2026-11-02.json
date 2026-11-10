@@ -1,0 +1,64 @@
+{
+  "decisionId": "DG01-DG03-adoption-20261102",
+  "date": "2026-11-02",
+  "authority": "用户本轮明确确认采用DG01–DG03",
+  "adoptedDecisions": [
+    "DG01",
+    "DG02",
+    "DG03"
+  ],
+  "adoptedDocuments": [
+    {
+      "path": "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-01-repository.md",
+      "sha256": "sha256:41f354579a895e3f063b971736c649873c97936fd2fb48de3d6867be73b77193"
+    },
+    {
+      "path": "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-02-adult-auth.md",
+      "sha256": "sha256:2341715c2bb1c7e39d77a5e0bede8be8ec151dba075330727866c8441956043f"
+    },
+    {
+      "path": "/Users/dmy/Projects/Nodon-R0/docs/r1/adr/ADR-R1-03-projection-and-cursor.md",
+      "sha256": "sha256:8a93d362acec3d7748071d8a1c40bd3a4d67a1909ad0ceed190b573c879384ff"
+    },
+    {
+      "path": "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/repository-schema-and-transaction.md",
+      "sha256": "sha256:15e538904b294c4ff0bd07051db8cdcd9d24f611d0a3938bf8540fed190a2d2d"
+    },
+    {
+      "path": "/Users/dmy/Projects/Nodon-R0/docs/r1/contracts/page-command-and-return.md",
+      "sha256": "sha256:8b13738471136f2fce94dd17c6932718903b533153e317edf54b9bd28ab0ee8a"
+    },
+    {
+      "path": "/Users/dmy/Projects/Nodon-R0/docs/r1/acceptance/performance-and-ai-budget.md",
+      "sha256": "sha256:9cd7043a9a803568eb1e9f9571e41e642d85bccb1b4037e8de39028367c7fa7a"
+    }
+  ],
+  "adoptionMeaning": "采用工程/告知/页面/权限合同，不是实现或实测；原review.4/R0冻结输入不静默改写，R1采用由本记录显式覆盖原待采用状态",
+  "gates": {
+    "G-PLAN": "adopted_preparation_scope",
+    "G-ADR": "passed_contract_adoption_only",
+    "G-R0": "not_passed",
+    "G-E": "not_assessed",
+    "G-R1-ENTRY": "not_passed"
+  },
+  "R0VerificationAuthorized": true,
+  "R1FormalCodingAuthorized": false,
+  "model": "DeepSeek-V4.1-Flash-1017",
+  "amountCapCNY": 20,
+  "human": {
+    "participantId": "HUMAN-01",
+    "selfReport": "亲自参与过代码；作为内部开发者自测参与",
+    "roles": [
+      "developer_self_test",
+      "human_semantic_reviewer"
+    ],
+    "isIndependentNonDeveloper": false
+  },
+  "adoptionImpacts": [
+    "C17从浏览器存储改本机工作区，工作区清理需成人重认证和单次权限，备份清理也完成才成功",
+    "Node独立作品SQLite与Worker，50步会话undo/8命名含起始/2自动点及pin满退路",
+    "统一页面/来源/焦点/dirty/另存失败新身份、有界投影输入合同",
+    "成人Node口令与macOS原生Keychain桥，T02自有helper，课堂grant与管理登录分开"
+  ],
+  "newModelCallsBeyondExistingR0SlotsApproved": false
+}

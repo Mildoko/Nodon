@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.codegraph/
+.env
+.env.*
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.DS_Store
+
+.local/
+
+evidence/

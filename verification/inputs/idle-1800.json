@@ -1,0 +1,12 @@
+{
+  "segments": [
+    {
+      "ticks": 1800,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "maxTicks": 1800,
+  "inputSource": "catalog_machine",
+  "inputId": "idle-1800"
+}
